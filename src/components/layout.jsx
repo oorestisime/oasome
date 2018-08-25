@@ -24,7 +24,6 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Collapse from '@material-ui/core/Collapse';
 
-import withRoot from '../withRoot';
 import Destinations from './destinations';
 
 const drawerWidth = 230;
@@ -276,4 +275,4 @@ App.defaultProps = {
   children: null,
 };
 
-export default withRoot(withStyles(styles)(App));
+export default withStyles(styles)(App);

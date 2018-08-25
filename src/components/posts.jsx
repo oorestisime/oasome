@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import withRoot from '../withRoot';
 import CardPost from './cardPost';
 
 
@@ -55,4 +54,4 @@ Posts.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
-export default withRoot(withStyles(styles)(Posts));
+export default withStyles(styles)(Posts);

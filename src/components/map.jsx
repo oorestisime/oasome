@@ -13,8 +13,8 @@ import {
 } from 'react-simple-maps';
 import { withStyles } from '@material-ui/core/styles';
 
-import withRoot from '../withRoot';
 import { capitalize } from './tools';
+import worldJson from '../static/world-50m.json';
 
 
 const styles = {
@@ -46,6 +46,8 @@ class ZoomPan extends Component {
       center,
       zoom,
     } = this.props;
+
+    console.log(worldJson)
     return (
       <div>
         <div className={classes.wrapper}>
@@ -61,7 +63,7 @@ class ZoomPan extends Component {
             }}
           >
             <ZoomableGroup center={center} zoom={zoom} disablePanning>
-              <Geographies geography="/static/world-50m.json">
+              <Geographies geography={worldJson}>
                 {(geographies, projection) => geographies.map((geography, i) => geography.id !== 'ATA' && (
                   <Geography
                     key={i}
@@ -151,4 +153,4 @@ ZoomPan.defaultProps = {
 };
 
 
-export default withRoot(withStyles(styles)(ZoomPan));
+export default withStyles(styles)(ZoomPan);

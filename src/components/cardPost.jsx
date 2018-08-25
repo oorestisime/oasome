@@ -15,7 +15,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import TagCloud from './tagCloud';
 import Share from './share';
-import withRoot from '../withRoot';
 
 
 const chipStyle = theme => (
@@ -154,4 +153,4 @@ CardPost.defaultProps = {
 };
 
 
-export default withRoot(withStyles(chipStyle, { withTheme: true })(CardPost));
+export default withStyles(chipStyle, { withTheme: true })(CardPost);

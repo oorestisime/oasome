@@ -4,8 +4,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
 
-import withRoot from '../withRoot';
-
 
 const styles = theme => ({
   nested: {
@@ -47,4 +45,4 @@ const Destinations = classes => (
   />
 );
 
-export default withRoot(withStyles(styles)(Destinations));
+export default withStyles(styles)(Destinations);

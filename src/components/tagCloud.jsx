@@ -7,8 +7,6 @@ import { emphasize } from '@material-ui/core/styles/colorManipulator';
 import Chip from '@material-ui/core/Chip';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 
-import withRoot from '../withRoot';
-
 
 const chipStyle = (theme) => {
   const background = blueGrey[50];
@@ -64,4 +62,4 @@ TagCloud.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default withRoot(withStyles(chipStyle, { withTheme: true })(TagCloud));
+export default withStyles(chipStyle, { withTheme: true })(TagCloud);

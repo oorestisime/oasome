@@ -18,7 +18,6 @@ import {
   RedditShareButton,
 } from 'react-share';
 
-import withRoot from '../withRoot';
 
 const styles = () => ({
   iconHover: {
@@ -94,4 +93,4 @@ Share.propTypes = {
   path: PropTypes.string.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Share));
+export default withStyles(styles)(Share);
