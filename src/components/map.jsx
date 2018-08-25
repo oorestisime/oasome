@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { push } from 'gatsby-link';
+import { push } from 'gatsby';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import {
