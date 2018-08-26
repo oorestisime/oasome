@@ -47,7 +47,6 @@ class ZoomPan extends Component {
       zoom,
     } = this.props;
 
-    console.log(worldJson)
     return (
       <div>
         <div className={classes.wrapper}>

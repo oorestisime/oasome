@@ -5,17 +5,13 @@ import { withStyles } from '@material-ui/core/styles';
 import grey from '@material-ui/core/colors/grey';
 import MenuItem from '@material-ui/core/MenuItem';
 import {
-  Facebook,
   Twitter,
   Email,
-  Reddit,
   Instagram,
 } from 'mdi-material-ui';
 import {
-  FacebookShareButton,
   TwitterShareButton,
   EmailShareButton,
-  RedditShareButton,
 } from 'react-share';
 
 
@@ -58,28 +54,12 @@ const Share = props => (
             </TwitterShareButton>
           </MenuItem>
           <MenuItem>
-            <FacebookShareButton
-              url={getLink(data.site, path)}
-              quote={title}
-            >
-              <Facebook className={classes.iconHover} color="disabled" />
-            </FacebookShareButton>
-          </MenuItem>
-          <MenuItem>
             <EmailShareButton
               url={getLink(data.site, path)}
               subject={title}
             >
               <Email className={classes.iconHover} color="disabled" />
             </EmailShareButton>
-          </MenuItem>
-          <MenuItem>
-            <RedditShareButton
-              url={getLink(data.site, path)}
-              subject={title}
-            >
-              <Reddit className={classes.iconHover} color="disabled" />
-            </RedditShareButton>
           </MenuItem>
         </div>
       );

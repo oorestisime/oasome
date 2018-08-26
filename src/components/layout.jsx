@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
+import Grid from '@material-ui/core/Grid';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -23,8 +24,16 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Collapse from '@material-ui/core/Collapse';
+import {
+  Twitter,
+  Email,
+  Instagram,
+  GithubCircle,
+} from 'mdi-material-ui';
+
 
 import Destinations from './destinations';
+import CCSvg from '../static/license.svg';
 
 const drawerWidth = 230;
 
@@ -110,6 +119,21 @@ const styles = theme => ({
   menuButton: {
     marginLeft: 12,
     marginRight: 20,
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    paddingLeft: drawerWidth + theme.spacing.unit,
+    padding: theme.spacing.unit * 6,
+    width: '100%',
+  },
+  list: {
+    margin: 0,
+    paddingLeft: 0,
+    listStyle: 'none',
+    display: 'inline',
+  },
+  icon: {
+    margin: theme.spacing.unit / 2,
   },
 });
 
@@ -259,6 +283,26 @@ class App extends React.Component {
             </div>
           </div>
         </div>
+        <footer className={classes.footer}>
+          <Grid container>
+            <Grid item xs={12}>
+              <ul className={classes.list}>
+                  <Instagram className={classes.icon} />
+                  <Twitter className={classes.icon} />
+                  <GithubCircle className={classes.icon} />
+                  <Email className={classes.icon} />
+                  <img className={classes.icon} height="20" src={CCSvg} alt="Creative Common Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" />
+              </ul>
+            </Grid>
+            <Typography align="center">
+              {'Both the texts and the photos are released under the '}
+              <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style={{ color: 'black' }}>
+                Creative Commons License
+              </a>
+              {'. '}
+            </Typography>
+          </Grid>
+        </footer>
       </div>
     );
   }

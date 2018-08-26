@@ -27,6 +27,9 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     paddingBotton: theme.spacing.unit * 4,
   },
+  cardSpacer: {
+    paddingRight: theme.spacing.unit * 2,
+  }
 });
 
 function List({
@@ -47,22 +50,24 @@ function List({
           )
         }
         {posts.map(post => (
-          <CardPost
-            key={post.frontmatter.title}
-            title={post.frontmatter.title}
-            date={post.frontmatter.date}
-            cover={post.frontmatter.cover}
-            tags={post.frontmatter.tags}
-            timeToRead={post.timeToRead}
-            type={type}
-            content={(
-              <Typography component="p">
-                {post.excerpt}
-              </Typography>
-            )}
-            path={post.frontmatter.path}
-            expand
-          />
+          <Grid item xs={12} sm={4} key={post.id} className={classes.cardSpacer}>
+            <CardPost
+              key={post.frontmatter.title}
+              title={post.frontmatter.title}
+              date={post.frontmatter.date}
+              cover={post.frontmatter.cover}
+              tags={post.frontmatter.tags}
+              timeToRead={post.timeToRead}
+              type={type}
+              content={(
+                <Typography component="p">
+                  {post.excerpt}
+                </Typography>
+              )}
+              path={post.frontmatter.path}
+              expand
+            />
+          </Grid>
         ))}
       </Grid>
       <MobileStepper
