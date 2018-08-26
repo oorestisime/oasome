@@ -5,7 +5,11 @@ import { createMuiTheme, createGenerateClassName } from '@material-ui/core/style
 
 // A theme with custom primary and secondary color.
 // It's optional.
-const theme = createMuiTheme();
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: "'Montserrat', 'Helvetica', 'Arial'",
+  },
+});
 
 function createPageContext() {
   return {

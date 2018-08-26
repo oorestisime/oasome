@@ -50,7 +50,7 @@ function List({
           )
         }
         {posts.map(post => (
-          <Grid item xs={12} sm={4} key={post.id} className={classes.cardSpacer}>
+          <Grid item xs={12} sm={6} key={post.id} className={classes.cardSpacer}>
             <CardPost
               key={post.frontmatter.title}
               title={post.frontmatter.title}

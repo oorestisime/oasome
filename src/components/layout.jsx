@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import Grid from '@material-ui/core/Grid';
-import Drawer from '@material-ui/core/Drawer';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -35,20 +35,11 @@ import {
 import Destinations from './destinations';
 import CCSvg from '../static/license.svg';
 
-const drawerWidth = 230;
 
 const styles = theme => ({
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
   toolbar: {
     ...theme.mixins.toolbar,
-    paddingLeft: (theme.spacing.unit * 6) + 42,
+    paddingLeft: theme.spacing.unit * 6,
     display: 'flex',
     flexGrow: 1,
     flexDirection: 'column',
@@ -67,8 +58,8 @@ const styles = theme => ({
   },
   content: {
     height: '100%',
-    paddingLeft: drawerWidth,
     padding: theme.spacing.unit * 6,
+    paddingBottom: 0,
   },
   wrapper: {
     height: '100%',
@@ -91,40 +82,14 @@ const styles = theme => ({
     display: 'flex',
     flex: 1,
   },
-  'content-left': {
-    marginLeft: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'contentShift-left': {
-    marginLeft: 0,
-  },
-  hide: {
-    display: 'none',
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'appBarShift-left': {
-    marginLeft: drawerWidth,
-  },
   menuButton: {
     marginLeft: 12,
     marginRight: 20,
   },
   footer: {
-    backgroundColor: theme.palette.background.paper,
-    paddingLeft: drawerWidth + theme.spacing.unit,
-    padding: theme.spacing.unit * 6,
-    width: '100%',
+    paddingLeft: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 2,
+    paddingTop: theme.spacing.unit * 2,
   },
   list: {
     margin: 0,
@@ -133,11 +98,11 @@ const styles = theme => ({
     display: 'inline',
   },
   icon: {
-    margin: theme.spacing.unit / 2,
+    marginRight: theme.spacing.unit / 2,
+    '&:hover': {
+      color: grey[900],
+    },
   },
-  footerLink: {
-    color: 'black',
-  }
 });
 
 
@@ -176,13 +141,9 @@ class App extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="HandheldFriendly" content="True" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" />
         </Helmet>
-        <AppBar
-          className={classNames(classes.appBar, {
-            [classes.appBarShift]: open,
-            [classes['appBarShift-left']]: open,
-          })}
-        >
+        <AppBar className={classes.appBar}>
           <Toolbar disableGutters={!open}>
             <IconButton
               color="inherit"
@@ -197,25 +158,15 @@ class App extends React.Component {
             </Typography>
           </Toolbar>
         </AppBar>
-        <Drawer
-          variant="persistent"
-          classes={{ paper: classes.drawerPaper }}
+        <SwipeableDrawer
           anchor="left"
           open={open}
+          onClose={() => this.toggleDrawer(false)}
         >
           <div className={classes.toolbarIe11}>
             <div className={classes.toolbar}>
-              <div className={classes.drawerHeader}>
-                <IconButton onClick={() => this.toggleDrawer(false)}>
-                  <MenuIcon />
-                </IconButton>
-              </div>
               <Typography variant="title" color="inherit">
                 OAsome
-              </Typography>
-              <Typography variant="caption">
-                { /* eslint-disable-next-line react/jsx-one-expression-per-line */ }
-                secrets
               </Typography>
             </div>
           </div>
@@ -271,50 +222,43 @@ class App extends React.Component {
               </ListItem>
             </div>
           </List>
-        </Drawer>
-        <div className={classNames(
-          classes.content, classes['content-left'],
-          {
-            [classes.contentShift]: open,
-            [classes['contentShift-left']]: open,
-          },
-        )}
-        >
+        </SwipeableDrawer>
+        <div className={classes.content}>
           <div className={classes.root}>
             <div className={classes.fullWidth}>
               { children }
             </div>
           </div>
-        </div>
-        <footer className={classes.footer}>
-          <Grid container>
-            <Grid item xs={12}>
-              <ul className={classes.list}>
-                  <Instagram className={classes.icon} />
-                  <Twitter className={classes.icon} />
-                  <GithubCircle className={classes.icon} />
-                  <Email className={classes.icon} />
+          <footer className={classes.footer}>
+            <Grid container>
+              <Grid item xs={12}>
+                <ul className={classes.list}>
+                  <Instagram color="disabled" className={classes.icon} />
+                  <Twitter color="disabled" className={classes.icon} />
+                  <GithubCircle color="disabled" className={classes.icon} />
+                  <Email color="disabled" className={classes.icon} />
                   <img className={classes.icon} height="20" src={CCSvg} alt="Creative Common Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" />
-              </ul>
+                </ul>
+              </Grid>
+              <Typography>
+                {'Both the texts and the photos are released under the '}
+                <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes.footerLink}>
+                  Creative Commons License
+                </a>
+                {'. '}
+                <br />
+                {'Code of this blog is released under the '}
+                <a rel="noopener noreferrer" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html" className={classes.footerLink}>
+                  GNU Affero General Public License 3.0
+                </a>
+                {', and is available on '}
+                <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome" className={classes.footerLink}>
+                  Github
+                </a>
+              </Typography>
             </Grid>
-            <Typography>
-              {'Both the texts and the photos are released under the '}
-              <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes.footerLink}>
-                Creative Commons License
-              </a>
-              {'. '}
-              <br />
-              {'Code of this blog is released under the '}
-              <a rel="noopener noreferrer" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html" className={classes.footerLink}>
-                GNU Affero General Public License 3.0
-              </a>
-              {', and is available on '}
-              <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome" className={classes.footerLink}>
-                Github
-              </a>
-            </Typography>
-          </Grid>
-        </footer>
+          </footer>
+        </div>
       </div>
     );
   }

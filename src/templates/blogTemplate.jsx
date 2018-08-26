@@ -5,7 +5,9 @@ import { graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import rehypeReact from 'rehype-react';
 
+import PhotoComposition from '../components/photoComposition';
 import withRoot from '../withRoot';
 import App from '../components/layout';
 import CardPost from '../components/cardPost';
@@ -21,7 +23,43 @@ const styles = theme => ({
   text: {
     ...theme.typography.body1,
   },
+  toc: {
+    top: 90,
+    width: 162,
+    flexShrink: 0,
+    order: 2,
+    position: 'sticky',
+    wordBreak: 'break-word',
+    height: 'calc(100vh - 70px)',
+    overflowY: 'auto',
+    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0`,
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+    '& $ul': {
+      paddingLeft: theme.spacing.unit * 2,
+      margin: 0,
+      listStyleType: 'none',
+    },
+    '& $li': {
+      fontSize: 14,
+      padding: `${theme.spacing.unit / 2}px 0`,
+    },
+    '& $a': {
+      color: 'rgba(0, 0, 0, 0.54)',
+      textDecoration: 'none',
+      '&:hover': {
+        color: 'black',
+      },
+    },
+  },
 });
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { 'photo-composition': PhotoComposition },
+}).Compiler;
 
 function BlogPost({
   data, classes, pageContext, // this prop will be injected by the GraphQL query below.
@@ -31,9 +69,10 @@ function BlogPost({
   const { siteMetadata: { siteUrl } } = site;
   const {
     frontmatter,
-    html,
+    htmlAst,
     excerpt,
     timeToRead,
+    tableOfContents,
   } = markdownRemark;
   return (
     <App title="OAsome blog">
@@ -56,17 +95,33 @@ function BlogPost({
         <meta name="twitter:image" content={`${siteUrl}${frontmatter.cover.childImageSharp.fluid.src}`} />
       </Helmet>
       <Grid container spacing={24} className={classes.spacer}>
-        <CardPost
-          title={frontmatter.title}
-          date={frontmatter.date}
-          cover={frontmatter.cover}
-          tags={frontmatter.tags}
-          content={<div className={classes.text} dangerouslySetInnerHTML={{ __html: html }} />}
-          expand={false}
-          photos={frontmatter.photos || []}
-          type={frontmatter.type}
-          timeToRead={timeToRead}
-        />
+        <Grid item xs={12} sm={tableOfContents ? 10 : 12}>
+          <CardPost
+            title={frontmatter.title}
+            date={frontmatter.date}
+            cover={frontmatter.cover}
+            tags={frontmatter.tags}
+            content={(
+              <div className={classes.text}>
+                {renderAst(htmlAst)}
+              </div>
+            )}
+            expand={false}
+            photos={frontmatter.photos || []}
+            type={frontmatter.type}
+            timeToRead={timeToRead}
+          />
+        </Grid>
+        {tableOfContents
+          && (
+            <Grid item sm={2} className={classes.toc}>
+              <Typography variant="title" gutterBottom>
+                Contents
+              </Typography>
+              <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+            </Grid>
+          )
+        }
       </Grid>
       {similar.length > 0
         && (
@@ -77,7 +132,7 @@ function BlogPost({
               </Typography>
             </Grid>
             {similar.filter(post => post.frontmatter.title !== frontmatter.title).slice(0, 8).map(post => (
-              <Grid item xs={4} key={post.frontmatter.title}>
+              <Grid item xs={12} sm={6} key={post.frontmatter.title}>
                 <CardPost
                   title={post.frontmatter.title}
                   date={post.frontmatter.date}
@@ -110,8 +165,9 @@ export const pageQuery = graphql`
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+      htmlAst
       timeToRead
+      tableOfContents
       excerpt(pruneLength: 150)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
