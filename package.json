@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "OAsome",
+  "description": "OAsome blog",
   "dependencies": {
     "@material-ui/core": "^1.4.1",
     "@material-ui/icons": "^2.0.0",
@@ -32,9 +32,11 @@
     "react-simple-maps": "latest"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "material-ui",
+    "blog"
   ],
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

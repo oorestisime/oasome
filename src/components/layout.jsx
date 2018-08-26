@@ -135,6 +135,9 @@ const styles = theme => ({
   icon: {
     margin: theme.spacing.unit / 2,
   },
+  footerLink: {
+    color: 'black',
+  }
 });
 
 
@@ -294,12 +297,21 @@ class App extends React.Component {
                   <img className={classes.icon} height="20" src={CCSvg} alt="Creative Common Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" />
               </ul>
             </Grid>
-            <Typography align="center">
+            <Typography>
               {'Both the texts and the photos are released under the '}
-              <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style={{ color: 'black' }}>
+              <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes.footerLink}>
                 Creative Commons License
               </a>
               {'. '}
+              <br />
+              {'Code of this blog is released under the '}
+              <a rel="noopener noreferrer" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html" className={classes.footerLink}>
+                GNU Affero General Public License 3.0
+              </a>
+              {', and is available on '}
+              <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome" className={classes.footerLink}>
+                Github
+              </a>
             </Typography>
           </Grid>
         </footer>
