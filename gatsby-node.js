@@ -7,7 +7,6 @@
 const path = require('path');
 let _ = require('lodash');
 
-
 function paginate(array, pageSize, pageNumber) {
   return array.slice(0).slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
 }
@@ -111,7 +110,7 @@ exports.createPages = ({ actions, graphql }) => {
               }
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 1200) {
+                  fluid(maxHeight: 300) {
                     base64
                     aspectRatio
                     src
@@ -151,4 +150,16 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
   });
+};
+
+// This might need to be a temporal fixed until https://github.com/gatsbyjs/gatsby/issues/4038
+exports.onCreateNode = (props) => {
+  const { node, actions: { createNodeField } } = props;
+  if (node.internal.type === 'MarkdownRemark') {
+    createNodeField({
+      name: 'slug',
+      node,
+      value: node.frontmatter.path,
+    });
+  }
 };

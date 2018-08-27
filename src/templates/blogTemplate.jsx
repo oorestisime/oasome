@@ -110,6 +110,7 @@ function BlogPost({
             photos={frontmatter.photos || []}
             type={frontmatter.type}
             timeToRead={timeToRead}
+            country={frontmatter.country}
           />
         </Grid>
         {tableOfContents
@@ -146,6 +147,7 @@ function BlogPost({
                     </Typography>
                   )}
                   path={post.frontmatter.path}
+                  country={frontmatter.country}
                   expand
                 />
               </Grid>

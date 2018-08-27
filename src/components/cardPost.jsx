@@ -11,13 +11,16 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import IconButton from '@material-ui/core/IconButton';
 import ShareIcon from '@material-ui/icons/Share';
+import Location from '@material-ui/icons/LocationOn';
+import DateIcon from '@material-ui/icons/DateRange';
+import Timer from '@material-ui/icons/Timer';
 import Menu from '@material-ui/core/Menu';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 import TagCloud from './tagCloud';
 import Share from './share';
-
+import { capitalize } from './tools';
 
 const chipStyle = theme => (
   {
@@ -34,7 +37,16 @@ const chipStyle = theme => (
     spacer: {
       margin: theme.spacing.unit,
     },
-
+    headerIcon: {
+      paddingLeft: theme.spacing.unit,
+      marginRight: theme.spacing.unit,
+      display: 'inline-flex',
+      alignSelf: 'center',
+      height: '1.25em',
+      width: '1.25em',
+      position: 'relative',
+      top: '0.3em',
+    },
   }
 );
 
@@ -108,6 +120,7 @@ class CardPost extends Component {
       photos,
       type,
       timeToRead,
+      country,
     } = this.props;
     const { shareOpen, anchorEl } = this.state;
     return (
@@ -116,7 +129,16 @@ class CardPost extends Component {
           <CardHeader
             title={title}
             titleTypographyProps={{ variant: expand ? 'subheading' : 'display1' }}
-            subheader={`${date} - ${timeToRead} min read`}
+            subheader={(
+              <div>
+                <DateIcon className={classes.headerIcon} />
+                {`${date}`}
+                <Location className={classes.headerIcon} />
+                {`${capitalize(country)}`}
+                <Timer className={classes.headerIcon} />
+                {`${timeToRead} min read`}
+              </div>
+            )}
             action={(
               <div>
                 <IconButton
@@ -193,6 +215,7 @@ CardPost.propTypes = {
   type: PropTypes.string.isRequired,
   cover: PropTypes.shape(),
   photos: PropTypes.arrayOf(PropTypes.object),
+  country: PropTypes.string.isRequired,
   timeToRead: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 

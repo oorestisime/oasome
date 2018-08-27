@@ -103,6 +103,9 @@ const styles = theme => ({
       color: grey[900],
     },
   },
+  footerLink: {
+    color: 'black',
+  },
 });
 
 
