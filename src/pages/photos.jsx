@@ -52,9 +52,10 @@ export const pageQuery = graphql`
             path
             tags
             type
+            country
             cover {
               childImageSharp {
-                fluid(maxWidth: 1200) {
+                fluid(maxHeight: 300) {
                   base64
                   aspectRatio
                   src

@@ -67,6 +67,7 @@ export const pageQuery = graphql`
               country
               coordinates
             }
+            country
             cover {
               childImageSharp{
                 fluid(maxHeight: 300) {

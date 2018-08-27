@@ -34,6 +34,7 @@ function Posts({
           date={post.node.frontmatter.date}
           cover={post.node.frontmatter.cover}
           tags={post.node.frontmatter.tags}
+          country={post.node.frontmatter.country}
           timeToRead={post.node.timeToRead}
           content={(
             <Typography component="p">

@@ -57,6 +57,7 @@ function List({
               date={post.frontmatter.date}
               cover={post.frontmatter.cover}
               tags={post.frontmatter.tags}
+              country={post.frontmatter.country}
               timeToRead={post.timeToRead}
               type={type}
               content={(

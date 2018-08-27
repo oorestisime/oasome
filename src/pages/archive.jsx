@@ -50,9 +50,10 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             tags
+            country
             cover {
               childImageSharp {
-                fluid(maxWidth: 1200) {
+                fluid(maxHeight: 300) {
                   base64
                   aspectRatio
                   src
