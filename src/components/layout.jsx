@@ -138,7 +138,7 @@ class App extends React.Component {
     return (
       <div className={classes.wrapper}>
         <Helmet titleTemplate="OAsome - %s" defaultTitle="OAsome Blog">
-          <meta name="description" content="OAsome secrets is a travel blog of couple. We detail out unique experiences and adventures around the world." />
+          <meta name="description" content="OAsome is a travel blog of couple. We detail out unique experiences and adventures around the world." />
           <html lang="en" />
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
