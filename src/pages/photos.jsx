@@ -22,7 +22,7 @@ function PhotosArchive({
 }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <App title="Photo posts in OAsome land">
+    <App title="Photo articles">
       <Grid container spacing={24} className={classes.spacer}>
         <Posts posts={posts} />
       </Grid>

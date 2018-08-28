@@ -14,7 +14,7 @@ import {
 import { withStyles } from '@material-ui/core/styles';
 
 import { capitalize } from './tools';
-import worldJson from '../static/world-50m.json';
+import worldJson from '../static/world-50m-simplified.json';
 
 
 const styles = {
