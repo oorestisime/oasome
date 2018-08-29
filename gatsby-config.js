@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/oasome',
   siteMetadata: {
     title: 'OAsome Blog',
     siteUrl: 'https://oasome.blog',
@@ -17,7 +18,6 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        // In your gatsby-transformer-remark plugin array
         plugins: [
           {
             resolve: 'gatsby-remark-images',

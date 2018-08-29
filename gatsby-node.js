@@ -5,7 +5,7 @@
  */
 
 const path = require('path');
-let _ = require('lodash');
+const _ = require('lodash');
 
 function paginate(array, pageSize, pageNumber) {
   return array.slice(0).slice((pageNumber - 1) * pageSize, pageNumber * pageSize);

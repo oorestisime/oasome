@@ -29,6 +29,7 @@ import {
   Email,
   Instagram,
   GithubCircle,
+  Rss,
 } from 'mdi-material-ui';
 
 
@@ -77,7 +78,7 @@ const styles = theme => ({
     zIndex: 100,
     flexDirection: 'row',
   },
-  titleToolbar: {
+  appBarToolbar: {
     justifyContent: 'space-between',
     display: 'flex',
     flex: 1,
@@ -105,6 +106,9 @@ const styles = theme => ({
   },
   footerLink: {
     color: 'black',
+  },
+  footerIcons: {
+    paddingBottom: theme.spacing.unit * 2,
   },
 });
 
@@ -147,7 +151,7 @@ class App extends React.Component {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" />
         </Helmet>
         <AppBar className={classes.appBar}>
-          <Toolbar disableGutters={!open}>
+          <Toolbar className={classes.appBarToolbar} disableGutters={!open}>
             <IconButton
               color="inherit"
               aria-label="Open drawer"
@@ -156,9 +160,24 @@ class App extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography style={{ padding: '0.5rem' }} variant="title" color="inherit" noWrap>
+            <Typography style={{ padding: '0.5rem', flexGrow: 1 }} variant="title" color="inherit" noWrap>
               {title}
             </Typography>
+            <IconButton
+              color="inherit"
+            >
+              <Instagram />
+            </IconButton>
+            <IconButton
+              color="inherit"
+            >
+              <Twitter />
+            </IconButton>
+            <IconButton
+              color="inherit"
+            >
+              <Email />
+            </IconButton>
           </Toolbar>
         </AppBar>
         <SwipeableDrawer
@@ -211,18 +230,22 @@ class App extends React.Component {
                   <Destinations />
                 </List>
               </Collapse>
-              <ListItem button>
-                <ListItemIcon>
-                  <PeopleIcon />
-                </ListItemIcon>
-                <ListItemText primary="About us" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <ContactIcon />
-                </ListItemIcon>
-                <ListItemText primary="Reach us" />
-              </ListItem>
+              <Link to="/about/" style={{ textDecoration: 'none' }}>
+                <ListItem button>
+                  <ListItemIcon>
+                    <PeopleIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="About us" />
+                </ListItem>
+              </Link>
+              <Link to="/contact/" style={{ textDecoration: 'none' }}>
+                <ListItem button>
+                  <ListItemIcon>
+                    <ContactIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Reach us" />
+                </ListItem>
+              </Link>
             </div>
           </List>
         </SwipeableDrawer>
@@ -234,12 +257,13 @@ class App extends React.Component {
           </div>
           <footer className={classes.footer}>
             <Grid container>
-              <Grid item xs={12}>
+              <Grid item xs={12} className={classes.footerIcons}>
                 <ul className={classes.list}>
                   <Instagram color="disabled" className={classes.icon} />
                   <Twitter color="disabled" className={classes.icon} />
                   <GithubCircle color="disabled" className={classes.icon} />
                   <Email color="disabled" className={classes.icon} />
+                  <Rss color="disabled" className={classes.icon} />
                   <img className={classes.icon} height="20" src={CCSvg} alt="Creative Common Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" />
                 </ul>
               </Grid>
@@ -271,11 +295,12 @@ class App extends React.Component {
 App.propTypes = {
   classes: PropTypes.shape().isRequired,
   children: PropTypes.node,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 App.defaultProps = {
   children: null,
+  title: 'OAsome blog',
 };
 
 export default withStyles(styles)(App);

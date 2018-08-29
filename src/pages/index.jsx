@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 import withRoot from '../withRoot';
 import App from '../components/layout';
@@ -15,12 +16,10 @@ const styles = theme => ({
   spacer: {
     marginBottom: theme.spacing.unit * 2,
     marginTop: theme.spacing.unit * 3,
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
   },
-  paperSpacer: {
-    padding: theme.spacing.unit * 2,
-    paddingBotton: theme.spacing.unit * 4,
+  headline: {
+    padding: `${theme.spacing.unit * 2} 0`,
+    textAlign: 'center',
   },
 });
 
@@ -30,12 +29,20 @@ function Index({
   const { edges: posts } = data.allMarkdownRemark;
   const coords = coordinates(posts.map(post => post.node));
   return (
-    <App title="OAsome land">
+    <App>
       <Grid container spacing={24} className={classes.spacer}>
-        <Grid item sm={12} className={classes.paperSpacer}>
-          <Map cities={coords} />
+        <Grid item xs={12}>
+          <Typography variant="display1" className={classes.headline}>
+            Latest articles
+          </Typography>
         </Grid>
         <Posts posts={posts} />
+        <Grid item xs={12}>
+          <Typography variant="display1" className={classes.headline}>
+            Where we have been!
+          </Typography>
+        </Grid>
+        <Map cities={coords} />
       </Grid>
     </App>
   );

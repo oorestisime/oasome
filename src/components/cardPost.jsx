@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import { push } from 'gatsby';
 import Lightbox from 'react-images';
 import { withStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
@@ -180,7 +181,7 @@ class CardPost extends Component {
             {expand && (
               <IconButton
                 className={classes.expand}
-                href={path}
+                onClick={() => push(path)}
                 aria-label="Read"
               >
                 <ExpandMoreIcon />

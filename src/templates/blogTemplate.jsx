@@ -17,8 +17,6 @@ const styles = theme => ({
   spacer: {
     marginBottom: theme.spacing.unit * 2,
     marginTop: theme.spacing.unit * 3,
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
   },
   text: {
     ...theme.typography.body1,
@@ -56,7 +54,7 @@ const styles = theme => ({
   },
 });
 
-const renderAst = new rehypeReact({
+const renderAst = new rehypeReact({ // eslint-disable-line new-cap
   createElement: React.createElement,
   components: { 'photo-composition': PhotoComposition },
 }).Compiler;

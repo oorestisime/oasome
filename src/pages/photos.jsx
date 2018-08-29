@@ -12,8 +12,6 @@ const styles = theme => ({
   spacer: {
     marginBottom: theme.spacing.unit * 2,
     marginTop: theme.spacing.unit * 3,
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
   },
 });
 
@@ -22,7 +20,7 @@ function PhotosArchive({
 }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <App title="Photo articles">
+    <App title="Photography articles">
       <Grid container spacing={24} className={classes.spacer}>
         <Posts posts={posts} />
       </Grid>

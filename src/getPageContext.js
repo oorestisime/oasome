@@ -9,6 +9,11 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: "'Montserrat', 'Helvetica', 'Arial'",
   },
+  palette: {
+    primary: {
+      main: '#EEEEEE',
+    },
+  },
 });
 
 function createPageContext() {

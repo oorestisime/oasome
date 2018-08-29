@@ -20,7 +20,6 @@ import worldJson from '../static/world-50m-simplified.json';
 const styles = {
   wrapper: {
     width: '100%',
-    maxWidth: 980,
     margin: '0 auto',
   },
 };
@@ -52,10 +51,10 @@ class ZoomPan extends Component {
         <div className={classes.wrapper}>
           <ComposableMap
             projectionConfig={{
-              scale: 205,
+              scale: 340,
             }}
-            width={980}
-            height={551}
+            width={1400}
+            height={900}
             style={{
               width: '100%',
               height: 'auto',
@@ -70,20 +69,14 @@ class ZoomPan extends Component {
                     projection={projection}
                     style={{
                       default: {
-                        fill: '#ECEFF1',
-                        stroke: '#607D8B',
+                        fill: '#f0f0f0',
+                        stroke: '#cdcdcd',
                         strokeWidth: 0.75,
                         outline: 'none',
                       },
                       hover: {
-                        fill: '#607D8B',
-                        stroke: '#607D8B',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-                      pressed: {
-                        fill: '#FF5722',
-                        stroke: '#607D8B',
+                        fill: '#828282',
+                        stroke: '#cdcdcd',
                         strokeWidth: 0.75,
                         outline: 'none',
                       },
@@ -100,7 +93,7 @@ class ZoomPan extends Component {
                     onClick={() => push(`/destination/${marker.country}`)}
                     marker={marker}
                     style={{
-                      default: { stroke: '#455A64' },
+                      default: { stroke: '#505050' },
                       hover: { stroke: '#FF5722' },
                       pressed: { stroke: '#FF5722' },
                     }}
