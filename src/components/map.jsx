@@ -38,6 +38,16 @@ class ZoomPan extends Component {
     });
   }
 
+  handleMapClick(geography) {
+    const { cities } = this.props;
+    // TODO Temporary fix. Will need to create a mapping later
+    const country = geography.properties.NAME === 'United States of America' ? 'Usa' : geography.properties.NAME;
+    const destination = cities.filter(city => city.country === country);
+    if (destination.length > 0) {
+      push(`/destination/${country}`);
+    }
+  }
+
   render() {
     const {
       cities,
@@ -62,11 +72,12 @@ class ZoomPan extends Component {
           >
             <ZoomableGroup center={center} zoom={zoom} disablePanning>
               <Geographies geography={worldJson}>
-                {(geographies, projection) => geographies.map((geography, i) => geography.id !== 'ATA' && (
+                {(geographies, projection) => geographies.map(geography => geography.id !== 'ATA' && (
                   <Geography
-                    key={i}
+                    key={geography.properties.NAME}
                     geography={geography}
                     projection={projection}
+                    onClick={() => this.handleMapClick(geography)}
                     style={{
                       default: {
                         fill: '#f0f0f0',
@@ -85,17 +96,14 @@ class ZoomPan extends Component {
                 ))}
               </Geographies>
               <Markers>
-                {cities.map((marker, i) => (
+                {cities.map(marker => (
                   <Marker
-                    key={i}
+                    key={marker.coordinates}
                     onMouseEnter={() => this.handleHover(`${marker.name} / ${capitalize(marker.country)}`)}
                     onMouseLeave={() => this.handleHover(null)}
-                    onClick={() => push(`/destination/${marker.country}`)}
                     marker={marker}
                     style={{
                       default: { stroke: '#505050' },
-                      hover: { stroke: '#FF5722' },
-                      pressed: { stroke: '#FF5722' },
                     }}
                   >
                     <g transform="translate(-12, -24)">
@@ -136,12 +144,17 @@ ZoomPan.propTypes = {
   classes: PropTypes.shape().isRequired,
   center: PropTypes.arrayOf(PropTypes.number),
   zoom: PropTypes.number,
+  cities: PropTypes.arrayOf(PropTypes.shape({
+    coordinates: PropTypes.arrayOf(PropTypes.number),
+    country: PropTypes.string,
+  })),
 };
 
 
 ZoomPan.defaultProps = {
   center: [0, 20],
   zoom: 1,
+  cities: [],
 };
 
 

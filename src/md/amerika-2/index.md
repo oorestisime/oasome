@@ -4,11 +4,11 @@ date: "2018-08-06"
 title: "Amerika we are coming 2"
 tags: ["usa", "canyons"]
 cover: "./antelope.jpg"
-country: "usa"
+country: "Usa"
 type: "article"
 coordinates: [
-    { name: 'San Francisco', coordinates: [-122.4194, 37.7749], country: 'usa' },
-    { name: 'Arizona', coordinates: [-112.1130, 36.1070], country: 'usa' },
+    { coordinates: [-122.4194, 37.7749], country: 'Usa' },
+    { coordinates: [-112.1130, 36.1070], country: 'Usa' },
 ]
 ---
 

@@ -4,10 +4,10 @@ date: "2018-08-07"
 title: "My first blog post"
 tags: ["lol", "lala"]
 cover: "./paros.jpg"
-country: "greece"
+country: "Greece"
 type: "article"
 coordinates: [
-    { name: 'Cyclades', coordinates: [25.3777, 37.1036], country: 'greece' },
+    { coordinates: [25.3777, 37.1036], country: 'Greece' },
 ]
 ---
 

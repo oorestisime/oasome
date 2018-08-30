@@ -167,7 +167,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       htmlAst
       timeToRead
-      tableOfContents
+      tableOfContents(nodeField: "tocField")
       excerpt(pruneLength: 150)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

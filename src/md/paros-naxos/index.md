@@ -4,11 +4,11 @@ date: "2018-08-05"
 title: "Eperasame omorfa kai tuti ti fora"
 tags: ["greece", "islands", "canyons"]
 cover: "./paros.jpg"
-country: "greece"
+country: "Greece"
 type: "photo"
 photos: ["./paros.jpg", "./monument.png", "./antelope.jpg"]
 coordinates: [
-    { name: 'Cyclades', coordinates: [25.3777, 37.1036], country: 'greece' },
+    { coordinates: [25.3777, 37.1036], country: 'Greece' },
 ]
 ---
 

@@ -29,12 +29,11 @@ import {
   Email,
   Instagram,
   GithubCircle,
+  Facebook,
   Rss,
 } from 'mdi-material-ui';
 
-
 import Destinations from './destinations';
-import CCSvg from '../static/license.svg';
 
 
 const styles = theme => ({
@@ -88,9 +87,10 @@ const styles = theme => ({
     marginRight: 20,
   },
   footer: {
-    paddingLeft: theme.spacing.unit * 3,
+    paddingLeft: theme.spacing.unit * 12,
     paddingBottom: theme.spacing.unit * 2,
     paddingTop: theme.spacing.unit * 2,
+    backgroundColor: '#444444',
   },
   list: {
     margin: 0,
@@ -100,15 +100,16 @@ const styles = theme => ({
   },
   icon: {
     marginRight: theme.spacing.unit / 2,
+    color: '#999999',
     '&:hover': {
       color: grey[900],
     },
   },
   footerLink: {
-    color: 'black',
+    color: '#999999',
   },
   footerIcons: {
-    paddingBottom: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 4,
   },
 });
 
@@ -172,6 +173,11 @@ class App extends React.Component {
               color="inherit"
             >
               <Twitter />
+            </IconButton>
+            <IconButton
+              color="inherit"
+            >
+              <Facebook />
             </IconButton>
             <IconButton
               color="inherit"
@@ -255,37 +261,37 @@ class App extends React.Component {
               { children }
             </div>
           </div>
-          <footer className={classes.footer}>
-            <Grid container>
-              <Grid item xs={12} className={classes.footerIcons}>
-                <ul className={classes.list}>
-                  <Instagram color="disabled" className={classes.icon} />
-                  <Twitter color="disabled" className={classes.icon} />
-                  <GithubCircle color="disabled" className={classes.icon} />
-                  <Email color="disabled" className={classes.icon} />
-                  <Rss color="disabled" className={classes.icon} />
-                  <img className={classes.icon} height="20" src={CCSvg} alt="Creative Common Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" />
-                </ul>
-              </Grid>
-              <Typography>
-                {'Both the texts and the photos are released under the '}
-                <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes.footerLink}>
-                  Creative Commons License
-                </a>
-                {'. '}
-                <br />
-                {'Code of this blog is released under the '}
-                <a rel="noopener noreferrer" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html" className={classes.footerLink}>
-                  GNU Affero General Public License 3.0
-                </a>
-                {', and is available on '}
-                <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome" className={classes.footerLink}>
-                  Github
-                </a>
-              </Typography>
-            </Grid>
-          </footer>
         </div>
+        <footer className={classes.footer}>
+          <Grid container>
+            <Grid item xs={12} className={classes.footerIcons}>
+              <ul className={classes.list}>
+                <Instagram color="disabled" className={classes.icon} />
+                <Twitter color="disabled" className={classes.icon} />
+                <GithubCircle color="disabled" className={classes.icon} />
+                <Email color="disabled" className={classes.icon} />
+                <Facebook color="disabled" className={classes.icon} />
+                <Rss color="disabled" className={classes.icon} />
+              </ul>
+            </Grid>
+            <Typography className={classes.footerLink}>
+              {'Both the texts and the photos are released under the '}
+              <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes.footerLink}>
+                Creative Commons License
+              </a>
+              {'. '}
+              <br />
+              {'Code of this blog is released under the '}
+              <a rel="noopener noreferrer" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html" className={classes.footerLink}>
+                GNU Affero General Public License 3.0
+              </a>
+              {', and is available on '}
+              <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome" className={classes.footerLink}>
+                Github
+              </a>
+            </Typography>
+          </Grid>
+        </footer>
       </div>
     );
   }
