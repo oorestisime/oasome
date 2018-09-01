@@ -9,18 +9,14 @@ import rehypeReact from 'rehype-react';
 
 import PhotoComposition from '../components/photoComposition';
 import withRoot from '../withRoot';
+import Section from '../components/section';
 import App from '../components/layout';
 import CardPost from '../components/cardPost';
+import { markdownStyle } from '../components/tools';
 
 
 const styles = theme => ({
-  spacer: {
-    marginBottom: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit * 3,
-  },
-  text: {
-    ...theme.typography.body1,
-  },
+  text: markdownStyle(theme),
   toc: {
     top: 90,
     width: 162,
@@ -92,7 +88,7 @@ function BlogPost({
         <meta name="twitter:url" content={`${siteUrl}${frontmatter.path}`} />
         <meta name="twitter:image" content={`${siteUrl}${frontmatter.cover.childImageSharp.fluid.src}`} />
       </Helmet>
-      <Grid container spacing={24} className={classes.spacer}>
+      <Section>
         <Grid item xs={12} sm={tableOfContents ? 10 : 12}>
           <CardPost
             title={frontmatter.title}
@@ -121,16 +117,18 @@ function BlogPost({
             </Grid>
           )
         }
-      </Grid>
+      </Section>
       {similar.length > 0
         && (
-          <Grid container spacing={24} className={classes.spacer}>
+          <Section shade="300">
             <Grid item xs={12}>
               <Typography variant="display1">
                 Similar articles
               </Typography>
             </Grid>
-            {similar.filter(post => post.frontmatter.title !== frontmatter.title).slice(0, 8).map(post => (
+            {similar.filter(
+              post => post.frontmatter.title !== frontmatter.title,
+            ).slice(0, 8).map(post => (
               <Grid item xs={12} sm={6} key={post.frontmatter.title}>
                 <CardPost
                   title={post.frontmatter.title}
@@ -150,7 +148,7 @@ function BlogPost({
                 />
               </Grid>
             ))}
-          </Grid>
+          </Section>
         )
       }
     </App>
@@ -164,10 +162,15 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(
+      frontmatter: {
+        path: { eq: $path },
+        type: { in: ["photo", "article"] }
+      }
+    ) {
       htmlAst
       timeToRead
-      tableOfContents(nodeField: "tocField")
+      tableOfContents(pathToSlugField: "frontmatter.path")
       excerpt(pruneLength: 150)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

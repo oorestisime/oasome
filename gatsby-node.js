@@ -104,7 +104,6 @@ exports.createPages = ({ actions, graphql }) => {
               country
               type
               coordinates {
-                name
                 coordinates
                 country
               }
@@ -133,33 +132,23 @@ exports.createPages = ({ actions, graphql }) => {
     );
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {
-          similar: _.uniqBy(
-            _.flatten(
-              _.concat(
-                destPosts[node.frontmatter.country],
-                node.frontmatter.tags.map(tag => tagPosts[tag]),
+      if (['article', 'photo'].includes(node.frontmatter.type)) {
+        createPage({
+          path: node.frontmatter.path,
+          component: blogPostTemplate,
+          context: {
+            similar: _.uniqBy(
+              _.flatten(
+                _.concat(
+                  destPosts[node.frontmatter.country],
+                  node.frontmatter.tags.map(tag => tagPosts[tag]),
+                ),
               ),
+              'id',
             ),
-            'id',
-          ),
-        }, // additional data can be passed via context
-      });
+          }, // additional data can be passed via context
+        });
+      }
     });
   });
-};
-
-// This might need to be a temporal fixed until https://github.com/gatsbyjs/gatsby/issues/4038
-exports.onCreateNode = (props) => {
-  const { node, actions: { createNodeField } } = props;
-  if (node.internal.type === 'MarkdownRemark') {
-    createNodeField({
-      name: 'slug',
-      node,
-      value: node.frontmatter.path,
-    });
-  }
 };

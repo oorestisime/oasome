@@ -1,35 +1,24 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 
 import withRoot from '../withRoot';
 import App from '../components/layout';
 import Posts from '../components/posts';
+import Section from '../components/section';
 
-const styles = theme => ({
-  spacer: {
-    marginBottom: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit * 3,
-  },
-});
-
-function Archive({
-  classes, data,
-}) {
+function Archive({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <App title="Archive">
-      <Grid container spacing={24} className={classes.spacer}>
+      <Section>
         <Posts posts={posts} />
-      </Grid>
+      </Section>
     </App>
   );
 }
 
 Archive.propTypes = {
-  classes: PropTypes.shape().isRequired,
   data: PropTypes.shape().isRequired,
 };
 
@@ -37,6 +26,7 @@ export const pageQuery = graphql`
   query ArchiveQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: {type: {in: ["photo", "article"] }  }}
     ) {
       edges {
         node {
@@ -67,4 +57,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default withRoot(withStyles(styles)(Archive));
+export default withRoot(Archive);

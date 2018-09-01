@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 
 import withRoot from '../withRoot';
 import App from '../components/layout';
-
+import Section from '../components/section';
 
 const styles = theme => ({
   spacer: {
@@ -39,8 +39,8 @@ function Error({
   classes,
 }) {
   return (
-    <App title="Oops something wrong in OAsome land">
-      <Grid container spacing={24} className={classes.spacer}>
+    <App title="Oops something went wrong!!">
+      <Section>
         <Grid item sm={12} className={classes.paperSpacer}>
           <Paper className={classes.paper}>
             <ErrorIcon style={{ fontSize: 100 }} />
@@ -54,7 +54,7 @@ function Error({
             </Typography>
           </Paper>
         </Grid>
-      </Grid>
+      </Section>
     </App>
   );
 }

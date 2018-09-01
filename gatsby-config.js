@@ -19,10 +19,11 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-copy-images',
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1600,
+              maxWidth: 800,
             },
           },
           {
@@ -58,8 +59,8 @@ module.exports = {
               edge.node.frontmatter,
               {
                 description: edge.node.excerpt,
-                url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                 custom_elements: [{ 'content:encoded': edge.node.html }],
               },
             )),
@@ -73,10 +74,10 @@ module.exports = {
                     node {
                       excerpt
                       html
-                      fields { slug }
                       frontmatter {
                         title
                         date
+                        path
                       }
                     }
                   }

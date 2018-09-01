@@ -7,6 +7,7 @@ module.exports = {
       'react/no-typos': 'off',
       "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "Link" ], "specialLink": [ "to" ] } ],
       "react/jsx-tag-spacing": ["error", {"beforeClosing": "never"}],
+      "react/no-danger": 'off',
     },
     "plugins": [
         "react",

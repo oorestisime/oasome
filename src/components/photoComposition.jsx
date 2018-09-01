@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import Grid from '@material-ui/core/Grid';
 import Lightbox from 'react-images';
 
@@ -9,7 +8,7 @@ class PhotoComposition extends Component {
     super(props);
     this.state = {
       lightbox: false,
-      photos: JSON.parse(props.photos),
+      photo: undefined,
     };
   }
 
@@ -34,17 +33,28 @@ class PhotoComposition extends Component {
   }
 
   render() {
-    const { perline } = this.props;
-    const { photos } = this.state;
+    const { perline, photos } = this.props;
+    const parsed = JSON.parse(photos).map(photo => Object.assign({ src: photo }));
     return (
       <Grid container spacing={24}>
-        {photos.map((photo, i) => (
-          <Grid item xs={12} sm={12 / Number(perline)} key={i}>
-            <a href={photo} onClick={e => this.openLightbox(i, e)}>
-              <img src={photo} />
+        {parsed.map((photo, i) => (
+          <Grid item xs={12} sm={12 / Number(perline)} key={photo.src}>
+            <a href={photo.src} onClick={e => this.openLightbox(i, e)}>
+              <img alt={photo.src} src={photo.src} style={{ width: '100%', height: 'auto' }} />
             </a>
           </Grid>
         ))}
+        {parsed && (
+          <Lightbox
+            backdropClosesModal
+            images={parsed}
+            currentImage={this.state.photo}
+            isOpen={this.state.lightbox}
+            onClickPrev={() => this.gotoPrevLightboxImage()}
+            onClickNext={() => this.gotoNextLightboxImage()}
+            onClose={() => this.closeLightbox()}
+          />
+        )}
       </Grid>
     );
   }

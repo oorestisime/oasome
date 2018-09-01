@@ -49,27 +49,8 @@ const styles = theme => ({
   toolbarIe11: {
     display: 'flex',
   },
-  root: {
-    display: 'flex',
-    flexFlow: 'column',
-    alignItems: 'center',
-    minHeight: '100%',
-    backgroundColor: grey['50'],
-  },
-  content: {
-    height: '100%',
-    padding: theme.spacing.unit * 6,
-    paddingBottom: 0,
-  },
   wrapper: {
     height: '100%',
-  },
-  fullWidth: {
-    width: '100%',
-    display: 'flex',
-    flexFlow: 'column',
-    maxWidth: 1200,
-    flex: 1,
   },
   appBar: {
     flex: 'none',
@@ -81,6 +62,9 @@ const styles = theme => ({
     justifyContent: 'space-between',
     display: 'flex',
     flex: 1,
+  },
+  appBarSpacer: {
+    paddingTop: theme.spacing.unit * 6,
   },
   menuButton: {
     marginLeft: 12,
@@ -149,7 +133,7 @@ class App extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="HandheldFriendly" content="True" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" />
+          <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:300,400,600" rel="stylesheet" />
         </Helmet>
         <AppBar className={classes.appBar}>
           <Toolbar className={classes.appBarToolbar} disableGutters={!open}>
@@ -255,12 +239,8 @@ class App extends React.Component {
             </div>
           </List>
         </SwipeableDrawer>
-        <div className={classes.content}>
-          <div className={classes.root}>
-            <div className={classes.fullWidth}>
-              { children }
-            </div>
-          </div>
+        <div className={classes.appBarSpacer}>
+          { children }
         </div>
         <footer className={classes.footer}>
           <Grid container>

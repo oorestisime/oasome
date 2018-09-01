@@ -8,18 +8,14 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
-
 import withRoot from '../withRoot';
 import App from '../components/layout';
 import Posts from '../components/posts';
 import Map from '../components/map';
+import Section from '../components/section';
 import { coordinates } from '../components/tools';
 
 const styles = theme => ({
-  spacer: {
-    marginBottom: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit * 3,
-  },
   paperSpacer: {
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
@@ -48,13 +44,15 @@ function Index({
   const coords = coordinates(posts.map(post => post.node));
   return (
     <App>
-      <Grid container spacing={24} className={classes.spacer}>
+      <Section>
         <Grid item xs={12}>
           <Typography variant="display1" className={classes.headline}>
             Featured articles
           </Typography>
         </Grid>
         <Posts posts={posts} />
+      </Section>
+      <Section shade="300">
         <Grid item xs={12}>
           <Typography variant="display1" className={classes.headline}>
             About us
@@ -85,19 +83,23 @@ function Index({
         <Grid item xs={12} sm={8}>
           <Img fluid={data.file.childImageSharp.fluid} alt="Logo" />
         </Grid>
+      </Section>
+      <Section>
         <Grid item xs={12}>
           <Typography variant="display1" className={classes.headline}>
             Where we have been!
           </Typography>
         </Grid>
         <Map cities={coords} />
+      </Section>
+      <Section shade="300">
         <Grid item xs={12}>
           <Typography variant="display1" className={classes.headline}>
             Latest articles
           </Typography>
         </Grid>
         <Posts posts={posts} />
-      </Grid>
+      </Section>
     </App>
   );
 }
@@ -118,6 +120,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: {type: {in: ["photo", "article"] }  }}
       limit: 6
     ) {
       edges {

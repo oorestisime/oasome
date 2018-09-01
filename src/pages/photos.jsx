@@ -6,30 +6,21 @@ import Grid from '@material-ui/core/Grid';
 
 import withRoot from '../withRoot';
 import App from '../components/layout';
+import Section from '../components/section';
 import Posts from '../components/posts';
 
-const styles = theme => ({
-  spacer: {
-    marginBottom: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit * 3,
-  },
-});
-
-function PhotosArchive({
-  classes, data,
-}) {
+function PhotosArchive({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <App title="Photography articles">
-      <Grid container spacing={24} className={classes.spacer}>
+      <Section>
         <Posts posts={posts} />
-      </Grid>
+      </Section>
     </App>
   );
 }
 
 PhotosArchive.propTypes = {
-  classes: PropTypes.shape().isRequired,
   data: PropTypes.shape().isRequired,
 };
 
@@ -69,4 +60,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default withRoot(withStyles(styles)(PhotosArchive));
+export default withRoot(PhotosArchive);

@@ -13,16 +13,11 @@ import withRoot from '../withRoot';
 import App from '../components/layout';
 import CardPost from '../components/cardPost';
 import Map from '../components/map';
+import Section from '../components/section';
 import { coordinates, capitalize } from '../components/tools';
 
 
 const styles = theme => ({
-  spacer: {
-    marginBottom: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit * 3,
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
-  },
   paperSpacer: {
     padding: theme.spacing.unit * 2,
     paddingBotton: theme.spacing.unit * 4,
@@ -41,7 +36,7 @@ function List({
   const coords = coordinates(posts);
   return (
     <App title={`OAsome blog - ${capitalize(title)}`}>
-      <Grid container spacing={24} className={classes.spacer}>
+      <Section>
         {type !== 'tag'
           && (
             <Grid item sm={12} className={classes.paperSpacer}>
@@ -70,7 +65,7 @@ function List({
             />
           </Grid>
         ))}
-      </Grid>
+      </Section>
       <MobileStepper
         variant="dots"
         steps={pagesSum}

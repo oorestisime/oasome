@@ -24,6 +24,7 @@ const styles = () => ({
   },
 });
 
+// TODO use gatsby link
 const getLink = (site, path) => `${site.siteMetadata.siteUrl}${path}`;
 
 const Share = props => (
