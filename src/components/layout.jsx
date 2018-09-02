@@ -33,6 +33,7 @@ import {
   Rss,
 } from 'mdi-material-ui';
 
+
 import Destinations from './destinations';
 
 
@@ -134,7 +135,6 @@ class App extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="HandheldFriendly" content="True" />
-          <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato:300,400,700" rel="stylesheet" />
         </Helmet>
         <AppBar className={classes.appBar}>
           <Toolbar className={classes.appBarToolbar} disableGutters={!open}>

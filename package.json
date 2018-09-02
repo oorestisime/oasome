@@ -36,7 +36,9 @@
     "react-jss": "latest",
     "react-share": "latest",
     "react-simple-maps": "latest",
-    "rehype-react": "^3.0.3"
+    "rehype-react": "^3.0.3",
+    "typeface-indie-flower": "^0.0.54",
+    "typeface-lato": "^0.0.54"
   },
   "keywords": [
     "gatsby",

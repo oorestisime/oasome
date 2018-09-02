@@ -2,6 +2,8 @@
 
 import { SheetsRegistry } from 'jss';
 import { createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';
+import 'typeface-lato';
+import 'typeface-indie-flower';
 
 // A theme with custom primary and secondary color.
 // It's optional.
