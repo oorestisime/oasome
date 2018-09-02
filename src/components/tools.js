@@ -11,6 +11,9 @@ const markdownStyle = theme => Object.assign(
   {
     padding: theme.spacing.unit * 2,
     ...theme.typography.body1,
+    '& img': {
+      maxWidth: '100%',
+    },
     '& p': {
       marginLeft: theme.spacing.unit * 2,
       ...theme.typography.body1,

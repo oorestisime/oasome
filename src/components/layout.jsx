@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import { withStyles } from '@material-ui/core/styles';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import classNames from 'classnames';
 import Grid from '@material-ui/core/Grid';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
@@ -16,7 +17,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import PhotoIcon from '@material-ui/icons/PhotoCamera';
 import AirplaneIcon from '@material-ui/icons/AirplanemodeActive';
 import PeopleIcon from '@material-ui/icons/People';
-import ContactIcon from '@material-ui/icons/Mail';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import grey from '@material-ui/core/colors/grey';
@@ -121,6 +121,7 @@ class App extends React.Component {
       classes,
       title,
       children,
+      width,
     } = this.props;
     const { open, expandDestinations } = this.state;
 
@@ -133,7 +134,7 @@ class App extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="HandheldFriendly" content="True" />
-          <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:300,400,600" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato:300,400,700" rel="stylesheet" />
         </Helmet>
         <AppBar className={classes.appBar}>
           <Toolbar className={classes.appBarToolbar} disableGutters={!open}>
@@ -145,34 +146,39 @@ class App extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography style={{ padding: '0.5rem', flexGrow: 1 }} variant="title" color="inherit" noWrap>
+            <Typography style={{ padding: '0.5rem', flexGrow: 1, fontWeight: 400 }} variant="headline" color="inherit" noWrap>
               {title}
             </Typography>
-            <IconButton
-              color="inherit"
-            >
-              <Instagram />
-            </IconButton>
-            <IconButton
-              color="inherit"
-            >
-              <Twitter />
-            </IconButton>
-            <IconButton
-              color="inherit"
-            >
-              <Facebook />
-            </IconButton>
-            <IconButton
-              color="inherit"
-            >
-              <Email />
-            </IconButton>
+            {isWidthUp('sm', width) && (
+              <div>
+                <IconButton
+                  color="inherit"
+                >
+                  <Instagram />
+                </IconButton>
+                <IconButton
+                  color="inherit"
+                >
+                  <Twitter />
+                </IconButton>
+                <IconButton
+                  color="inherit"
+                >
+                  <Facebook />
+                </IconButton>
+                <IconButton
+                  color="inherit"
+                >
+                  <Email />
+                </IconButton>
+              </div>)
+            }
           </Toolbar>
         </AppBar>
         <SwipeableDrawer
           anchor="left"
           open={open}
+          onOpen={() => this.toggleDrawer(true)}
           onClose={() => this.toggleDrawer(false)}
         >
           <div className={classes.toolbarIe11}>
@@ -228,14 +234,6 @@ class App extends React.Component {
                   <ListItemText primary="About us" />
                 </ListItem>
               </Link>
-              <Link to="/contact/" style={{ textDecoration: 'none' }}>
-                <ListItem button>
-                  <ListItemIcon>
-                    <ContactIcon />
-                  </ListItemIcon>
-                  <ListItemText primary="Reach us" />
-                </ListItem>
-              </Link>
             </div>
           </List>
         </SwipeableDrawer>
@@ -282,6 +280,7 @@ App.propTypes = {
   classes: PropTypes.shape().isRequired,
   children: PropTypes.node,
   title: PropTypes.string,
+  width: PropTypes.string.isRequired,
 };
 
 App.defaultProps = {
@@ -289,4 +288,4 @@ App.defaultProps = {
   title: 'OAsome blog',
 };
 
-export default withStyles(styles)(App);
+export default withWidth()(withStyles(styles)(App));

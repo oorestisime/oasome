@@ -7,11 +7,19 @@ import { createMuiTheme, createGenerateClassName } from '@material-ui/core/style
 // It's optional.
 const theme = createMuiTheme({
   typography: {
-    fontWeightLight: 300,
-    fontWeightRegular: 400,
-    fontWeightMedium: 600,
-    fontFamily: "'Open Sans', 'Helvetica', 'Arial'",
-    fontSize: 16,
+    fontWeightRegular: 300,
+    fontWeightMedium: 400,
+    fontFamily: "'Lato', 'Helvetica', 'Arial'",
+    fontSize: 18,
+    display1: {
+      fontWeight: 400,
+    },
+    title: {
+      fontWeight: 300,
+    },
+  },
+  MuiWithWidth: {
+    initialWidth: 'md',
   },
   palette: {
     primary: {

@@ -32,6 +32,9 @@ const chipStyle = theme => (
       }),
       marginLeft: 'auto',
     },
+    header: {
+      ...theme.typography.title,
+    },
     actions: {
       display: 'flex',
     },
@@ -129,6 +132,7 @@ class CardPost extends Component {
         <Card className={classes.spacer}>
           <CardHeader
             title={title}
+            classes={{ title: classes.header }}
             titleTypographyProps={{ variant: expand ? 'subheading' : 'display1' }}
             subheader={(
               <div>
@@ -169,7 +173,11 @@ class CardPost extends Component {
             {type === 'photo' && photos && (
               <div>
                 {photos.map((photo, i) => (
-                  <a key={i} href={photo.childImageSharp.fluid.src} onClick={e => this.openLightbox(i, e)}>
+                  <a
+                    key={photo.childImageSharp.fluid.src}
+                    href={photo.childImageSharp.fluid.src}
+                    onClick={e => this.openLightbox(i, e)}
+                  >
                     <Img className={classes.spacer} fluid={photo.childImageSharp.fluid} />
                   </a>
                 ))}

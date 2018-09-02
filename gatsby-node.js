@@ -36,7 +36,7 @@ function createLinkedPages(createPage, edges) {
     const pageSize = 5;
     const pagesSum = Math.ceil(destPosts[dest].length / pageSize);
 
-    for (let page = 1; page <= pagesSum; page++) {
+    for (let page = 1; page <= pagesSum; page += 1) {
       createPage({
         path:
           page === 1
@@ -58,7 +58,7 @@ function createLinkedPages(createPage, edges) {
     const pageSize = 5;
     const pagesSum = Math.ceil(tagPosts[tagName].length / pageSize);
 
-    for (let page = 1; page <= pagesSum; page++) {
+    for (let page = 1; page <= pagesSum; page += 1) {
       createPage({
         path:
           page === 1
@@ -150,5 +150,6 @@ exports.createPages = ({ actions, graphql }) => {
         });
       }
     });
+    return Promise.resolve();
   });
 };
