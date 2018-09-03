@@ -58,20 +58,31 @@ function Index({
             About us
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={7}>
           <Paper className={classes.paperSpacer}>
             <Typography variant="display1" className={classes.aboutTitle}>
               We are A and O
             </Typography>
+            <Typography variant="headline">
+              Hello there,
+            </Typography>
             <Typography className={classes.aboutText}>
-              Hello there and welcome to the OAsome blog.
-              This is a blog of couple who guess what, their initials start with an A and an O.
-              They both really like visiting new places, finding out about interesting adventures
-              and take casual photos.
+              Welcome to the OAsome blog.
+              <br />
+              This is a travel blog of a couple who guess what … their initials
+              start with an O and an A.
+              They both really  like travelling new places, finding out
+              interesting adventures and take casual photos.
               <br />
               <br />
               This blog also gives an area for friends to share some of their
-              experiences or fandfull trips they find out during their travel adventures
+              experiences or handful trips that they found out during their travel experiences!
+              <br />
+              <br />
+              Would you like to take a stroll around the OAsome world?
+              <br />
+              <br />
+              Then, follow along on our short adventures as we capture the planet!
             </Typography>
             <Link to="/about">
               <Button className={classes.aboutButton} variant="raised" color="primary">
@@ -80,7 +91,7 @@ function Index({
             </Link>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} sm={5}>
           <Img fluid={data.file.childImageSharp.fluid} alt="Logo" />
         </Grid>
       </Section>
@@ -113,7 +124,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        fluid(maxHeight: 400) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
