@@ -5,11 +5,8 @@ title: "About us"
 type: "about"
 ---
 
-![](monument.png)
+# Hello there,
 
-# Where am I?
-
-### Hello there,
 Welcome to the OAsome blog.
 This is a travel blog of a couple who guess what … their initials start with an O and an A.
 They both really like travelling new places, finding out interesting adventures and take casual photos.
@@ -29,6 +26,9 @@ Yay we agree, you would say all good, but why another travel blog? And truth to 
  * it is fun and you should try it to!
  * we document our experiences in a beautiful and constructive way
 
+![](up.jpg)
+
+
 # So who are you?
 
 We are not your typical travel blog couple that is in another country every month or week or... We are neither digital nomads nor backpackers who wandering around the world, although we guess we both would love to try this out.
@@ -43,7 +43,9 @@ We are no professional or anything. You could probably describe us best as amate
 
 We have not been to many countries yet, but we will try to provide details, tips and photos from our trips in Mexico, USA, Greece, Spain, Italy, Germany, France and some interesting tips about Paris and Cyprus.
 
-# Using the content, the photos or the code of this blog
+![](down.jpg)
+
+# Using the content of this blog
 
 First let us thank you for showing the interest in our blog. Content and photos of this blog are released under the Creative Commons license and the code is available on github under the GNU Affero General Public License 3.0
 

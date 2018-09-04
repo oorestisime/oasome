@@ -11,13 +11,14 @@ const styles = theme => ({
     alignItems: 'center',
     minHeight: '100%',
     height: '100%',
+    paddingRight: 0,
     padding: theme.spacing.unit,
   },
   fullWidth: {
     width: '100%',
     display: 'flex',
     flexFlow: 'column',
-    maxWidth: 1200,
+    maxWidth: 1400,
     flex: 1,
   },
   spacer: {

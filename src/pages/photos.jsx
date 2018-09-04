@@ -1,20 +1,20 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 
 import withRoot from '../withRoot';
 import App from '../components/layout';
 import Section from '../components/section';
 import Posts from '../components/posts';
+import { flatten } from '../components/tools';
+
 
 function PhotosArchive({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <App title="Photography articles">
       <Section>
-        <Posts posts={posts} />
+        <Posts posts={flatten(posts)} />
       </Section>
     </App>
   );

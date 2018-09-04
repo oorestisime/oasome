@@ -72,7 +72,7 @@ const styles = theme => ({
     marginRight: 20,
   },
   footer: {
-    paddingLeft: theme.spacing.unit * 12,
+    paddingLeft: theme.spacing.unit * 6,
     paddingBottom: theme.spacing.unit * 2,
     paddingTop: theme.spacing.unit * 2,
     backgroundColor: '#444444',

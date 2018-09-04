@@ -1,11 +1,12 @@
 ---
 path: "/paros-naxos"
 date: "2018-08-05"
-title: "Eperasame omorfa kai tuti ti fora"
+title: "Eperasame omorfa kai tuti ti fora hey hey hey"
 tags: ["greece", "islands", "canyons"]
 cover: "./paros.jpg"
 country: "Greece"
 type: "photo"
+featured: true
 photos: ["./paros.jpg", "./monument.png", "./antelope.jpg"]
 coordinates: [
     { coordinates: [25.3777, 37.1036], country: 'Greece' },

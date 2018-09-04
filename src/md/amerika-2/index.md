@@ -1,10 +1,11 @@
 ---
 path: "/america-2"
 date: "2018-08-06"
-title: "Amerika we are coming 2"
+title: "Amerika we are coming 2 coming to you"
 tags: ["usa", "canyons"]
 cover: "./antelope.jpg"
 country: "Usa"
+featured: false
 type: "article"
 coordinates: [
     { coordinates: [-122.4194, 37.7749], country: 'Usa' },

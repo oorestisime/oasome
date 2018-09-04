@@ -19,13 +19,13 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-copy-images',
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 800,
+              sizeByPixelDensity: true,
             },
           },
+          'gatsby-remark-copy-images',
           {
             resolve: 'gatsby-remark-autolink-headers',
             options: {

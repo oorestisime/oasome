@@ -1,11 +1,12 @@
 ---
 path: "/america"
 date: "2018-08-07"
-title: "Amerika we are coming"
+title: "Amerika we are coming to you it is so good"
 tags: ["usa", "canyons"]
 cover: "./monument.png"
 country: "Usa"
 type: "article"
+featured: true
 coordinates: [
     { coordinates: [-122.4194, 37.7749], country: 'Usa' },
     { coordinates: [-112.1130, 36.1070], country: 'Usa' },

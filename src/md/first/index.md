@@ -1,11 +1,12 @@
 ---
 path: "/my-first-post"
 date: "2018-08-07"
-title: "My first blog post"
+title: "My first blog post was the best of best of best"
 tags: ["lol", "lala"]
 cover: "./paros.jpg"
 country: "Greece"
 type: "article"
+featured: false
 coordinates: [
     { coordinates: [25.3777, 37.1036], country: 'Greece' },
 ]

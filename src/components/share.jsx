@@ -64,7 +64,7 @@ const Share = props => (
             </EmailShareButton>
           </MenuItem>
           <MenuItem>
-            <Facebook />
+            <Facebook className={classes.iconHover} color="disabled" />
           </MenuItem>
         </div>
       );

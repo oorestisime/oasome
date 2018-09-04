@@ -8,18 +8,20 @@ import Typography from '@material-ui/core/Typography';
 import rehypeReact from 'rehype-react';
 
 import PhotoComposition from '../components/photoComposition';
+import Tip from '../components/tip';
 import withRoot from '../withRoot';
 import Section from '../components/section';
 import App from '../components/layout';
 import CardPost from '../components/cardPost';
 import { markdownStyle } from '../components/tools';
+import Posts from '../components/posts';
+import TripDetails from '../components/tripNotes';
 
 
 const styles = theme => ({
   text: markdownStyle(theme),
   toc: {
     top: 90,
-    width: 162,
     flexShrink: 0,
     order: 2,
     position: 'sticky',
@@ -52,7 +54,10 @@ const styles = theme => ({
 
 const renderAst = new rehypeReact({ // eslint-disable-line new-cap
   createElement: React.createElement,
-  components: { 'photo-composition': PhotoComposition },
+  components: {
+    'photo-composition': PhotoComposition,
+    tip: Tip,
+  },
 }).Compiler;
 
 function BlogPost({
@@ -89,7 +94,7 @@ function BlogPost({
         <meta name="twitter:image" content={`${siteUrl}${frontmatter.cover.childImageSharp.fluid.src}`} />
       </Helmet>
       <Section>
-        <Grid item xs={12} sm={tableOfContents ? 10 : 12}>
+        <Grid item xs={12} sm={9}>
           <CardPost
             title={frontmatter.title}
             date={frontmatter.date}
@@ -107,16 +112,21 @@ function BlogPost({
             country={frontmatter.country}
           />
         </Grid>
-        {tableOfContents
-          && (
-            <Grid item sm={2} className={classes.toc}>
-              <Typography variant="title" gutterBottom>
-                Contents
-              </Typography>
-              <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-            </Grid>
-          )
-        }
+        <Grid item sm={3}>
+          {frontmatter.km && (
+            <TripDetails
+              km={frontmatter.km}
+              itinerary={frontmatter.itinerary}
+              duration={frontmatter.duration}
+            />
+          )}
+          <div className={classes.toc}>
+            <Typography variant="title" gutterBottom>
+              Contents
+            </Typography>
+            <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+          </div>
+        </Grid>
       </Section>
       {similar.length > 0
         && (
@@ -126,28 +136,11 @@ function BlogPost({
                 Similar articles
               </Typography>
             </Grid>
-            {similar.filter(
-              post => post.frontmatter.title !== frontmatter.title,
-            ).slice(0, 8).map(post => (
-              <Grid item xs={12} sm={6} key={post.frontmatter.title}>
-                <CardPost
-                  title={post.frontmatter.title}
-                  date={post.frontmatter.date}
-                  cover={post.frontmatter.cover}
-                  tags={post.frontmatter.tags}
-                  timeToRead={post.timeToRead}
-                  type={post.frontmatter.type}
-                  content={(
-                    <Typography component="p">
-                      {post.excerpt}
-                    </Typography>
-                  )}
-                  path={post.frontmatter.path}
-                  country={frontmatter.country}
-                  expand
-                />
-              </Grid>
-            ))}
+            <Posts
+              posts={similar.filter(
+                post => post.frontmatter.title !== frontmatter.title,
+              ).slice(0, 8)}
+            />
           </Section>
         )
       }
@@ -179,6 +172,9 @@ export const pageQuery = graphql`
         tags
         type
         country
+        km
+        itinerary
+        duration
         photos {
           childImageSharp{
             fluid(maxWidth: 1200) {
@@ -188,7 +184,7 @@ export const pageQuery = graphql`
         },
         cover {
           childImageSharp{
-            fluid(maxWidth: 1200) {
+            fluid(maxHeight: 600) {
               ...GatsbyImageSharpFluid
             }
           }

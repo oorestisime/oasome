@@ -29,11 +29,13 @@ function Error({
   return (
     <App title="About this blog">
       <Section>
-        <Grid item sm={12} className={classes.paperSpacer}>
+        <Grid item sm={2} />
+        <Grid item xs={12} sm={8} className={classes.paperSpacer}>
           <Paper className={classes.markdown}>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Paper>
         </Grid>
+        <Grid item sm={2} />
       </Section>
     </App>
   );

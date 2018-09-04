@@ -32,8 +32,8 @@ function createLinkedPages(createPage, edges) {
     }
   });
 
+  const pageSize = 3;
   Object.keys(destPosts).forEach((dest) => {
-    const pageSize = 5;
     const pagesSum = Math.ceil(destPosts[dest].length / pageSize);
 
     for (let page = 1; page <= pagesSum; page += 1) {
@@ -55,7 +55,6 @@ function createLinkedPages(createPage, edges) {
   });
 
   Object.keys(tagPosts).forEach((tagName) => {
-    const pageSize = 5;
     const pagesSum = Math.ceil(tagPosts[tagName].length / pageSize);
 
     for (let page = 1; page <= pagesSum; page += 1) {
@@ -103,13 +102,17 @@ exports.createPages = ({ actions, graphql }) => {
               title
               country
               type
+              featured
+              itinerary
+              km
+              duration
               coordinates {
                 coordinates
                 country
               }
               cover {
                 childImageSharp {
-                  fluid(maxHeight: 300) {
+                  fluid(maxHeight: 500) {
                     base64
                     aspectRatio
                     src

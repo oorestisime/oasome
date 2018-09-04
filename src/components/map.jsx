@@ -25,19 +25,6 @@ const styles = {
 };
 
 class ZoomPan extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      marker: false,
-    };
-  }
-
-  handleHover(marker) {
-    this.setState({
-      marker,
-    });
-  }
-
   handleMapClick(geography) {
     const { cities } = this.props;
     // TODO Temporary fix. Will need to create a mapping later
@@ -99,8 +86,6 @@ class ZoomPan extends Component {
                 {cities.map(marker => (
                   <Marker
                     key={marker.coordinates}
-                    onMouseEnter={() => this.handleHover(`${marker.name} / ${capitalize(marker.country)}`)}
-                    onMouseLeave={() => this.handleHover(null)}
                     marker={marker}
                     style={{
                       default: { stroke: '#505050' },
@@ -131,9 +116,6 @@ class ZoomPan extends Component {
               </Markers>
             </ZoomableGroup>
           </ComposableMap>
-          <Typography variant="headline" className={classes.wrapper}>
-            {this.state.marker !== null ? this.state.marker : ''}
-          </Typography>
         </div>
       </div>
     );

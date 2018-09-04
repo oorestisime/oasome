@@ -30,6 +30,7 @@
     "mdi-material-ui": "latest",
     "prop-types": "latest",
     "react": "latest",
+    "react-countup": "^4.0.0-alpha.6",
     "react-dom": "latest",
     "react-helmet": "latest",
     "react-images": "^0.5.19",

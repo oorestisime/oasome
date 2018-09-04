@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
@@ -11,9 +10,9 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
 import withRoot from '../withRoot';
 import App from '../components/layout';
-import CardPost from '../components/cardPost';
 import Map from '../components/map';
 import Section from '../components/section';
+import Posts from '../components/posts';
 import { coordinates, capitalize } from '../components/tools';
 
 
@@ -24,8 +23,9 @@ const styles = theme => ({
   },
   cardSpacer: {
     paddingRight: theme.spacing.unit * 2,
-  }
+  },
 });
+
 
 function List({
   pageContext, classes,
@@ -35,7 +35,7 @@ function List({
   } = pageContext;
   const coords = coordinates(posts);
   return (
-    <App title={`OAsome blog - ${capitalize(title)}`}>
+    <App title={`OAsome - ${capitalize(title)}`}>
       <Section>
         {type !== 'tag'
           && (
@@ -44,33 +44,13 @@ function List({
             </Grid>
           )
         }
-        {posts.map(post => (
-          <Grid item xs={12} sm={6} key={post.id} className={classes.cardSpacer}>
-            <CardPost
-              key={post.frontmatter.title}
-              title={post.frontmatter.title}
-              date={post.frontmatter.date}
-              cover={post.frontmatter.cover}
-              tags={post.frontmatter.tags}
-              country={post.frontmatter.country}
-              timeToRead={post.timeToRead}
-              type={type}
-              content={(
-                <Typography component="p">
-                  {post.excerpt}
-                </Typography>
-              )}
-              path={post.frontmatter.path}
-              expand
-            />
-          </Grid>
-        ))}
+        <Posts posts={posts} />
       </Section>
       <MobileStepper
         variant="dots"
         steps={pagesSum}
         position="static"
-        activeStep={page}
+        activeStep={page - 1}
         nextButton={(
           <Button size="small" href={`/${type}/${title}/page/${page + 1}`} disabled={page === pagesSum}>
             Next

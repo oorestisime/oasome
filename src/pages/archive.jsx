@@ -6,13 +6,14 @@ import withRoot from '../withRoot';
 import App from '../components/layout';
 import Posts from '../components/posts';
 import Section from '../components/section';
+import { flatten } from '../components/tools';
 
 function Archive({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <App title="Archive">
       <Section>
-        <Posts posts={posts} />
+        <Posts posts={flatten(posts)} />
       </Section>
     </App>
   );
@@ -26,7 +27,7 @@ export const pageQuery = graphql`
   query ArchiveQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: {type: {in: ["photo", "article"] }  }}
+      filter: { frontmatter: {type: {in: ["photo", "article", "friends"] }  }}
     ) {
       edges {
         node {

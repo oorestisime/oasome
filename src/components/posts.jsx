@@ -29,20 +29,20 @@ function Posts({
 }) {
   if (posts.length > 0) {
     return posts.map(post => (
-      <Grid item xs={12} sm={6} key={post.node.id} className={classes.spacer}>
+      <Grid item xs={12} sm={6} md={4} key={post.id} className={classes.spacer}>
         <CardPost
-          title={post.node.frontmatter.title}
-          date={post.node.frontmatter.date}
-          cover={post.node.frontmatter.cover}
-          tags={post.node.frontmatter.tags}
-          country={post.node.frontmatter.country}
-          timeToRead={post.node.timeToRead}
+          title={post.frontmatter.title}
+          date={post.frontmatter.date}
+          cover={post.frontmatter.cover}
+          tags={post.frontmatter.tags}
+          country={post.frontmatter.country}
+          timeToRead={post.timeToRead}
           content={(
             <Typography component="p">
-              {post.node.excerpt}
+              {post.excerpt}
             </Typography>
           )}
-          path={post.node.frontmatter.path}
+          path={post.frontmatter.path}
           expand
           type="list"
         />

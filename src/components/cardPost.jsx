@@ -33,7 +33,7 @@ const chipStyle = theme => (
       marginLeft: 'auto',
     },
     header: {
-      ...theme.typography.title,
+      ...theme.typography.subheading,
     },
     actions: {
       display: 'flex',
@@ -127,6 +127,7 @@ class CardPost extends Component {
       country,
     } = this.props;
     const { shareOpen, anchorEl } = this.state;
+
     return (
       <div>
         <Card className={classes.spacer}>
@@ -136,8 +137,8 @@ class CardPost extends Component {
             titleTypographyProps={{ variant: expand ? 'subheading' : 'display1' }}
             subheader={(
               <div>
-                <DateIcon className={classes.headerIcon} />
-                {`${date}`}
+                {!expand && <DateIcon className={classes.headerIcon} />}
+                {!expand && `${date}`}
                 <Location className={classes.headerIcon} />
                 {`${capitalize(country)}`}
                 <Timer className={classes.headerIcon} />
@@ -169,7 +170,7 @@ class CardPost extends Component {
             <Img fluid={cover.childImageSharp.fluid} />
           </CardMedia>
           <CardContent>
-            {content}
+            {!expand && content}
             {type === 'photo' && photos && (
               <div>
                 {photos.map((photo, i) => (
@@ -185,7 +186,7 @@ class CardPost extends Component {
             )}
           </CardContent>
           <CardActions className={classes.actions} disableActionSpacing>
-            <TagCloud tags={tags} />
+            <TagCloud tags={expand ? tags.slice(0, 3) : tags} />
             {expand && (
               <IconButton
                 className={classes.expand}
