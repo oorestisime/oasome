@@ -33,6 +33,7 @@ import {
   Rss,
 } from 'mdi-material-ui';
 
+import Section from './section';
 
 import Destinations from './destinations';
 
@@ -129,7 +130,10 @@ class App extends React.Component {
     return (
       <div className={classes.wrapper}>
         <Helmet titleTemplate="OAsome - %s" defaultTitle="OAsome Blog">
-          <meta name="description" content="OAsome is a travel blog of couple. We detail out unique experiences and adventures around the world." />
+          <meta
+            name="description"
+            content="Paris-based Cypriot adventurers. A and O. Lovers of life and travel. Want to get a glimpse of the OAsome world?"
+          />
           <html lang="en" />
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -240,36 +244,34 @@ class App extends React.Component {
         <div className={classes.appBarSpacer}>
           { children }
         </div>
-        <footer className={classes.footer}>
-          <Grid container>
-            <Grid item xs={12} className={classes.footerIcons}>
-              <ul className={classes.list}>
-                <Instagram color="disabled" className={classes.icon} />
-                <Twitter color="disabled" className={classes.icon} />
-                <GithubCircle color="disabled" className={classes.icon} />
-                <Email color="disabled" className={classes.icon} />
-                <Facebook color="disabled" className={classes.icon} />
-                <Rss color="disabled" className={classes.icon} />
-              </ul>
-            </Grid>
-            <Typography className={classes.footerLink}>
-              {'Both the texts and the photos are released under the '}
-              <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes.footerLink}>
-                Creative Commons License
-              </a>
-              {'. '}
-              <br />
-              {'Code of this blog is released under the '}
-              <a rel="noopener noreferrer" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html" className={classes.footerLink}>
-                GNU Affero General Public License 3.0
-              </a>
-              {', and is available on '}
-              <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome" className={classes.footerLink}>
-                Github
-              </a>
-            </Typography>
+        <Section shade="900">
+          <Grid item xs={12} className={classes.footerIcons}>
+            <ul className={classes.list}>
+              <Instagram color="disabled" className={classes.icon} />
+              <Twitter color="disabled" className={classes.icon} />
+              <GithubCircle color="disabled" className={classes.icon} />
+              <Email color="disabled" className={classes.icon} />
+              <Facebook color="disabled" className={classes.icon} />
+              <Rss color="disabled" className={classes.icon} />
+            </ul>
           </Grid>
-        </footer>
+          <Typography className={classes.footerLink}>
+            {'Both the texts and the photos are released under the '}
+            <a rel="noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes.footerLink}>
+              Creative Commons License
+            </a>
+            {'. '}
+            <br />
+            {'Code of this blog is released under the '}
+            <a rel="noopener noreferrer" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html" className={classes.footerLink}>
+              GNU Affero General Public License 3.0
+            </a>
+            {', and is available on '}
+            <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome" className={classes.footerLink}>
+              Github
+            </a>
+          </Typography>
+        </Section>
       </div>
     );
   }

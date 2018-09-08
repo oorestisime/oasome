@@ -42,7 +42,7 @@ const Share = props => (
       const { classes, path, title } = props;
       return (
         <div>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/__arte__mis__/" style={{ textDecoration: 'none' }}>
+          <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/oasome.blog/" style={{ textDecoration: 'none' }}>
             <MenuItem>
               <Instagram className={classes.iconHover} color="disabled" />
             </MenuItem>

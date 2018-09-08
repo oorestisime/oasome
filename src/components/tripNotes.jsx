@@ -39,11 +39,11 @@ function TripNotes({
         </Typography>
         <Typography variant="caption">
           <DateIcon style={{ fontSize: 20 }} />
-          {` Days spent: ${duration}`}
+          {` Duration: ${duration} days`}
         </Typography>
         <Typography variant="caption">
           <Location style={{ fontSize: 20 }} />
-          {` Itinerary details: ${itinerary.join(' -> ')}`}
+          {` Destinations: ${itinerary.join(' -> ')}`}
         </Typography>
       </CardContent>
     </Card>

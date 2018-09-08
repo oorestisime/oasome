@@ -21,7 +21,7 @@ const styles = theme => ({
     width: '100%',
     display: 'flex',
     flexFlow: 'column',
-    maxWidth: 1400,
+    maxWidth: 1200,
     flex: 1,
   },
   spacer: {
@@ -34,7 +34,10 @@ function Section({
   classes, children, shade, noPadding,
 }) {
   return (
-    <div className={classNames(classes.root, !noPadding && classes.rootPadding)} style={{ backgroundColor: grey[shade] }}>
+    <div
+      className={classNames(classes.root, !noPadding && classes.rootPadding)}
+      style={{ backgroundColor: grey[shade] }}
+    >
       <div className={classes.fullWidth}>
         <Grid container spacing={0} className={!noPadding && classes.spacer}>
           { children }

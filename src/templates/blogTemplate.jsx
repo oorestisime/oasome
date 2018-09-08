@@ -28,13 +28,14 @@ const styles = theme => ({
     wordBreak: 'break-word',
     height: 'calc(100vh - 70px)',
     overflowY: 'auto',
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0`,
+    margin: theme.spacing.unit,
+    padding: theme.spacing.unit * 4,
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
     '& $ul': {
-      paddingLeft: theme.spacing.unit * 2,
+      paddingLeft: theme.spacing.unit * 3,
       margin: 0,
       listStyleType: 'none',
     },
@@ -121,7 +122,7 @@ function BlogPost({
             />
           )}
           <div className={classes.toc}>
-            <Typography variant="title" gutterBottom>
+            <Typography variant="headline" gutterBottom>
               Contents
             </Typography>
             <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />

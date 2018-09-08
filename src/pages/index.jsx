@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import classNames from 'classnames';
 import _ from 'lodash';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
@@ -12,7 +13,7 @@ import Button from '@material-ui/core/Button';
 import Location from '@material-ui/icons/LocationOn';
 import DateIcon from '@material-ui/icons/DateRange';
 import Hidden from '@material-ui/core/Hidden';
-import { MapMarkerDistance as Distance, Earth } from 'mdi-material-ui';
+import { MapMarkerDistance as Distance, Earth, Instagram } from 'mdi-material-ui';
 
 import withRoot from '../withRoot';
 import App from '../components/layout';
@@ -33,14 +34,13 @@ const styles = theme => ({
     textAlign: 'center',
   },
   headline: {
-    padding: `${theme.spacing.unit * 2} 0`,
+    padding: `${theme.spacing.unit * 3} 0`,
     textAlign: 'center',
   },
-  aboutTitle: {
-    paddingBottom: theme.spacing.unit * 2,
+  indie: {
     fontFamily: 'Indie flower',
   },
-  aboutText: {
+  paddingText: {
     paddingBottom: theme.spacing.unit * 3,
   },
   aboutButton: {
@@ -163,10 +163,10 @@ class Index extends Component {
           </Grid>
           <Grid item sm={1} />
           <Grid item xs={12} sm={6}>
-            <Typography variant="headline" className={classes.aboutTitle}>
+            <Typography variant="headline" className={classNames(classes.paddingText, classes.indie)}>
               Hello there, we are A and O
             </Typography>
-            <Typography className={classes.aboutText}>
+            <Typography className={classes.paddingText}>
               Welcome to the OAsome blog.
               <br />
               This is a travel blog of a couple who guess what … their initials
@@ -203,9 +203,20 @@ class Index extends Component {
           </Grid>
           <Posts posts={latest} />
         </Section>
-        <Section noPadding>
-          <Instafeed />
-        </Section>
+        <Hidden smDown>
+          <Section noPadding>
+            <Grid item xs={12}>
+              <Typography
+                variant="display1"
+                className={classNames(classes.headline, classes.indie, classes.paddingText)}
+              >
+                <Instagram />
+                {' OAsome'}
+              </Typography>
+            </Grid>
+            <Instafeed data={data.allInstaPost} />
+          </Section>
+        </Hidden>
       </App>
     );
   }
@@ -222,6 +233,17 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    allInstaPost{
+      edges {
+        node {
+          id
+          picture
+          likes {
+            count
+          }
         }
       }
     }

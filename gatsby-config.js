@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: 'OAsome Blog',
     siteUrl: 'https://oasome.blog',
-    description: 'OAsome is a travel blog of O and A. We detail our experiences and adventures around the world.',
+    description: 'Paris-based Cypriot adventurers. A and O. Lovers of life and travel. Want to get a glimpse of the OAsome world?',
   },
   plugins: [
     'gatsby-transformer-sharp',
