@@ -1,7 +1,7 @@
 ---
-path: "/america-2"
+path: "/america-3"
 date: "2018-08-06"
-title: "Amerika we are coming 2 coming to you youu"
+title: "Amerika we are coming 3 coming to you youu"
 tags: ["usa", "canyons"]
 cover: "./antelope.jpg"
 country: "Usa"

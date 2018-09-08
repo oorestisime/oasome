@@ -10,8 +10,8 @@ The posts we should have 6 published + 10 drafts
 * ~~contact us page~~
 * add logo
 * ~~rss feed~~
-* fix toc links
-* create meta card on top of toc
+* ~~fix toc links~~
+* ~~create meta card on top of toc~~
 
 ## Future
 

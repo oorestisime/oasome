@@ -1,6 +1,6 @@
 # Instructions
 
-Loipon ta posts einai se markdown (xoris HTML). Kathe arthro einai se morfi enos folder to opios periexei to minimum ena file index.md (p periexei to markdown) kai to cover photo.
+Loipon ta posts einai se markdown (xoris HTML). Kathe arthro einai se morfi enos folder to opio periexei to minimum ena file index.md (p periexei to markdown) kai to cover photo.
 
 Cheatsheet markdown (Apo to inline HTML kai kato den einai valid se mas)https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
@@ -44,16 +44,16 @@ Ena # simeni kirios titlos, oso parapano # valeis toso pio ligo simantikos en o 
 
 ## Tags
 
-Osa einai metaksi --- einai ta legomena tags. To ipolipo einai to keimeno.
+Osa einai metaksi `---` einai ta legomena tags. To ipolipo einai to keimeno.
 
 ### Required
 
-* **path** to pos fenete to url sto site. **prepei nai ksekina kai na telionei me /**. Xoris allo / sto path
+* **path** to pos fenete to url sto site. **prepei na ksekina kai na telionei me /**. Xoris allo / sto endiameso. /polla-kala/ **valid**. /polla/kalla/ **not valid**
 * **date** imerominia release tou arthru
 * **title** o titlos tou arthru. Prepei na einai kato apo 60 characters
-* **tags** ta prota 4 tha fenonte aman to keimeno den einai expanded, opote na valeis sta prota 4 ta pio simantika
+* **tags** ta prota 4 tha fenonte aman to keimeno den einai expanded, opote na valeis sta prota 4 ta pio simantika. lowercase ola
 * **cover** i cover photo tou arthru
-* **country** i xora, lowecase ola
+* **country** i xora, lowercase ola
 * **type** article i photo i friends (gia na ksexorizume ta diafora types)
 
 ### Optional
@@ -62,9 +62,9 @@ Osa einai metaksi --- einai ta legomena tags. To ipolipo einai to keimeno.
 * **duration** poses nixtes dierkise to taksidi
 * **itinerary** lista me topous p epiame
 * **km** posa km sinolika xoris tis ptisis apo kai pros parisi. diladi ta km on the ground
-* **photos** lista me photos p tha mpun sto telos tou arthru kai tha fenonte me lightbox
+* **photos** lista me photos p tha mpun sto telos tou arthru kai tha fenonte me lightbox. Mono sta photo arthra
 * **coordinates** lista me ta coordinates gia na mpun ta pins sto xarti
-* **featured** sta tria prota tou index
+* **featured** an tha einai sta tria prota tou index
 
 ## Custom components
 
