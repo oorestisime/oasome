@@ -6,6 +6,8 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import { Heart } from 'mdi-material-ui';
+import IconButton from '@material-ui/core/IconButton';
+import LinkIcon from '@material-ui/icons/Link';
 
 
 import insta1 from '../static/insta/insta1.jpg';
@@ -16,6 +18,7 @@ import insta5 from '../static/insta/insta5.jpg';
 import insta6 from '../static/insta/insta6.jpg';
 import insta7 from '../static/insta/insta7.jpg';
 import insta8 from '../static/insta/insta8.jpg';
+import insta9 from '../static/insta/insta9.jpg';
 
 
 const styles = theme => ({
@@ -29,6 +32,18 @@ const styles = theme => ({
     flexWrap: 'nowrap',
     transform: 'translateZ(0)',
   },
+  caption: {
+    color: theme.palette.primary.light,
+  },
+  tile: {
+    '& img': {
+      visibility: 'visible',
+    },
+    visibility: 'hidden',
+    '&:hover': {
+      visibility: 'visible',
+    },
+  },
 });
 
 function Instafeed({ classes }) {
@@ -41,18 +56,24 @@ function Instafeed({ classes }) {
     insta6,
     insta7,
     insta8,
+    insta9,
   ];
 
   return (
     <Hidden smDown>
       <div className={classes.root}>
-        <GridList cellHeight={150} className={classes.gridList} cols={8}>
+        <GridList cellHeight={150} className={classes.gridList} cols={9}>
           {feed.map(img => (
-            <GridListTile key={img}>
+            <GridListTile classes={{ tile: classes.tile }} key={img}>
               <img src={img} alt={img} />
               <GridListTileBar
                 className={classes.caption}
                 style={{ height: '25px' }}
+                actionIcon={(
+                  <IconButton>
+                    <LinkIcon className={classes.caption} />
+                  </IconButton>
+                )}
                 subtitle={(
                   <span>
                     <Heart style={{ fontSize: 12 }} />

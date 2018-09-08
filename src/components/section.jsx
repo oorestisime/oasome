@@ -21,7 +21,7 @@ const styles = theme => ({
     width: '100%',
     display: 'flex',
     flexFlow: 'column',
-    maxWidth: 1200,
+    maxWidth: 1400,
     flex: 1,
   },
   spacer: {
