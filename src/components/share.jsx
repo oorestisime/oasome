@@ -8,7 +8,6 @@ import {
   Twitter,
   Email,
   Instagram,
-  Facebook,
 } from 'mdi-material-ui';
 import {
   TwitterShareButton,
@@ -62,9 +61,6 @@ const Share = props => (
             >
               <Email className={classes.iconHover} color="disabled" />
             </EmailShareButton>
-          </MenuItem>
-          <MenuItem>
-            <Facebook className={classes.iconHover} color="disabled" />
           </MenuItem>
         </div>
       );

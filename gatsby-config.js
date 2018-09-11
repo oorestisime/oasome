@@ -36,6 +36,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: '__arte__mis__',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-feed',
       options: {
         query: `

@@ -214,7 +214,7 @@ class Index extends Component {
                 {' OAsome'}
               </Typography>
             </Grid>
-            <Instafeed data={data.allInstaPost} />
+            <Instafeed data={data.allInstaNode} />
           </Section>
         </Hidden>
       </App>
@@ -236,11 +236,17 @@ export const pageQuery = graphql`
         }
       }
     }
-    allInstaPost{
+    allInstaNode (
+      limit: 8
+    ){
       edges {
         node {
           id
-          picture
+          thumbnails {
+            src
+            config_width
+            config_height
+          }
           likes {
             count
           }
@@ -272,7 +278,7 @@ export const pageQuery = graphql`
             country
             cover {
               childImageSharp{
-                fluid(maxHeight: 500) {
+                fluid(maxHeight: 250, maxWidth: 350) {
                     ...GatsbyImageSharpFluid
                 }
               }

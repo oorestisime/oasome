@@ -4,6 +4,8 @@
   "dependencies": {
     "@material-ui/core": "^1.4.1",
     "@material-ui/icons": "^2.0.0",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
     "classnames": "^2.2.6",
     "eslint": "^4.19.1 || ^5.3.0",
     "eslint-config-airbnb": "latest",
@@ -16,12 +18,13 @@
     "gatsby-plugin-feed": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
-    "gatsby-remark-autolink-headers": "^1.4.19",
+    "gatsby-remark-autolink-headers": "next",
     "gatsby-remark-copy-images": "^0.2.1",
     "gatsby-remark-copy-linked-files": "next",
     "gatsby-remark-images": "next",
     "gatsby-remark-images-grid": "^1.0.2",
     "gatsby-source-filesystem": "next",
+    "gatsby-source-instagram": "^0.0.3",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
     "gray-matter": "^4.0.1",
@@ -40,9 +43,7 @@
     "react-visibility-sensor": "^4.0.0",
     "rehype-react": "^3.0.3",
     "typeface-indie-flower": "^0.0.54",
-    "typeface-lato": "^0.0.54",
-    "axios": "^0.18.0",
-    "cheerio": "^1.0.0-rc.2"
+    "typeface-lato": "^0.0.54"
   },
   "keywords": [
     "gatsby",

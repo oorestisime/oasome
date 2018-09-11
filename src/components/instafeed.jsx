@@ -42,7 +42,7 @@ function Instafeed({ classes, data }) {
               target="_blank"
               href={`https://www.instagram.com/p/${img.node.id}`}
             >
-              <img src={img.node.picture} alt={img.node.id} />
+              <img src={img.node.thumbnails[0].src} alt={img.node.id} />
             </a>
             <GridListTileBar
               className={classes.caption}
