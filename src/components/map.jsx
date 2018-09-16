@@ -48,7 +48,7 @@ class ZoomPan extends Component {
             scale: 320,
           }}
           width={1200}
-          height={900}
+          height={zoom > 1 ? 500 : 900}
           style={{
             width: '100%',
             height: 'auto',

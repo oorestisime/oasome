@@ -6,7 +6,7 @@ tags: ["usa", "canyons"]
 cover: "./monument.png"
 country: "Usa"
 type: "article"
-featured: true
+featured: false
 coordinates: [
     { coordinates: [-122.4194, 37.7749], country: 'Usa' },
     { coordinates: [-112.1130, 36.1070], country: 'Usa' },

@@ -104,6 +104,7 @@ class Index extends Component {
                     Distance covered
                   </Typography>
                   <CountUp
+                    duration={2}
                     start={0}
                     end={this.state.didViewCountUp ? totals.km : 0}
                     suffix=" km"
@@ -115,6 +116,7 @@ class Index extends Component {
                     Duration
                   </Typography>
                   <CountUp
+                    duration={2}
                     start={0}
                     end={this.state.didViewCountUp ? totals.duration : 0}
                     suffix=" days"
@@ -126,6 +128,7 @@ class Index extends Component {
                     Countries
                   </Typography>
                   <CountUp
+                    duration={2}
                     start={0}
                     end={this.state.didViewCountUp ? countries : 0}
                   />
@@ -136,6 +139,7 @@ class Index extends Component {
                     Destinations
                   </Typography>
                   <CountUp
+                    duration={2}
                     start={0}
                     end={this.state.didViewCountUp ? totals.stops : 0}
                     suffix=" stops"
@@ -201,7 +205,7 @@ class Index extends Component {
               Latest articles
             </Typography>
           </Grid>
-          <Posts posts={latest} />
+          <Posts posts={latest.slice(0, 3)} />
         </Section>
         <Hidden smDown>
           <Section noPadding>
@@ -231,7 +235,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     file(relativePath: { eq: "about/up.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
@@ -278,7 +282,7 @@ export const pageQuery = graphql`
             country
             cover {
               childImageSharp{
-                fluid(maxHeight: 250, maxWidth: 350) {
+                fluid(maxHeight: 250, maxWidth: 350, quality: 100) {
                     ...GatsbyImageSharpFluid
                 }
               }

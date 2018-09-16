@@ -40,8 +40,8 @@ function createLinkedPages(createPage, edges) {
       createPage({
         path:
           page === 1
-            ? `/destination/${dest.toLowerCase()}`
-            : `/destination/${dest.toLowerCase()}/page/${page}`,
+            ? `/destination/${dest}`
+            : `/destination/${dest}/page/${page}`,
         component: listTemplate,
         context: {
           posts: paginate(destPosts[dest], pageSize, page),
@@ -112,8 +112,7 @@ exports.createPages = ({ actions, graphql }) => {
               }
               cover {
                 childImageSharp {
-                  fluid(maxHeight: 500) {
-                    base64
+                  fluid(maxHeight: 250, maxWidth: 350, quality: 100) {
                     aspectRatio
                     src
                     sizes

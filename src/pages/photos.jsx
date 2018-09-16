@@ -44,13 +44,9 @@ export const pageQuery = graphql`
             country
             cover {
               childImageSharp {
-                fluid(maxHeight: 300) {
-                  base64
-                  aspectRatio
-                  src
-                  sizes
-                  srcSet
-                }
+                fluid(maxHeight: 250, maxWidth: 350, quality: 100) {
+                  ...GatsbyImageSharpFluid
+              }
               }
             }
           }

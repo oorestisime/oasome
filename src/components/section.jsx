@@ -39,7 +39,7 @@ function Section({
       style={{ backgroundColor: grey[shade] }}
     >
       <div className={classes.fullWidth}>
-        <Grid container spacing={0} className={!noPadding && classes.spacer}>
+        <Grid container spacing={0} className={!noPadding ? classes.spacer : null}>
           { children }
         </Grid>
       </div>

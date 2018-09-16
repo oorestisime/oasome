@@ -129,7 +129,7 @@ function BlogPost({
           </div>
         </Grid>
       </Section>
-      {similar.length > 0
+      {similar.length > 1
         && (
           <Section shade="300">
             <Grid item xs={12}>
@@ -178,14 +178,14 @@ export const pageQuery = graphql`
         duration
         photos {
           childImageSharp{
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 1200, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         },
         cover {
           childImageSharp{
-            fluid(maxHeight: 400, maxWidth: 800) {
+            fluid(maxHeight: 400, maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
