@@ -24,7 +24,7 @@
     "gatsby-remark-images": "latest",
     "gatsby-remark-images-grid": "^1.0.2",
     "gatsby-source-filesystem": "latest",
-    "gatsby-source-instagram": "^0.0.3",
+    "gatsby-source-instagram": "^0.1.2",
     "gatsby-transformer-remark": "latest",
     "gatsby-transformer-sharp": "latest",
     "gray-matter": "^4.0.1",

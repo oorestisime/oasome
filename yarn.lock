@@ -5036,9 +5036,9 @@ gatsby-source-filesystem@latest:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-source-instagram@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-source-instagram/-/gatsby-source-instagram-0.0.3.tgz#799e86a89e234ab3d61fbcd828745f95d1c1d3a7"
+gatsby-source-instagram@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-source-instagram/-/gatsby-source-instagram-0.1.2.tgz#ebe48226112b2cd0f37125eb0782d4698eb95aca"
   dependencies:
     "@babel/preset-env" "^7.0.0"
     "@babel/runtime" "^7.0.0"
