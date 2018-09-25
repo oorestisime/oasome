@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Img from 'gatsby-image';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
@@ -42,7 +43,7 @@ function Instafeed({ classes, data }) {
               target="_blank"
               href={`https://www.instagram.com/p/${img.node.id}`}
             >
-              <img src={img.node.thumbnails[0].src} alt={img.node.id} />
+              <Img fixed={img.node.localFile.childImageSharp.fixed} alt={img.node.id} />
             </a>
             <GridListTileBar
               className={classes.caption}
@@ -62,7 +63,20 @@ function Instafeed({ classes, data }) {
 
 Instafeed.propTypes = {
   classes: PropTypes.shape().isRequired,
-  data: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  data: PropTypes.shape({
+    edges: PropTypes.arrayOf(PropTypes.shape({
+      node: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        likes: PropTypes.shape({ count: PropTypes.number }),
+        fixed: PropTypes.shape({
+          src: PropTypes.string.isRequired,
+          srcSet: PropTypes.string.isRequired,
+          width: PropTypes.number.isRequired,
+          height: PropTypes.number.isRequired,
+        }),
+      }),
+    })).isRequired,
+  }).isRequired,
 };
 
 export default withStyles(styles)(Instafeed);

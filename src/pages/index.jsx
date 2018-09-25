@@ -246,13 +246,15 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          thumbnails {
-            src
-            config_width
-            config_height
-          }
           likes {
             count
+          }
+          localFile {
+            childImageSharp {
+              fixed(width: 150, height:150) {
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
         }
       }
@@ -263,7 +265,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 150)
           id
           timeToRead
           frontmatter {
@@ -283,7 +284,7 @@ export const pageQuery = graphql`
             cover {
               childImageSharp{
                 fluid(maxHeight: 250, maxWidth: 350, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

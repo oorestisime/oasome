@@ -28,8 +28,10 @@ const markdownStyle = theme => Object.assign(
     ...theme.typography.body1,
     '& img': {
       maxWidth: '100%',
+      height: 'auto',
       display: 'block',
       margin: '0 auto',
+      paddingBottom: theme.spacing.unit * 2,
     },
     '& p': {
       marginLeft: theme.spacing.unit * 2,

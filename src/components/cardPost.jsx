@@ -127,7 +127,6 @@ class CardPost extends Component {
       country,
     } = this.props;
     const { shareOpen, anchorEl } = this.state;
-
     return (
       <div>
         <Card className={classes.spacer}>
