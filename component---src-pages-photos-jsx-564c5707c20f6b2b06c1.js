@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{142:function(e,a,t){"use strict";t.r(a),t.d(a,"pageQuery",function(){return w});var n=t(0),r=t.n(n),c=t(4),o=t.n(c),p=t(169),s=t(172),u=t(160),d=t(182),i=t(166);function l(e){var a=e.data.allMarkdownRemark.edges;return r.a.createElement(s.a,{title:"Photography articles"},r.a.createElement(u.a,null,r.a.createElement(d.a,{posts:Object(i.d)(a)})))}l.propTypes={data:o.a.shape().isRequired};var w="1554338756";a.default=Object(p.a)(l)}}]);
+//# sourceMappingURL=component---src-pages-photos-jsx-564c5707c20f6b2b06c1.js.map
