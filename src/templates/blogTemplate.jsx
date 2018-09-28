@@ -106,6 +106,7 @@ function BlogPost({
                 {renderAst(htmlAst)}
               </div>
             )}
+            photos={frontmatter.photos || []}
             expand={false}
             type={frontmatter.type}
             timeToRead={timeToRead}
@@ -175,6 +176,13 @@ export const pageQuery = graphql`
         km
         itinerary
         duration
+        photos {
+          childImageSharp{
+            fluid(maxWidth: 1200, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        },
         cover {
           childImageSharp{
             fluid(maxHeight: 450, maxWidth: 800, quality: 100) {
