@@ -39,9 +39,19 @@ module.exports = {
     {
       resolve: 'gatsby-source-instagram',
       options: {
-        username: '__arte__mis__',
+        username: 'oasome.blog',
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-126639314-1',
+        anonymize: true,
+        respectDNT: true,
+        cookieDomain: 'oasome.blog',
+      },
+    },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-feed',
       options: {
