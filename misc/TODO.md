@@ -18,3 +18,4 @@ The posts we should have 6 published + 10 drafts
 * fix type checking props
 * dedup styles
 * use sharp to optimise custom component hack
+* add instagram as a staticquery and add it into all layouts

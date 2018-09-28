@@ -87,7 +87,7 @@ const styles = theme => ({
     marginRight: theme.spacing.unit / 2,
     color: '#999999',
     '&:hover': {
-      color: grey[900],
+      color: grey[200],
     },
   },
   footerLink: {
@@ -156,6 +156,8 @@ class App extends React.Component {
               <div>
                 <IconButton
                   color="inherit"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   href="https://instagram.com/oasome.blog/"
                 >
                   <Instagram />
@@ -243,11 +245,21 @@ class App extends React.Component {
         <Section shade="900">
           <Grid item xs={12} className={classes.footerIcons}>
             <ul className={classes.list}>
-              <Instagram color="disabled" className={classes.icon} />
-              <Twitter color="disabled" className={classes.icon} />
-              <GithubCircle color="disabled" className={classes.icon} />
-              <Email color="disabled" className={classes.icon} />
-              <Rss color="disabled" className={classes.icon} />
+              <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/oasome.blog/">
+                <Instagram color="disabled" className={classes.icon} />
+              </a>
+              <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/oasome.blog/">
+                <Twitter color="disabled" className={classes.icon} />
+              </a>
+              <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome">
+                <GithubCircle color="disabled" className={classes.icon} />
+              </a>
+              <a href="mailto:oasome.blog@gmail.com">
+                <Email color="disabled" className={classes.icon} />
+              </a>
+              <a href="/rss.xml">
+                <Rss color="disabled" className={classes.icon} />
+              </a>
             </ul>
           </Grid>
           <Typography className={classes.footerLink}>

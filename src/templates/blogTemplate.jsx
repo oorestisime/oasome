@@ -107,7 +107,6 @@ function BlogPost({
               </div>
             )}
             expand={false}
-            photos={frontmatter.photos || []}
             type={frontmatter.type}
             timeToRead={timeToRead}
             country={frontmatter.country}
@@ -176,13 +175,6 @@ export const pageQuery = graphql`
         km
         itinerary
         duration
-        photos {
-          childImageSharp{
-            fluid(maxWidth: 1200, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        },
         cover {
           childImageSharp{
             fluid(maxHeight: 450, maxWidth: 800, quality: 100) {
