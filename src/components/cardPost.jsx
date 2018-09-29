@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { push } from 'gatsby';
-import Lightbox from 'react-images';
 import { withStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Card from '@material-ui/core/Card';
@@ -66,22 +65,10 @@ class CardPost extends Component {
 
   constructor(props) {
     super(props);
-    if (props.type === 'photo' && props.photos) {
-      this.state = {
-        shareOpen: false,
-        anchorEl: null,
-        lightbox: false,
-        photos: props.photos.map(photo => Object.assign(
-          { srcSet: photo.childImageSharp.fluid.srcSet },
-        )),
-      };
-    } else {
-      this.state = {
-        shareOpen: false,
-        anchorEl: null,
-        lightbox: false,
-      };
-    }
+    this.state = {
+      shareOpen: false,
+      anchorEl: null,
+    };
   }
 
   handleClick(event) {
@@ -102,15 +89,6 @@ class CardPost extends Component {
     this.setState({ photo: photo + 1 });
   }
 
-  openLightbox(photo, event) {
-    event.preventDefault();
-    this.setState({ lightbox: true, photo });
-  }
-
-  closeLightbox() {
-    this.setState({ lightbox: false });
-  }
-
   render() {
     const {
       classes,
@@ -121,8 +99,6 @@ class CardPost extends Component {
       content,
       expand,
       path,
-      photos,
-      type,
       timeToRead,
       country,
     } = this.props;
@@ -170,19 +146,6 @@ class CardPost extends Component {
           </CardMedia>
           <CardContent>
             {!expand && content}
-            {type === 'photo' && photos && (
-              <div>
-                {photos.map((photo, i) => (
-                  <a
-                    key={photo.childImageSharp.fluid.src}
-                    href={photo.childImageSharp.fluid.src}
-                    onClick={e => this.openLightbox(i, e)}
-                  >
-                    <Img className={classes.spacer} fluid={photo.childImageSharp.fluid} />
-                  </a>
-                ))}
-              </div>
-            )}
           </CardContent>
           <CardActions className={classes.actions} disableActionSpacing>
             <TagCloud tags={expand ? tags.slice(0, 3) : tags} />
@@ -197,17 +160,6 @@ class CardPost extends Component {
             )}
           </CardActions>
         </Card>
-        {type === 'photo' && photos && (
-          <Lightbox
-            backdropClosesModal
-            images={this.state.photos}
-            currentImage={this.state.photo}
-            isOpen={this.state.lightbox}
-            onClickPrev={() => this.gotoPrevLightboxImage()}
-            onClickNext={() => this.gotoNextLightboxImage()}
-            onClose={() => this.closeLightbox()}
-          />
-        )}
       </div>
     );
   }
@@ -221,15 +173,12 @@ CardPost.propTypes = {
   path: PropTypes.string,
   content: PropTypes.node.isRequired,
   expand: PropTypes.bool.isRequired,
-  type: PropTypes.string.isRequired,
   cover: PropTypes.shape(),
-  photos: PropTypes.arrayOf(PropTypes.object),
   country: PropTypes.string.isRequired,
   timeToRead: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 CardPost.defaultProps = {
-  photos: [],
   cover: {},
   path: null,
 };

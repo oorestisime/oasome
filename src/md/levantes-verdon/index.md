@@ -7,7 +7,6 @@ cover: "./cover.jpg"
 country: "France"
 type: "article"
 duration: 3
-featured: false
 itinerary: ["Aix en provence", "Valensole", "Gorges du Verdon"]
 km: 300
 coordinates: [

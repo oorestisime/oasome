@@ -2,19 +2,17 @@
 path: "/enjoying-7-nighs-sw-usa/"
 date: "2018-09-03"
 title: "Visiting the southwest, the land of canyons."
-tags: ["canyons", "hiking", "southwest"]
+tags: ["canyon", "hiking", "southwest", "zion", "Grand Canyon", "Antelope", "Monument Valley"]
 cover: "./sf.jpg"
 country: "Usa"
 type: "article"
 duration: 8
 featured: true
-itinerary: ["Death Valley", "Sequoia National Park", "Zion National Park", "Bryce canyon",
-"Antelope canyon", "Monument Valley", "Grand Canyon"]
+itinerary: ["Death Valley", "Sequoia National Park", "Zion National Park", "Bryce canyon", "Antelope canyon", "Monument Valley", "Grand Canyon"]
 km: 3200
 coordinates: [
     { coordinates: [-112.1401, 36.0544], country: 'Usa' },
     { coordinates: [-116.9325, 36.5323], country: 'Usa' },
-    { coordinates: [-113.0263, 37.2982], country: 'Usa' },
 ]
 ---
 

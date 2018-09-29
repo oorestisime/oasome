@@ -70,7 +70,7 @@ class Index extends Component {
     const { data, classes } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
     const nodes = flatten(posts);
-    const { [true]: featured, [false]: latest } = groupBy(nodes, 'featured');
+    const { [true]: featured, [null]: latest } = groupBy(nodes, 'featured');
     const coords = coordinates(nodes);
     const totals = calculateTotals(nodes);
     const countries = _.uniq(nodes.map(post => post.frontmatter.country)).length;

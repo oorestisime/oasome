@@ -2,7 +2,7 @@
 path: "/northern-lights-iceland/"
 date: "2018-09-13"
 title: "Chasing the northern light and visiting south Iceland"
-tags: ["aurora", "iceland", "northern-lights"]
+tags: ["aurora", "iceland", "northern-lights", "waterfall"]
 cover: "./iceland.jpg"
 country: "Iceland"
 type: "article"

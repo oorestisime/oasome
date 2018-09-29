@@ -23,7 +23,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               sizeByPixelDensity: true,
-              quality: 90,
+              quality: 100,
             },
           },
           'gatsby-remark-copy-images',
