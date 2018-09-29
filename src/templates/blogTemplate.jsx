@@ -174,6 +174,7 @@ export const pageQuery = graphql`
         country
         km
         itinerary
+        duration
         cover {
           childImageSharp{
             fluid(maxHeight: 450, maxWidth: 800, quality: 100) {

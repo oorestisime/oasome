@@ -32,7 +32,7 @@ function createLinkedPages(createPage, edges) {
     }
   });
 
-  const pageSize = 3;
+  const pageSize = 6;
   Object.keys(destPosts).forEach((dest) => {
     const pagesSum = Math.ceil(destPosts[dest].length / pageSize);
 

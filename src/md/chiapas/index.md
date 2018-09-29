@@ -1,8 +1,8 @@
 ---
 path: "/chiapas/"
-date: "2018-09-29"
+date: "2018-09-25"
 title: "Mexico: exploring the city of San Cristobal de las Casas"
-tags: ["chiapas", "mexico", "canyon", "waterfall", "zapatistas"]
+tags: ["chiapas", "mexico", "canyon", "waterfall", "zapatistas", "San Cristobal de las Casas"]
 cover: "./cover.jpg"
 country: "mexico"
 type: "article"
@@ -35,13 +35,26 @@ The road from the airport of Tuxtla to the city was quite interesting and scary!
 
 We booked our stay not far from the historic city center in order to be able to move around on foot and explore the market and the pedestrian streets quite easily. And it was a good choice since the city center is lively and beautiful with vivid colors. Besides visiting the most known places such as the cathedral, Na Bolom, but one should not skip the handicrafts market. In overall just walking around real de Guadelupe is enough to charm anyone's heart.
 
+<photo-composition><img src="realguadelupe.jpg" /><img src="realguadelupe2.jpg" /></photo-composition>
+
 Day 1 was the day we searched for the best tacos in town. Its name is El Tacoleto! From the guacamole to the al pastor tacos, from the drinks to the overal taste and flavor to the food, it was just perfect. And we returned there again and again. As for late night drinks, we ve once tried Dos Amores for some local Mezcal and it was very good and TierrAdentro for some live music with lots of locals buzzing around.
+
+<photo-composition><img src="burrito.jpg" /><img src="mezcal.jpg" /></photo-composition>
 
 ## Sumidero canyon
 
 First day trip was to Sumidero canyon along with a short visit to Chiapa de Corzo colonial village which albeit nice was nothing special. The drive to the canyon was not long and as soon as we arrived to the starting point we put on our life jackets and hopped on to the boat.
 
+![](sumidero.jpg)
+
+![](sumidero2.jpg)
+
+
 At the beginning the views are not spectacular but as soon as the canyon gets narrower then everything sets into place for some magnificent spots. And in terms of living animals we weren't left unsatisfied since we managed to see quite a lot different birds, a few crocodiles and some funny monkeys competing for a few pieces of bananas!
+
+![](crocodile.jpg)
+
+![](monkeys.jpg)
 
 ## El Chiflon and Montebello lakes
 
@@ -49,7 +62,11 @@ Second tour was a pretty long one. We left early in the morning to return late a
 
 There are 59 different lakes in the national park situated near the Guatemala borders, some of quite big, others small but all of them with stunning blue and green colors. We managed to catch the sunset at one of them and it was quite nice with the sun almost falling in the lake. Probably the most amazing one is at the border since while not that big it has the most intense green and blue colors.
 
+![](montebello.jpg)
+
 We probably apperciated though much more the El Chiflon waterfalls during that day trip. The hike to the top is neither hard nor long and there are several nice stops in between for shorter falls and interesting colors. For the way back we chose the zip lining for a short fun!
+
+![](elchiflon.jpg)
 
 ## Zapatistas
 
@@ -62,7 +79,11 @@ There are times throughout the year that Zapatistas refuse entrance to the villa
 It is a military zone, even if at no time we felt insecure or threatened so they ask you a few questions before letting you in, like where you are from and what is the purpose of the visit.
 </tip>
 
+![](zapatistas.jpg)
+
 We were allowed a 2h entrance to the village with a *guide* explaining us the buildings the history and the current struggles. There was only one problem during our visit, it was in spanish and we both don't speak spanish :D Luckily we had two Argentines with us translating most of the things our guide said. The people we met were more than friendly to talk with us and answer our questions. We were also allowed to take pictures of the many wall paintings (murals) available around the village.
+
+![](zapatistas2.jpg)
 
 ## Agua Azul and Misol Ha cascades
 
@@ -70,7 +91,12 @@ The first part of our trip was almost to an end. Two stops before arriving to th
 
 The waterfall are totaly different from one another and probably the most interesting is the Agua Azul. We had never seen a cascade group with so spectacular colors and we were left speachless.
 
+![](aguaazul.jpg)
+![](aguaazul2.jpg)
+
 Misol Ha on the other hand is a more common watefall, taller than Agua Azul but what lacks in colors gets it in the small cave behind the fall. We could walk around the waterfall and it was an interesting experience.
+
+![](misolha.jpg)
 
 People were swimming in both of them, we unfortunately were short on time and didn't have our swimming suits with us!
 

@@ -1,8 +1,8 @@
 ---
 path: "/lavender-fields-and-verdon/"
-date: "2018-09-19"
+date: "2018-09-23"
 title: "A weekend at the lavender routes and Verdon in France"
-tags: ["lavender", "Verdon", "canyon", "Aix"]
+tags: ["lavender", "Verdon", "canyon", "Aix-en-Provence"]
 cover: "./cover.jpg"
 country: "France"
 type: "article"
