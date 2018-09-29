@@ -19,3 +19,4 @@ The posts we should have 6 published + 10 drafts
 * dedup styles
 * use sharp to optimise custom component hack
 * add instagram as a staticquery and add it into all layouts
+* add social networks as config and query for them

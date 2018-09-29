@@ -164,6 +164,9 @@ class App extends React.Component {
                 </IconButton>
                 <IconButton
                   color="inherit"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://twitter.com/oasome_blog"
                 >
                   <Twitter />
                 </IconButton>
@@ -248,7 +251,7 @@ class App extends React.Component {
               <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/oasome.blog/">
                 <Instagram color="disabled" className={classes.icon} />
               </a>
-              <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/oasome.blog/">
+              <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/oasome_blog">
                 <Twitter color="disabled" className={classes.icon} />
               </a>
               <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome">

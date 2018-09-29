@@ -18,7 +18,7 @@
     "gatsby-plugin-feed": "latest",
     "gatsby-plugin-google-analytics": "^2.0.6",
     "gatsby-plugin-offline": "^2.0.5",
-    "gatsby-plugin-react-helmet": "latest",
+    "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "latest",
     "gatsby-remark-autolink-headers": "latest",
     "gatsby-remark-copy-images": "^0.2.1",

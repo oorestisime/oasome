@@ -15,6 +15,7 @@ module.exports = {
         name: 'pages',
       },
     },
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
