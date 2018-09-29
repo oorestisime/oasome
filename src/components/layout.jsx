@@ -128,16 +128,12 @@ class App extends React.Component {
 
     return (
       <div className={classes.wrapper}>
-        <Helmet titleTemplate="OAsome - %s" defaultTitle="OAsome Blog">
+        <Helmet>
+          <title>{title}</title>
           <meta
             name="description"
             content="Paris-based Cypriot adventurers. A and O. Lovers of life and travel. Want to get a glimpse of the OAsome world?"
           />
-          <html lang="en" />
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-          <meta name="HandheldFriendly" content="True" />
         </Helmet>
         <AppBar className={classes.appBar}>
           <Toolbar className={classes.appBarToolbar} disableGutters={!open}>

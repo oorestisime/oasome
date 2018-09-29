@@ -81,8 +81,8 @@ function BlogPost({
           {frontmatter.title}
         </title>
         <meta name="description" content={excerpt} />
-        <meta name="keywords" content={frontmatter.tags} />
-        <meta property="og:site_name" content="OAsome secrets" />
+        <meta name="keywords" content={frontmatter.tags.join()} />
+        <meta property="og:site_name" content="Oasome blog" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:description" content={excerpt} />
