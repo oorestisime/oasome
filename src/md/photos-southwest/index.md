@@ -12,9 +12,9 @@ Photo album from our [trip at the SouthWest](/enjoying-7-nighs-sw-usa/).
 
 ### Death Valley
 
-![Death valley; Badwater bassin](deathvalley.jpg)
+![Death valley; Badwater bassin](dunes.jpg)
 
-<photo-composition><img src="zabriskie.jpg" /><img src="dunes.jpg" /></photo-composition>
+<photo-composition><img src="zabriskie.jpg" /><img src="deathvalley.jpg" /></photo-composition>
 
 ### Sequoia National Park
 
@@ -44,11 +44,13 @@ Photo album from our [trip at the SouthWest](/enjoying-7-nighs-sw-usa/).
 
 ![Antelope canyon](antelope6.jpg)
 
-<photo-composition><img src="antelope4.jpg" /><img src="lightbeam.jpg" /></photo-composition>
+![Antelope canyon](lightbeam.jpg)
 
-### Horseshew bend
+### Lake Powell
 
 ![Lake powell](powell.jpg)
+
+### Horseshew bend
 
 ![Horseshew bend](horseshew.jpg)
 

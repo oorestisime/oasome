@@ -1,9 +1,9 @@
 ---
-path: "/enjoying-7-nighs-sw-usa/"
+path: "/road-trip-southwest/"
 date: "2018-09-03"
-title: "Visiting the southwest, the land of canyons."
-tags: ["canyon", "hiking", "southwest", "zion", "Grand Canyon", "Antelope", "Monument Valley"]
-cover: "./sf.jpg"
+title: "Road trip at the southwest, the land of canyons."
+tags: ["canyon", "hiking", "southwest", "zion", "Grand Canyon", "Antelope", "Monument Valley", "road trip"]
+cover: "../photos-southwest/forest-gump.jpg"
 country: "Usa"
 type: "article"
 duration: 8
@@ -57,6 +57,8 @@ The drive was nothing special until you get to understand that you are close to 
 
 We were most impressed by Badwater bassin but boy it was hot! We managed to convince ourselves not to take with us a bottle of water since we thought it was a short stop on a flat walking area. Lesson learned. We had water with us in each and every subsequest stop.
 
+![Badwater bassin](../photos-southwest/deathvalley.jpg)
+
 ## Comparing ourselves to the great trees of Sequoia National Park
 
 Second day involved quite some driving as well. We had to drive 2 hours from olive tree to get to the general sherman trail and then once we were finished with the national park to drive all the way to Barstow so that we could gain some distance off for the next stop.
@@ -71,8 +73,12 @@ We were lucky to have a few more hours to spend after that and some energy left 
 
 Next day we headed early in the morning to the canyon to hike the narrows. We had rented our equipment (shoes and sticks) the previous day from a shop near the visitor center so that we could be ready to hike early in the morning. We arrived at the shuttles at 8 but still had to wait 5 shuttles before it was our turn to get on. Some people seem to wake up really early!
 
+![The narrows](../photos-southwest/zion.jpg)
+
 The hike was marvelous, we hadn't hike inside a canyon before and the whole experience was great. The flow of the river was low (40cfs) so it wasn't that hard to walk inside the river and even if we had a waterproof bag we didn't really feel we needed. Still probably on another day with a greater flow the experience must be totally different.
 Starting from the temple of Sinawava it took us around 3 hours to get to wall street and the canyon Orderville, taking lots of photos in the process. It tooks a bit more than 1.5 hour for the return. We didn't advance further than those areas due to being on tight schedule. Still the canyon got pretty narrow by that time and it was incredible.
+
+![The narrows](../photos-southwest/zion2.jpg)
 
 Our time at Zion ended with our drive towards Bryce and the few stops after Mt Carmel tunnel including the Checkerboard Mesa.
 
@@ -92,6 +98,8 @@ Welcome to Arizona! Welcome to Navajo land. This was our first stop in this nati
 
 This is the canyon that seems most narrow, and doesn't offer any lightbeams. It still offers though some magnificent colors and has much less people inside. We enjoyed it a lot and took some nice photos. We played a lot with the white balance settings of our camera and we ended up shooting raw for most of the time in order to be able to modify colors later.
 
+![Lower antelope canyon](../photos-southwest/antelope.jpg)
+
 ### Rattlesnake
 
 A much less known slot canyon this one, we were the only people inside and we were able to take our time walking around back and forth and explore in utter peace the canyon. Most parts ressembled the lower antelope canyon. Our guide was exceptional answering to us questions about Navajo land and people, the struggles they face with the american government and their integration. He also took the time to explain us how they use some of the plants we found around the canyon.
@@ -99,6 +107,8 @@ A much less known slot canyon this one, we were the only people inside and we we
 ### Upper antelope canyon
 
 Final Navajo stop. If we were to describe this with one word: crowded. Like really really crowded. Like walking in a queue croweded. We got to see the light beams for a maximum of 10 minutes since it was, guess what, crowded and everyone has to keep moving. We felt the visit was done in a hurry (yes probably because it was crowded) and we didn't take the best of photos. Probably a tripod would have helped but we didn't pay for the photo tour. It was nice though, the canyon forms a lot of interesting figures and nice colors. Could be less crowded and nicer in other months.
+
+![Lower antelope canyon](../photos-southwest/lightbeam.jpg)
 
 Thinking about the tours a few days later we felt that we should have probably avoided the upper one. But still we wanted to see the light beams. A pretty horrible dillema to be in.
 
@@ -110,9 +120,13 @@ Second Navajo stop of our trip was Monument Valley. The road once we turned from
 
 And it did not disappoint us. As soon as we arrived at the visitor center for a quick snack we got to marvel the beautiful and imposing mittens and you are left wondering how nature turned this into such a unique place. We then proceeded to do the short loop that does not require any special car. We got to approach a tiny bit more to these marvelous rock formations and witness a few more i.e the 3 sisters or the John Ford point. All of them were amazing and left us wondering what more we could observe at the long loop trail. Unfortunately we will probably never find out.
 
+![Lower antelope canyon](../photos-southwest/monument4.jpg)
+
 Next stop was the iconic Forrest Gump point and the Mexican hat. A few minutes drive from the visitor center we had the time to visit these two places take a couple of shots and make it back in time for the sunset. The views were beautiful but not what we expected. The sun sets on the opposite direction of the mittens so even if we got to see some nice shadows forming up we ultimately didn't shoot the sun at all.
 
 The problem was not solved though, we were up and ready to be amazed on the sunrise. We set out at 5 in the morning and we were glad we made this choice. We were able to shoot some amazing photos, observe how the landscape changes with the sun rising from the mittens and the incredible dark colors of the sky before the sun is up along with the moon.
+
+![Lower antelope canyon](../photos-southwest/monument1.jpg)
 
 ## Driving along the beautiful view points of Grand Canyon
 
@@ -121,3 +135,5 @@ Last stop for this short but packed trip was Grand Canyon. We started early afte
 The different viewpoints offer some spectacular views. The canyon walls are enormous and the colors you get to see from up are just beautiful. We mostly used the car to drive around the viewpoints but we did have a short walk for Mather point and used the hermit road shuttle for the rest of the viewpoints.
 
 This was our last stop for the week. We were pretty tired when we arrived late at night to the hotel but it was all worth it. Could easily be considered as one of our best trips, or at least the one with the most colors and vivid experiences.
+
+![Lower antelope canyon](../photos-southwest/grand2.jpg)
