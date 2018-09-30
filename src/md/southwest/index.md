@@ -2,7 +2,7 @@
 path: "/road-trip-southwest/"
 date: "2018-09-29"
 title: "Road trip at the southwest, the land of canyons."
-tags: ["canyon", "hiking", "southwest", "Zion", "Grand Canyon", "Antelope", "Monument Valley", "road trip", "Death Valley", "Bryce"]
+tags: ["canyon", "hiking", "National park", "Zion", "Grand Canyon", "Antelope", "Monument Valley", "road trip", "Death Valley", "Bryce", "southwest"]
 cover: "../photos-southwest/forest-gump.jpg"
 country: "Usa"
 type: "article"

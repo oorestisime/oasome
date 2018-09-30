@@ -2,7 +2,7 @@
 path: "/chiapas/"
 date: "2018-09-25"
 title: "Mexico: exploring the city of San Cristobal de las Casas"
-tags: ["chiapas", "mexico", "canyon", "waterfall", "zapatistas", "San Cristobal de las Casas"]
+tags: ["chiapas", "canyon", "waterfall", "zapatistas", "San Cristobal de las Casas", "National park"]
 cover: "./cover.jpg"
 country: "mexico"
 type: "article"

@@ -2,7 +2,7 @@
 path: "/paros-naxos-cyclades/"
 date: "2018-09-28"
 title: "The white-blue scenery and the crystal-clear water of Cyclades!"
-tags: ["greece", "island", "cyclades", "paros", "naxos"]
+tags: ["island", "cyclades", "sea", "paros", "naxos"]
 cover: "./cover.jpg"
 country: "Greece"
 type: "article"
