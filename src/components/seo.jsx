@@ -1,4 +1,3 @@
-import path from 'path';
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
@@ -9,6 +8,7 @@ const getSchemaOrgJSONLD = ({
   title,
   image,
   description,
+  isBlogPost,
 }) => {
   const schemaOrgJSONLD = [
     {
@@ -19,56 +19,57 @@ const getSchemaOrgJSONLD = ({
       alternateName: config.title,
     },
   ];
-
-  return [
-    ...schemaOrgJSONLD,
-    {
-      '@context': 'http://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          item: {
-            '@id': url,
-            name: title,
-            image,
+  if (isBlogPost) {
+    schemaOrgJSONLD.push([
+      {
+        '@context': 'http://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            item: {
+              '@id': url,
+              name: title,
+              image,
+            },
           },
+        ],
+      },
+      {
+        '@context': 'http://schema.org',
+        '@type': 'BlogPosting',
+        url,
+        name: title,
+        alternateName: config.title,
+        headline: title,
+        image: {
+          '@type': 'ImageObject',
+          url: image,
         },
-      ],
-    },
-    {
-      '@context': 'http://schema.org',
-      '@type': 'BlogPosting',
-      url,
-      name: title,
-      alternateName: config.title,
-      headline: title,
-      image: {
-        '@type': 'ImageObject',
-        url: image,
+        description,
+        author: {
+          '@type': 'Person',
+          name: 'OAsome',
+        },
+        mainEntityOfPage: {
+          '@type': 'WebSite',
+          '@id': config.url,
+        },
       },
-      description,
-      author: {
-        '@type': 'Person',
-        name: 'OAsome',
-      },
-      mainEntityOfPage: {
-        '@type': 'WebSite',
-        '@id': config.url,
-      },
-    },
-  ];
+    ]);
+  }
+  return schemaOrgJSONLD;
 };
 
-const SEO = ({ postData, postImage }) => {
+const SEO = ({ postData, postImage, isBlogPost }) => {
   const postMeta = postData.frontmatter || {};
 
   const title = postMeta.title || config.title;
   const description = postData.excerpt || config.description;
-  const image = `${config.url}${postImage}` || config.image;
-  const url = postMeta.slug
-    ? `${config.url}${path.sep}${postMeta.slug}`
+  const image = `${config.url}${postImage}`;
+  const url = postMeta.path
+    ? `${config.url}${postMeta.slug}`
     : config.url;
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
@@ -76,6 +77,7 @@ const SEO = ({ postData, postImage }) => {
     title,
     image,
     description,
+    isBlogPost,
   });
 
   return (
@@ -95,7 +97,6 @@ const SEO = ({ postData, postImage }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="fb:app_id" content={config.fbAppID} />
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -108,15 +109,18 @@ const SEO = ({ postData, postImage }) => {
 };
 
 SEO.propTypes = {
+  isBlogPost: PropTypes.bool,
   postData: PropTypes.shape({
     frontmatter: PropTypes.any,
     excerpt: PropTypes.any,
-  }).isRequired,
+  }),
   postImage: PropTypes.string,
 };
 
 SEO.defaultProps = {
   postImage: null,
+  isBlogPost: false,
+  postData: {},
 };
 
 export default SEO;

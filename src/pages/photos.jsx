@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
@@ -7,16 +7,23 @@ import App from '../components/layout';
 import Section from '../components/section';
 import Posts from '../components/posts';
 import { flatten } from '../components/tools';
+import Seo from '../components/seo';
 
 
 function PhotosArchive({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <App title="Photography articles">
-      <Section>
-        <Posts posts={flatten(posts)} />
-      </Section>
-    </App>
+    <Fragment>
+      <Seo
+        postImage={data.file.childImageSharp.fluid.src}
+        postData={{ frontmatter: { title: 'Photography articles - OAsome blog' } }}
+      />
+      <App title="Photography articles">
+        <Section>
+          <Posts posts={flatten(posts)} />
+        </Section>
+      </App>
+    </Fragment>
   );
 }
 
@@ -26,6 +33,13 @@ PhotosArchive.propTypes = {
 
 export const pageQuery = graphql`
   query PhotoQuery {
+    file(relativePath: { eq: "about/up.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 100) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: {type: {eq: "photo"}  }}

@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import classNames from 'classnames';
-import Helmet from 'react-helmet';
 import _ from 'lodash';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
@@ -22,6 +21,7 @@ import Posts from '../components/posts';
 import Map from '../components/map';
 import Section from '../components/section';
 import Instafeed from '../components/instafeed';
+import Seo from '../components/seo';
 import {
   flatten,
   groupBy,
@@ -78,11 +78,7 @@ class Index extends Component {
 
     return (
       <Fragment>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <title>OAsome blog</title>
-        </Helmet>
+        <Seo postImage={data.file.childImageSharp.fluid.src} />
         <App>
           <Section>
             <Grid item xs={12}>
