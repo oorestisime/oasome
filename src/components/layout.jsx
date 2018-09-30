@@ -28,6 +28,7 @@ import {
   Email,
   Instagram,
   GithubCircle,
+  Facebook,
   Rss,
 } from 'mdi-material-ui';
 
@@ -161,6 +162,14 @@ class App extends React.Component {
                 </IconButton>
                 <IconButton
                   color="inherit"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={`https://facebook.com/${config.facebook}`}
+                >
+                  <Facebook />
+                </IconButton>
+                <IconButton
+                  color="inherit"
                   href={`mailto:${config.email}`}
                 >
                   <Email />
@@ -241,6 +250,9 @@ class App extends React.Component {
                 <Instagram color="disabled" className={classes.icon} />
               </a>
               <a rel="noopener noreferrer" target="_blank" href={`https://twitter.com/${config.twitter}`}>
+                <Twitter color="disabled" className={classes.icon} />
+              </a>
+              <a rel="noopener noreferrer" target="_blank" href={`https://facebook.com/${config.facebook}`}>
                 <Twitter color="disabled" className={classes.icon} />
               </a>
               <a rel="noopener noreferrer" target="_blank" href={`https://github.com/${config.github}`}>

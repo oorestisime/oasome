@@ -7,4 +7,5 @@ module.exports = {
   gaId: 'UA-126639314-1',
   email: 'oasome.blog@gmail.com',
   github: 'oorestisime/oasome',
+  facebook: 'oasome.blog',
 };

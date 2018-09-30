@@ -8,10 +8,12 @@ import {
   Twitter,
   Email,
   Instagram,
+  Facebook,
 } from 'mdi-material-ui';
 import {
   TwitterShareButton,
   EmailShareButton,
+  FacebookShareButton,
 } from 'react-share';
 
 import config from '../config';
@@ -54,6 +56,14 @@ const Share = props => (
             >
               <Twitter className={classes.iconHover} color="disabled" />
             </TwitterShareButton>
+          </MenuItem>
+          <MenuItem>
+            <FacebookShareButton
+              url={getLink(data.site, path)}
+              title={title}
+            >
+              <Facebook className={classes.iconHover} color="disabled" />
+            </FacebookShareButton>
           </MenuItem>
           <MenuItem>
             <EmailShareButton
