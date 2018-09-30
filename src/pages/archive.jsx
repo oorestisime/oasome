@@ -15,7 +15,12 @@ function Archive({ data }) {
     <Fragment>
       <Seo
         postImage={data.file.childImageSharp.fluid.src}
-        postData={{ frontmatter: { title: 'Archive - OAsome blog' } }}
+        postData={{
+          frontmatter: {
+            title: 'Archive - OAsome blog',
+            path: '/archive/',
+          },
+        }}
       />
       <App title="Archive">
         <Section>

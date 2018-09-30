@@ -80,6 +80,7 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
     isBlogPost,
   });
 
+  console.log(url, config.url)
   return (
     <Helmet>
       {/* General tags */}
@@ -90,6 +91,9 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
+
+      {/* Google webmaster */}
+      {url === config.url && <meta name="google-site-verification" content="YUxxWy9eAbuiQ86l-TiUk1SvM5hAnrtNBf6qA9uwFXk" />}
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />

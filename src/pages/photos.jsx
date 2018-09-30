@@ -16,7 +16,12 @@ function PhotosArchive({ data }) {
     <Fragment>
       <Seo
         postImage={data.file.childImageSharp.fluid.src}
-        postData={{ frontmatter: { title: 'Photography articles - OAsome blog' } }}
+        postData={{
+          frontmatter: {
+            title: 'Photography articles - OAsome blog',
+            path: '/photos/',
+          },
+        }}
       />
       <App title="Photography articles">
         <Section>

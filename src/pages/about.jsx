@@ -30,7 +30,12 @@ function Error({
     <Fragment>
       <Seo
         postImage={data.file.childImageSharp.fluid.src}
-        postData={{ frontmatter: { title: 'About this blog - OAsome blog' } }}
+        postData={{
+          frontmatter: {
+            title: 'About this blog - OAsome blog',
+            path: '/about/',
+          },
+        }}
       />
       <App title="About this blog">
         <Section>
