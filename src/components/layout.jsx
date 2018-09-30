@@ -253,7 +253,7 @@ class App extends React.Component {
                 <Twitter color="disabled" className={classes.icon} />
               </a>
               <a rel="noopener noreferrer" target="_blank" href={`https://facebook.com/${config.facebook}`}>
-                <Twitter color="disabled" className={classes.icon} />
+                <Facebook color="disabled" className={classes.icon} />
               </a>
               <a rel="noopener noreferrer" target="_blank" href={`https://github.com/${config.github}`}>
                 <GithubCircle color="disabled" className={classes.icon} />

@@ -69,7 +69,7 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
   const description = postData.excerpt || config.description;
   const image = `${config.url}${postImage}`;
   const url = postMeta.path
-    ? `${config.url}${postMeta.slug}`
+    ? `${config.url}${postMeta.path}`
     : config.url;
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({

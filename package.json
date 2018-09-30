@@ -15,6 +15,7 @@
     "eslint-plugin-react": "^7.11.0",
     "gatsby": "latest",
     "gatsby-image": "latest",
+    "gatsby-plugin-favicon": "^3.1.4",
     "gatsby-plugin-feed": "latest",
     "gatsby-plugin-google-analytics": "^2.0.6",
     "gatsby-plugin-netlify-cache": "^0.1.0",

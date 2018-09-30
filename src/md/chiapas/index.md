@@ -47,7 +47,7 @@ First day trip was to Sumidero canyon along with a short visit to Chiapa de Corz
 
 ![](sumidero.jpg)
 
-![](sumidero2.jpg)
+<photo-composition><img src="sumidero3.jpg" /><img src="sumidero2.jpg" /></photo-composition>
 
 At the beginning the views are not spectacular but as soon as the canyon gets narrower then everything sets into place for some magnificent spots. And in terms of living animals we weren't left unsatisfied since we managed to see quite a lot different birds, a few crocodiles and some funny monkeys competing for a few pieces of bananas!
 
