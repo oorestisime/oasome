@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import Helmet from 'react-helmet';
 import { withStyles } from '@material-ui/core/styles';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import classNames from 'classnames';
@@ -35,6 +34,7 @@ import {
 import Section from './section';
 
 import Destinations from './destinations';
+import config from '../config';
 
 
 const styles = theme => ({
@@ -128,13 +128,6 @@ class App extends React.Component {
 
     return (
       <div className={classes.wrapper}>
-        <Helmet>
-          <title>{title}</title>
-          <meta
-            name="description"
-            content="Paris-based Cypriot adventurers. A and O. Lovers of life and travel. Want to get a glimpse of the OAsome world?"
-          />
-        </Helmet>
         <AppBar className={classes.appBar}>
           <Toolbar className={classes.appBarToolbar} disableGutters={!open}>
             <IconButton
@@ -154,7 +147,7 @@ class App extends React.Component {
                   color="inherit"
                   rel="noopener noreferrer"
                   target="_blank"
-                  href="https://instagram.com/oasome.blog/"
+                  href={`https://instagram.com/${config.instagram}/`}
                 >
                   <Instagram />
                 </IconButton>
@@ -162,13 +155,13 @@ class App extends React.Component {
                   color="inherit"
                   rel="noopener noreferrer"
                   target="_blank"
-                  href="https://twitter.com/oasome_blog"
+                  href={`https://twitter.com/${config.twitter}`}
                 >
                   <Twitter />
                 </IconButton>
                 <IconButton
                   color="inherit"
-                  href="mailto:oasome.blog@gmail.com"
+                  href={`mailto:${config.email}`}
                 >
                   <Email />
                 </IconButton>
@@ -244,16 +237,16 @@ class App extends React.Component {
         <Section shade="900">
           <Grid item xs={12} className={classes.footerIcons}>
             <ul className={classes.list}>
-              <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/oasome.blog/">
+              <a rel="noopener noreferrer" target="_blank" href={`https://instagram.com/${config.instagram}/`}>
                 <Instagram color="disabled" className={classes.icon} />
               </a>
-              <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/oasome_blog">
+              <a rel="noopener noreferrer" target="_blank" href={`https://twitter.com/${config.twitter}`}>
                 <Twitter color="disabled" className={classes.icon} />
               </a>
-              <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome">
+              <a rel="noopener noreferrer" target="_blank" href={`https://github.com/${config.github}`}>
                 <GithubCircle color="disabled" className={classes.icon} />
               </a>
-              <a href="mailto:oasome.blog@gmail.com">
+              <a href={`mailto:${config.email}`}>
                 <Email color="disabled" className={classes.icon} />
               </a>
               <a href="/rss.xml">
@@ -273,7 +266,7 @@ class App extends React.Component {
               GNU Affero General Public License 3.0
             </a>
             {', and is available on '}
-            <a rel="noopener noreferrer" target="_blank" href="https://github.com/oorestisime/oasome" className={classes.footerLink}>
+            <a rel="noopener noreferrer" target="_blank" href={`https://github.com/${config.github}`} className={classes.footerLink}>
               Github
             </a>
           </Typography>

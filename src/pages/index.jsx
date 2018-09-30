@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import classNames from 'classnames';
+import Helmet from 'react-helmet';
 import _ from 'lodash';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
@@ -76,152 +77,159 @@ class Index extends Component {
     const countries = _.uniq(nodes.map(post => post.frontmatter.country)).length;
 
     return (
-      <App>
-        <Section>
-          <Grid item xs={12}>
-            <Typography variant="display1" className={classes.headline}>
-              Featured articles
-            </Typography>
-          </Grid>
-          <Posts posts={featured} />
-        </Section>
-        <Hidden smDown>
-          <Section shade="300">
-            <Grid item xs={12}>
-              <Typography variant="display1" className={classes.headline}>
-                Our trips in numbers
-              </Typography>
-            </Grid>
-            <VisibilitySensor
-              onChange={e => this.onVisibilityChange(e)}
-              offset={{ top: 10 }}
-              delayedCall
-            >
-              <Fragment>
-                <Grid item xs={12} sm={3} className={classes.stats}>
-                  <Distance style={{ fontSize: 50 }} />
-                  <Typography variant="headline">
-                    Distance covered
-                  </Typography>
-                  <CountUp
-                    duration={2}
-                    start={0}
-                    end={this.state.didViewCountUp ? totals.km : 0}
-                    suffix=" km"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={3} className={classes.stats}>
-                  <DateIcon style={{ fontSize: 50 }} />
-                  <Typography variant="headline">
-                    Duration
-                  </Typography>
-                  <CountUp
-                    duration={2}
-                    start={0}
-                    end={this.state.didViewCountUp ? totals.duration : 0}
-                    suffix=" days"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={3} className={classes.stats}>
-                  <Earth style={{ fontSize: 50 }} />
-                  <Typography variant="headline">
-                    Countries
-                  </Typography>
-                  <CountUp
-                    duration={2}
-                    start={0}
-                    end={this.state.didViewCountUp ? countries : 0}
-                  />
-                </Grid>
-                <Grid item xs={12} sm={3} className={classes.stats}>
-                  <Location style={{ fontSize: 50 }} />
-                  <Typography variant="headline">
-                    Destinations
-                  </Typography>
-                  <CountUp
-                    duration={2}
-                    start={0}
-                    end={this.state.didViewCountUp ? totals.stops : 0}
-                    suffix=" stops"
-                  />
-                </Grid>
-              </Fragment>
-            </VisibilitySensor>
-          </Section>
-        </Hidden>
-        <Hidden smDown>
+      <Fragment>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <title>OAsome blog</title>
+        </Helmet>
+        <App>
           <Section>
             <Grid item xs={12}>
               <Typography variant="display1" className={classes.headline}>
-                Where we have been!
+                Featured articles
               </Typography>
             </Grid>
-            <Map cities={coords} />
+            <Posts posts={featured} />
           </Section>
-        </Hidden>
-        <Section shade="300">
-          <Grid item xs={12}>
-            <Typography variant="display1" className={classes.headline}>
-              About us
-            </Typography>
-          </Grid>
-          <Grid item sm={1} />
-          <Grid item xs={12} sm={6}>
-            <Typography variant="headline" className={classNames(classes.paddingText, classes.indie)}>
-              Hello there, we are A and O
-            </Typography>
-            <Typography className={classes.paddingText}>
-              Welcome to the OAsome blog.
-              <br />
-              This is a travel blog of a couple who guess what … their initials
-              start with an O and an A.
-              They both really  like travelling new places, finding out
-              interesting adventures and take casual photos.
-              <br />
-              <br />
-              This blog also gives an area for friends to share some of their
-              experiences or handful trips that they found out during their travel experiences!
-              <br />
-              <br />
-              Would you like to take a stroll around the OAsome world?
-              <br />
-              <br />
-              Then, follow along on our short adventures as we capture the planet!
-            </Typography>
-            <Link to="/about">
-              <Button className={classes.aboutButton} variant="raised" color="primary">
-                Read more
-              </Button>
-            </Link>
-          </Grid>
-          <Grid item sm={1} />
-          <Grid item xs={12} sm={4}>
-            <Img fluid={data.file.childImageSharp.fluid} alt="Logo" />
-          </Grid>
-        </Section>
-        <Section>
-          <Grid item xs={12}>
-            <Typography variant="display1" className={classes.headline}>
-              Latest articles
-            </Typography>
-          </Grid>
-          <Posts posts={latest.slice(0, 3)} />
-        </Section>
-        <Hidden smDown>
-          <Section noPadding>
-            <Grid item xs={12}>
-              <Typography
-                variant="display1"
-                className={classNames(classes.headline, classes.indie, classes.paddingText)}
+          <Hidden smDown>
+            <Section shade="300">
+              <Grid item xs={12}>
+                <Typography variant="display1" className={classes.headline}>
+                  Our trips in numbers
+                </Typography>
+              </Grid>
+              <VisibilitySensor
+                onChange={e => this.onVisibilityChange(e)}
+                offset={{ top: 10 }}
+                delayedCall
               >
-                <Instagram />
-                {' OAsome'}
+                <Fragment>
+                  <Grid item xs={12} sm={3} className={classes.stats}>
+                    <Distance style={{ fontSize: 50 }} />
+                    <Typography variant="headline">
+                      Distance covered
+                    </Typography>
+                    <CountUp
+                      duration={2}
+                      start={0}
+                      end={this.state.didViewCountUp ? totals.km : 0}
+                      suffix=" km"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={3} className={classes.stats}>
+                    <DateIcon style={{ fontSize: 50 }} />
+                    <Typography variant="headline">
+                      Duration
+                    </Typography>
+                    <CountUp
+                      duration={2}
+                      start={0}
+                      end={this.state.didViewCountUp ? totals.duration : 0}
+                      suffix=" days"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={3} className={classes.stats}>
+                    <Earth style={{ fontSize: 50 }} />
+                    <Typography variant="headline">
+                      Countries
+                    </Typography>
+                    <CountUp
+                      duration={2}
+                      start={0}
+                      end={this.state.didViewCountUp ? countries : 0}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={3} className={classes.stats}>
+                    <Location style={{ fontSize: 50 }} />
+                    <Typography variant="headline">
+                      Destinations
+                    </Typography>
+                    <CountUp
+                      duration={2}
+                      start={0}
+                      end={this.state.didViewCountUp ? totals.stops : 0}
+                      suffix=" stops"
+                    />
+                  </Grid>
+                </Fragment>
+              </VisibilitySensor>
+            </Section>
+          </Hidden>
+          <Hidden smDown>
+            <Section>
+              <Grid item xs={12}>
+                <Typography variant="display1" className={classes.headline}>
+                  Where we have been!
+                </Typography>
+              </Grid>
+              <Map cities={coords} />
+            </Section>
+          </Hidden>
+          <Section shade="300">
+            <Grid item xs={12}>
+              <Typography variant="display1" className={classes.headline}>
+                About us
               </Typography>
             </Grid>
-            <Instafeed data={data.allInstaNode} />
+            <Grid item sm={1} />
+            <Grid item xs={12} sm={6}>
+              <Typography variant="headline" className={classNames(classes.paddingText, classes.indie)}>
+                Hello there, we are A and O
+              </Typography>
+              <Typography className={classes.paddingText}>
+                Welcome to the OAsome blog.
+                <br />
+                This is a travel blog of a couple who guess what … their initials
+                start with an O and an A.
+                They both really  like travelling new places, finding out
+                interesting adventures and take casual photos.
+                <br />
+                <br />
+                This blog also gives an area for friends to share some of their
+                experiences or handful trips that they found out during their travel experiences!
+                <br />
+                <br />
+                Would you like to take a stroll around the OAsome world?
+                <br />
+                <br />
+                Then, follow along on our short adventures as we capture the planet!
+              </Typography>
+              <Link to="/about">
+                <Button className={classes.aboutButton} variant="raised" color="primary">
+                  Read more
+                </Button>
+              </Link>
+            </Grid>
+            <Grid item sm={1} />
+            <Grid item xs={12} sm={4}>
+              <Img fluid={data.file.childImageSharp.fluid} alt="Logo" />
+            </Grid>
           </Section>
-        </Hidden>
-      </App>
+          <Section>
+            <Grid item xs={12}>
+              <Typography variant="display1" className={classes.headline}>
+                Latest articles
+              </Typography>
+            </Grid>
+            <Posts posts={latest.slice(0, 3)} />
+          </Section>
+          <Hidden smDown>
+            <Section noPadding>
+              <Grid item xs={12}>
+                <Typography
+                  variant="display1"
+                  className={classNames(classes.headline, classes.indie, classes.paddingText)}
+                >
+                  <Instagram />
+                  {' OAsome'}
+                </Typography>
+              </Grid>
+              <Instafeed data={data.allInstaNode} />
+            </Section>
+          </Hidden>
+        </App>
+      </Fragment>
     );
   }
 }

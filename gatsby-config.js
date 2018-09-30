@@ -1,9 +1,10 @@
+const config = require('./src/config');
+
 module.exports = {
-  pathPrefix: '/oasome',
   siteMetadata: {
-    title: 'OAsome Blog',
-    siteUrl: 'https://oasome.blog',
-    description: 'Paris-based Cypriot adventurers. A and O. Lovers of life and travel. Want to get a glimpse of the OAsome world?',
+    title: config.title,
+    siteUrl: config.url,
+    description: config.description,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,7 +17,6 @@ module.exports = {
         name: 'pages',
       },
     },
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -41,13 +41,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-instagram',
       options: {
-        username: 'oasome.blog',
+        username: config.instagram,
       },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-126639314-1',
+        trackingId: config.gaId,
         anonymize: true,
         respectDNT: true,
         cookieDomain: 'oasome.blog',

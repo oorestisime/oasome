@@ -1,5 +1,4 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
@@ -16,6 +15,7 @@ import CardPost from '../components/cardPost';
 import { markdownStyle } from '../components/tools';
 import Posts from '../components/posts';
 import TripDetails from '../components/tripNotes';
+import Seo from '../components/seo';
 
 
 const styles = theme => ({
@@ -64,97 +64,79 @@ const renderAst = new rehypeReact({ // eslint-disable-line new-cap
 function BlogPost({
   data, classes, pageContext, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark, site } = data; // data.markdownRemark holds our post data
+  const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { similar } = pageContext;
-  const { siteMetadata: { siteUrl } } = site;
   const {
     frontmatter,
     htmlAst,
-    excerpt,
     timeToRead,
     tableOfContents,
   } = markdownRemark;
   return (
-    <App title="OAsome blog">
-      <Helmet>
-        <title>
-          {frontmatter.title}
-        </title>
-        <meta name="description" content={excerpt} />
-        <meta name="keywords" content={frontmatter.tags.join()} />
-        <meta property="og:site_name" content="Oasome blog" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:description" content={excerpt} />
-        <meta property="og:url" content={`${siteUrl}${frontmatter.path}`} />
-        <meta property="og:image" content={`${siteUrl}${frontmatter.cover.childImageSharp.fluid.src}`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={frontmatter.title} />
-        <meta name="twitter:description" content={excerpt} />
-        <meta name="twitter:url" content={`${siteUrl}${frontmatter.path}`} />
-        <meta name="twitter:image" content={`${siteUrl}${frontmatter.cover.childImageSharp.fluid.src}`} />
-      </Helmet>
-      <Section>
-        <Grid item xs={12} sm={9}>
-          <CardPost
-            title={frontmatter.title}
-            date={frontmatter.date}
-            cover={frontmatter.cover}
-            tags={frontmatter.tags}
-            content={(
-              <div className={classes.text}>
-                {renderAst(htmlAst)}
-              </div>
+    <Fragment>
+      <Seo
+        key={`seo-${frontmatter.title}`}
+        postImage={frontmatter.cover.childImageSharp.fluid.src}
+        postData={markdownRemark}
+      />
+      <App title="OAsome blog">
+        <Section>
+          <Grid item xs={12} sm={9}>
+            <CardPost
+              title={frontmatter.title}
+              date={frontmatter.date}
+              cover={frontmatter.cover}
+              tags={frontmatter.tags}
+              content={(
+                <div className={classes.text}>
+                  {renderAst(htmlAst)}
+                </div>
+              )}
+              expand={false}
+              type={frontmatter.type}
+              timeToRead={timeToRead}
+              country={frontmatter.country}
+            />
+          </Grid>
+          <Grid item sm={3}>
+            {frontmatter.km && (
+              <TripDetails
+                km={frontmatter.km}
+                itinerary={frontmatter.itinerary}
+                duration={frontmatter.duration}
+              />
             )}
-            expand={false}
-            type={frontmatter.type}
-            timeToRead={timeToRead}
-            country={frontmatter.country}
-          />
-        </Grid>
-        <Grid item sm={3}>
-          {frontmatter.km && (
-            <TripDetails
-              km={frontmatter.km}
-              itinerary={frontmatter.itinerary}
-              duration={frontmatter.duration}
-            />
-          )}
-          <div className={classes.toc}>
-            <Typography variant="headline" gutterBottom>
-              Contents
-            </Typography>
-            <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-          </div>
-        </Grid>
-      </Section>
-      {similar.length > 1
-        && (
-          <Section shade="300">
-            <Grid item xs={12}>
-              <Typography variant="display1">
-                Similar articles
+            <div className={classes.toc}>
+              <Typography variant="headline" gutterBottom>
+                Contents
               </Typography>
-            </Grid>
-            <Posts
-              posts={similar.filter(
-                post => post.frontmatter.title !== frontmatter.title,
-              ).slice(0, 8)}
-            />
-          </Section>
-        )
-      }
-    </App>
+              <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+            </div>
+          </Grid>
+        </Section>
+        {similar.length > 1
+          && (
+            <Section shade="300">
+              <Grid item xs={12}>
+                <Typography variant="display1">
+                  Similar articles
+                </Typography>
+              </Grid>
+              <Posts
+                posts={similar.filter(
+                  post => post.frontmatter.title !== frontmatter.title,
+                ).slice(0, 8)}
+              />
+            </Section>
+          )
+        }
+      </App>
+    </Fragment>
   );
 }
 
 export const pageQuery = graphql`
   query($path: String!) {
-    site {
-      siteMetadata {
-        siteUrl
-      }
-    }
     markdownRemark(
       frontmatter: {
         path: { eq: $path },

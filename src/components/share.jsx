@@ -14,6 +14,8 @@ import {
   EmailShareButton,
 } from 'react-share';
 
+import config from '../config';
+
 
 const styles = () => ({
   iconHover: {
@@ -40,7 +42,7 @@ const Share = props => (
       const { classes, path, title } = props;
       return (
         <div>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/oasome.blog/" style={{ textDecoration: 'none' }}>
+          <a rel="noopener noreferrer" target="_blank" href={`https://instagram.com/${config.instagram}/`} style={{ textDecoration: 'none' }}>
             <MenuItem>
               <Instagram className={classes.iconHover} color="disabled" />
             </MenuItem>
