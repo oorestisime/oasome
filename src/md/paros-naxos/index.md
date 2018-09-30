@@ -2,13 +2,13 @@
 path: "/paros-naxos-cyclades/"
 date: "2018-09-28"
 title: "The white-blue scenery and the crystal-clear water of Cyclades!"
-tags: ["greece", "islands", "cyclades", "paros", "naxos"]
+tags: ["greece", "island", "cyclades", "paros", "naxos"]
 cover: "./cover.jpg"
 country: "Greece"
 type: "article"
 featured: true
 duration: 5
-itinerary: ["Naoussa", "Ampelas", "Naxos", "Apeiranthos", "Chalki", "Aliko"]
+itinerary: ["Paros", "Naoussa", "Ampelas", "Naxos", "Apeiranthos", "Chalki", "Aliko"]
 km: 170
 coordinates: [
     { coordinates: [25.3777, 37.1036], country: 'Greece' },
@@ -17,7 +17,7 @@ coordinates: [
 
 Cyclades,
 
-One of our dreams became true! O and A, went to Cyclades on summer 2018
+One of our dreams became true! O and A, went to Cyclades on summer 2018.
 
 Before sharing our experience, lets exchange few geographical
 information! Did you know that the Cyclades comprise of about 220 islands?
@@ -25,13 +25,13 @@ The major ones being Amorgos, Andros, Antiparos, Delos, Ios, Kythnos,
 Milos, Mykonos, Naxos, Paros, Folegandros, Serifos, Sifnos, Syros,
 Tinos, and Santoríni. There are also many minor islands including
 Donousa, Eschati, Irakleia, Koufonisia, Makronisos and Schoinousa. The
-name \"Cyclades\" refers to the islands forming a circle (\"circular
-islands\") around the island of Delos.
+name "Cyclades" refers to the islands forming a circle ("circular
+islands") around the island of Delos.
 
 Sooooo, as it seems the decision was a really hard one. Which
 islands in Cyclades should we visit? After hours and hours
 looking around on internet and trusting some local sites and bloggers,
-our **\"Cyclades OAsome trip\"** scheduled to get started exploring the
+our **"Cyclades OAsome trip"** scheduled to get started exploring the
 islands of Naxos and Paros. Hmmmm we know... we are Cypriots and speak the
 same language, so it was easier to search local places, less touristic but still amazing.
 We agree, so this post is to share our tips, beautiful photos and experiences

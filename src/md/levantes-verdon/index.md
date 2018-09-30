@@ -14,26 +14,26 @@ coordinates: [
 ]
 ---
 
-Most of our interests while travelling include nature wonders and culture. In France we try to couple small prolonged weekend with either nature adventures or culture entertainement.
+Most of our interests while travelling include nature wonders and culture. In France we try to couple small prolonged weekends with either of those interests.
 
 We were always interested in witnessing the lovely purple colors of the lavender fields near Aix en provence as well as exploring the breathtaking views and the vivid blue colors of the Verdon canyon in the same area.
 
-We don't usually plan early in advance our France trips and this was no different. We managed to liberate ourselves, on mid July, for a weekend plus Monday and we chose all of a sudden to wander around the Aix en provence area in search for lavenders and canyon adventures.
+We don't usually plan early in advance our France trips and this was no different. We managed to liberate ourselves, on mid July, for a weekend plus Monday and we chose all of a sudden to wander around the Aix-en-provence area in search for lavenders and canyon adventures.
 
 In the end our sudden decision to visit that area did not fully pay off. Even if everywhere on the internet people seem to say that lavender has its peak at early July and fields stay colorful till beginning of August, we found out the hard way that due to climate changes they collect lavender quite earlier.
 We still managed to observe some nice fields but we were unlucky in the overall experience especially at plateau de Valensole.
 
 <tip title="Planning lavender visits">
-If you are planning to do as us then the best solution would be to call the different agriculturers to find out when this year collect will happen. This is what they suggested, calling around May would give you the best information. Latest years the harvest tends to lean more at mid June especially at the Valensole plateau where all the iconic photos are shoot.
+If you are planning to do as us then the best solution would be to call the different agriculturers to find out when this year collect will happen. This is what they suggested, calling around May would give you the best information. During the last years the harvest tends to lean more at mid June especially at the Valensole plateau where all the iconic photos are shoot.
 </tip>
 
-Our trip was so separated into 3 main sections. First was wandering around Aix en provence, its markets and nice city center, then going by car un our home designed lavender route and finally spending a day at the Gorges du Verdon.
+Our trip was so separated into 3 main sections. First was wandering around Aix-en-provence, its markets and nice city center, then going by car on our home designed lavender route and finally spending a day at the Gorges du Verdon.
 
 # Aix en provence
 
-The city during the summer days is buzzing with life. Markets are untill late at night and eveything seems quite vibrant and lively. The only downside, the mass of people wandering around the same areas.
+The city during the summer days is buzzing with life. Markets are open until late at night and eveything seems quite vibrant and lively. The only downside, the mass of people wandering around the same areas.
 
-We managed to try our fair share of duck recipes since this is the region the are most famous of. And we weren't dissapointed. Intersting flavours, tasty food at a nice setting. We could not ask for more.
+We managed to try our fair share of duck recipes since this is the region they are most famous. And we weren't dissapointed. Intersting flavours, tasty food at a nice setting. We could not ask for more.
 
 ![Aix en provence](aix.jpg)
 
@@ -61,14 +61,14 @@ Unfortunately as we were descending to lower altitude the fields disappeared and
 
 # Verdon
 
-Another hickup of our last minute weekend was that the river going inside the canyon by canoe or paddle was closed. There were indeed some strong winds and it was forbidden by the authorities.
+Another hickup of our last minute weekend was that the day we wanted to enter the river going inside the canyon by canoe or paddle was closed. There were indeed some strong winds and it was forbidden by the authorities.
 
 <photo-composition><img src="gorges.jpg" /><img src="verdon.jpg" /></photo-composition>
 
-The change of plans meant we go to visit the canyon from the different viewpoints around it by car. The views were spectacular and with so many places to stop and admire: the bridge of Lac St. Croix, Pont de l’Artuby, the different viewpoints (belvedere) at Route des Cretes and some of the villages around such as Moustier-Sainte-Marie.
+The change of plans meant we got to visit the canyon from the different viewpoints around it by car. The views were spectacular and with so many places to stop and admire: the bridge of Lac St. Croix, Pont de l’Artuby, the different viewpoints (belvedere) at Route des Cretes and some of the villages around such as Moustier-Sainte-Marie.
 
 ![Verdon](verdon2.jpg)
 
 # We will be back
 
-We left full of amazing pictures but with a bitter taste in our mouth. Going there 1 month earlier would have impressed even more. We will probably be back to get the full experience sooner rather than later!
+We left full of beautiful memories but with a bitter taste in our mouth. Going there 1 month earlier would have impressed even more. We will probably be back to get the full experience sooner rather than later!

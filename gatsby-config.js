@@ -7,6 +7,7 @@ module.exports = {
     description: config.description,
   },
   plugins: [
+    'gatsby-plugin-netlify-cache',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

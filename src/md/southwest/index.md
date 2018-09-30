@@ -18,9 +18,9 @@ coordinates: [
 
 # Preparation
 
-We had been longing to do this trip for quite a long time. Beautiful sceneries, awesome hikings, breathtaking views, amazing sunrises and sunsets, pallets full of colors. This trip was always going to be packed with excitement.
+We had been longing to do this trip for quite a long time. Beautiful sceneries, awesome hikings, [breathtaking views, amazing sunrises and sunsets, pallets full of colors](/photo-album-southwest/). This trip was always going to be packed with excitement.
 
-We were lucky, one of us had to attend a conference in Las Vegas in a way that we were really close to those places and we no longer had the opportunity to postpone this trip! Only hindsight was that we only had 7 nights to spend in the area and we had to prepare as much as possible, from accomodation to restaurants to almost the exact timeline of the trip. We had too many things to see and fit in a short timespace that preparation proved to be of great importance.
+We were lucky, one of us had to attend a conference in Las Vegas in a way that we were really close to those places and we no longer had the opportunity to postpone this trip! Only hindsight, we only had 7 nights to spend in the area and we had to prepare as much as possible, from accomodation to restaurants to almost the exact timeline of the trip. We had too many things to see and fit in a short timespace that preparation proved to be of great importance.
 
 <tip title="Flexible accomodation!">
 Keep in mind that even with the best preparation around, your plans might change.
@@ -41,8 +41,7 @@ spending a day at Death Valley, comparing ourselves to the giant Sequoias, hikin
 Equip yourself with the annual pass. You will save money and time since you only need to present the card and then proceed. They are sold in most visitor centers. We got ours at Death Valley.
 </tip>
 
-We managed to do just that, although i guess with a couple of more days to spare our trip would
-have been much more relaxed and we could have hiked a bit more. Neverthless we thouroughly enjoyed our trip so here's how it happened!
+We managed to do just that, although i guess with a couple of more days to spare our trip would have been much more relaxed and we could have hiked a bit more. Neverthless we thouroughly enjoyed our trip so here's how it happened!
 
 ## Driving and visiting through Death Valley
 
@@ -53,9 +52,9 @@ have been much more relaxed and we could have hiked a bit more. Neverthless we t
 
 We started early since we had to cover 180km to arrive at our first stop and a total of 650km for traversing Death Valley and arriving at our hotel for the night.
 
-The drive was nothing special until you get to understand that you are close to the valley. Rocks seem to be changins colors and elevation keeps dropping at a nice pace. We managed to visit Zabriskie point, Badwater bassin, Devil's golf course, Artists palette and the sand dunes. We would have really liked to get to the moving rocks as well but time was not our side.
+The drive was nothing special until you get to understand that you are close to the valley. Rocks seem to be changing colors and elevation keeps dropping at a nice pace. We managed to visit Zabriskie point, Badwater bassin, Devil's golf course, Artists palette and the sand dunes. We would have really liked to get to the moving rocks as well but time was not our side.
 
-We were most impressed by Badwater bassin but boy it was hot! We managed to convince ourselves not to take with us a bottle of water since we thought it was a short stop on a flat walking area. Lesson learned. We had water with us in each and every subsequest stop.
+We were most impressed by Badwater bassin but boy it was hot! We somehow convinced ourselves not to take with us a bottle of water since we thought it was a short stop on a flat walking area. Lesson learned. We had water with us in each and every subsequent stop.
 
 ![Badwater bassin](../photos-southwest/deathvalley.jpg)
 
@@ -76,7 +75,8 @@ Next day we headed early in the morning to the canyon to hike the narrows. We ha
 ![The narrows](../photos-southwest/zion.jpg)
 
 The hike was marvelous, we hadn't hike inside a canyon before and the whole experience was great. The flow of the river was low (40cfs) so it wasn't that hard to walk inside the river and even if we had a waterproof bag we didn't really feel we needed. Still probably on another day with a greater flow the experience must be totally different.
-Starting from the temple of Sinawava it took us around 3 hours to get to wall street and the canyon Orderville, taking lots of photos in the process. It tooks a bit more than 1.5 hour for the return. We didn't advance further than those areas due to being on tight schedule. Still the canyon got pretty narrow by that time and it was incredible.
+
+Starting from the temple of Sinawava it took us around 3 hours to get to wall street and the canyon Orderville, taking lots of photos in the process. It took a bit more than 1.5 hour for the return. We didn't advance further than those areas due to being on tight schedule. Still the canyon got pretty narrow by that time and it was incredible.
 
 ![The narrows](../photos-southwest/zion2.jpg)
 
@@ -86,29 +86,29 @@ Our time at Zion ended with our drive towards Bryce and the few stops after Mt C
 
 Unfortunately we didn't have time to hike at Bryce even if it seem quite interesting. We mostly used our car to drive around the different spectacular viewpoints from the visiting center to the arch and back. The architecture of the hoodoos are incredible. Definetely a must if you are around Zion even if its for a short afternoon. You would not witness such a thing elsewhere.
 
-Since we stayed near Bryce we spent quite some time in the canyon just walking around till it was dark. Unfortunately we didn't have the force to shoot any sunset or sunrise but we were amazed by the clear and dark skies that surround the canyon. If you are looking to shoot some galaxy photos then Bryce seems to be very nice spot.
+Since we stayed near Bryce we spent quite some time in the canyon just walking around till it was dark. Unfortunately we didn't have the force to shoot the sunset or the sunrise but we were amazed by the clear and dark skies that surround the canyon. If you are looking to shoot some galaxy photos then Bryce seems to be very nice spot.
 
-Finally we had a unique culinary experience at the small village we were leaving. Something between a bar and a restaurant it had a huge Barbecue inside giving the opportunity to food lovers us as to buy there meat from free range cattle and cook it to our liking along with a big list of spices, sauces and beers. If you are searching for something nice to eat then stop at the Outlaw saloon at Hatch.
+Finally we had a unique culinary experience at the small village we were staying. Something between a bar and a restaurant it had a huge barbecue inside giving the opportunity to food lovers us as to buy meat from free range cattle and cook it to our liking along with a big list of spices, sauces and beers. If you are searching for something nice to eat then stop at the Outlaw saloon at Hatch.
 
 ## Catching the light beams at antelope canyon and the sunset at horseshoe bend
 
-Welcome to Arizona! Welcome to Navajo land. This was our first stop in this native american land. We had already booked two tours. One to the lower antelope canyon and another to rattlesnake followed by the upper antelope canyon on the prime hours for the lightbeams. The tours seem to be booked out quite early, like 2-3 months before, on summer so we had to book quite early.
+Welcome to Arizona! Welcome to Navajo land. This was our first stop in this native american land. We had already booked two tours. One to the lower antelope canyon and another to rattlesnake followed by the upper antelope canyon on the prime hours for the lightbeams. The tours seem to be booked out quite early on summer, like 2-3 months before, so preparation is needed again.
 
 ### Lower antelope canyon
 
-This is the canyon that seems most narrow, and doesn't offer any lightbeams. It still offers though some magnificent colors and has much less people inside. We enjoyed it a lot and took some nice photos. We played a lot with the white balance settings of our camera and we ended up shooting raw for most of the time in order to be able to modify colors later.
+This is the canyon that seems the most narrow, and doesn't offer any lightbeams. It still offers though some magnificent colors and has much less people inside. We enjoyed it a lot and took some nice photos. We played a lot with the white balance settings of our camera and we ended up shooting raw for most of the time in order to be able to modify colors later.
 
-![Lower antelope canyon](../photos-southwest/antelope.jpg)
+![Lower antelope canyon](../photos-southwest/antelope1.jpg)
 
 ### Rattlesnake
 
-A much less known slot canyon this one, we were the only people inside and we were able to take our time walking around back and forth and explore in utter peace the canyon. Most parts ressembled the lower antelope canyon. Our guide was exceptional answering to us questions about Navajo land and people, the struggles they face with the american government and their integration. He also took the time to explain us how they use some of the plants we found around the canyon.
+A much less known slot canyon this one, we were the only people inside and we were able to take our time walking around back and forth and explore in utter peace the canyon. Most parts looked like the lower antelope canyon. Our guide was exceptional answering to us questions about Navajo land and people, the struggles they face with the american government and their integration. He also took the time to explain us how they use some of the plants we found around the canyon.
 
 ### Upper antelope canyon
 
-Final Navajo stop. If we were to describe this with one word: crowded. Like really really crowded. Like walking in a queue croweded. We got to see the light beams for a maximum of 10 minutes since it was, guess what, crowded and everyone has to keep moving. We felt the visit was done in a hurry (yes probably because it was crowded) and we didn't take the best of photos. Probably a tripod would have helped but we didn't pay for the photo tour. It was nice though, the canyon forms a lot of interesting figures and nice colors. Could be less crowded and nicer in other months.
+Next Navajo stop. If we were to describe this with one word: crowded. Like really really crowded. Like walking in a queue crowded. We got to see the light beams for a maximum of 10 minutes since it was, guess what, crowded and everyone had to keep moving fast. We felt the visit was done in a hurry (yes probably because it was crowded) and we didn't take the best of photos. Probably a tripod would have helped but we didn't pay for the photo tour. It was nice though, the canyon forms a lot of interesting figures and nice colors. Could be less crowded and nicer in other months.
 
-![Lower antelope canyon](../photos-southwest/lightbeam.jpg)
+![Upper antelope canyon](../photos-southwest/lightbeam.jpg)
 
 Thinking about the tours a few days later we felt that we should have probably avoided the upper one. But still we wanted to see the light beams. A pretty horrible dillema to be in.
 
@@ -116,17 +116,17 @@ Another highlight from this part of our trip was horseshew bend. We went there e
 
 ## Having the sunrise of our life at Monument Valley
 
-Second Navajo stop of our trip was Monument Valley. The road once we turned from Kayenta towards the valley started to be interesting and letting us get a quick overview of what we could expect from the rest of the park.
+Final Navajo stop of our trip was Monument Valley. The road once we turned from Kayenta towards the valley started to be interesting and letting us get a quick overview of what we could expect from the rest of the park.
 
 And it did not disappoint us. As soon as we arrived at the visitor center for a quick snack we got to marvel the beautiful and imposing mittens and you are left wondering how nature turned this into such a unique place. We then proceeded to do the short loop that does not require any special car. We got to approach a tiny bit more to these marvelous rock formations and witness a few more i.e the 3 sisters or the John Ford point. All of them were amazing and left us wondering what more we could observe at the long loop trail. Unfortunately we will probably never find out.
 
-![Lower antelope canyon](../photos-southwest/monument4.jpg)
+![Monument Valley](../photos-southwest/monument4.jpg)
 
 Next stop was the iconic Forrest Gump point and the Mexican hat. A few minutes drive from the visitor center we had the time to visit these two places take a couple of shots and make it back in time for the sunset. The views were beautiful but not what we expected. The sun sets on the opposite direction of the mittens so even if we got to see some nice shadows forming up we ultimately didn't shoot the sun at all.
 
-The problem was not solved though, we were up and ready to be amazed on the sunrise. We set out at 5 in the morning and we were glad we made this choice. We were able to shoot some amazing photos, observe how the landscape changes with the sun rising from the mittens and the incredible dark colors of the sky before the sun is up along with the moon.
+The problem was solved though, we were up and ready to be amazed on the sunrise. We set out at 5 in the morning and we were glad we made this choice. We were able to shoot some amazing photos, observe how the landscape changes with the sun rising from the mittens and the incredible dark colors of the sky before the sun is up along with the moon.
 
-![Lower antelope canyon](../photos-southwest/monument1.jpg)
+![Monument Valley](../photos-southwest/monument1.jpg)
 
 ## Driving along the beautiful view points of Grand Canyon
 
@@ -136,4 +136,4 @@ The different viewpoints offer some spectacular views. The canyon walls are enor
 
 This was our last stop for the week. We were pretty tired when we arrived late at night to the hotel but it was all worth it. Could easily be considered as one of our best trips, or at least the one with the most colors and vivid experiences.
 
-![Lower antelope canyon](../photos-southwest/grand2.jpg)
+![Monument Valley](../photos-southwest/grand2.jpg)
