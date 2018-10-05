@@ -148,6 +148,7 @@ class App extends React.Component {
                   color="inherit"
                   rel="noopener noreferrer"
                   target="_blank"
+                  title="Instagram"
                   href={`https://instagram.com/${config.instagram}/`}
                 >
                   <Instagram />
@@ -156,6 +157,7 @@ class App extends React.Component {
                   color="inherit"
                   rel="noopener noreferrer"
                   target="_blank"
+                  title="Twitter"
                   href={`https://twitter.com/${config.twitter}`}
                 >
                   <Twitter />
@@ -164,6 +166,7 @@ class App extends React.Component {
                   color="inherit"
                   rel="noopener noreferrer"
                   target="_blank"
+                  title="Facebook"
                   href={`https://facebook.com/${config.facebook}`}
                 >
                   <Facebook />
@@ -246,22 +249,22 @@ class App extends React.Component {
         <Section shade="900">
           <Grid item xs={12} className={classes.footerIcons}>
             <ul className={classes.list}>
-              <a rel="noopener noreferrer" target="_blank" href={`https://instagram.com/${config.instagram}/`}>
+              <a title="Instagram account" rel="noopener noreferrer" target="_blank" href={`https://instagram.com/${config.instagram}/`}>
                 <Instagram color="disabled" className={classes.icon} />
               </a>
-              <a rel="noopener noreferrer" target="_blank" href={`https://twitter.com/${config.twitter}`}>
+              <a title="Twitter account" rel="noopener noreferrer" target="_blank" href={`https://twitter.com/${config.twitter}`}>
                 <Twitter color="disabled" className={classes.icon} />
               </a>
-              <a rel="noopener noreferrer" target="_blank" href={`https://facebook.com/${config.facebook}`}>
+              <a title="Facebook account" rel="noopener noreferrer" target="_blank" href={`https://facebook.com/${config.facebook}`}>
                 <Facebook color="disabled" className={classes.icon} />
               </a>
-              <a rel="noopener noreferrer" target="_blank" href={`https://github.com/${config.github}`}>
+              <a title="Github account" rel="noopener noreferrer" target="_blank" href={`https://github.com/${config.github}`}>
                 <GithubCircle color="disabled" className={classes.icon} />
               </a>
-              <a href={`mailto:${config.email}`}>
+              <a title="Email" href={`mailto:${config.email}`}>
                 <Email color="disabled" className={classes.icon} />
               </a>
-              <a href="/rss.xml">
+              <a title="RSS feed" href="/rss.xml">
                 <Rss color="disabled" className={classes.icon} />
               </a>
             </ul>

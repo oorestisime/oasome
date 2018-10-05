@@ -80,12 +80,12 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
     isBlogPost,
   });
 
-  console.log(url, config.url)
   return (
     <Helmet>
       {/* General tags */}
       <meta name="description" content={description} />
       <meta name="image" content={image} />
+      <title>{title}</title>
 
       {/* Schema.org tags */}
       <script type="application/ld+json">
@@ -94,6 +94,7 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
 
       {/* Google webmaster */}
       {url === config.url && <meta name="google-site-verification" content="YUxxWy9eAbuiQ86l-TiUk1SvM5hAnrtNBf6qA9uwFXk" />}
+      {url === config.url && <link rel="manifest" href="/manifest.webmanifest" />}
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
