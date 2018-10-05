@@ -29,9 +29,9 @@ module.exports = {
             options: {
               sizeByPixelDensity: true,
               quality: 100,
+              withWebp: true,
             },
           },
-          'gatsby-remark-copy-images',
           {
             resolve: 'gatsby-remark-autolink-headers',
             options: {
@@ -56,7 +56,6 @@ module.exports = {
         cookieDomain: 'oasome.blog',
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -122,5 +121,6 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-offline',
   ],
 };
