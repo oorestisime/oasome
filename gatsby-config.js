@@ -58,22 +58,13 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        // Setting a color is optional.
-        color: 'tomato',
-        // Disable the loading spinner.
-        showSpinner: false,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'OAsome blog',
         short_name: 'OAsome',
         start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
+        background_color: '#fafafa',
+        theme_color: '#EEEEEE',
         display: 'minimal-ui',
       },
     },

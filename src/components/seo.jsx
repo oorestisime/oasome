@@ -86,6 +86,8 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
       <meta name="description" content={description} />
       <meta name="image" content={image} />
       <title>{title}</title>
+      <meta name="theme-color" content="#EEEEEE" />
+      <html lang="en" amp />
 
       {/* Schema.org tags */}
       <script type="application/ld+json">

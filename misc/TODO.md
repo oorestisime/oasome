@@ -19,7 +19,4 @@ The posts we should have 6 published + 10 drafts
 * dedup styles
 * add instagram as a staticquery and add it into all layouts
 * add coming soon trip
-* add nprogress
-* add sitemap
-* use webp
 * use lighthouse and fix the issues
