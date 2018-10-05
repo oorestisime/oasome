@@ -96,7 +96,7 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
 
       {/* Google webmaster */}
       {url === config.url && <meta name="google-site-verification" content="YUxxWy9eAbuiQ86l-TiUk1SvM5hAnrtNBf6qA9uwFXk" />}
-      {url === config.url && <link rel="manifest" href="/manifest.webmanifest" />}
+      <link rel="manifest" href="/manifest.webmanifest" />
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
