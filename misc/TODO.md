@@ -3,20 +3,23 @@
 The dev before we launch
 The posts we should have 6 published + 10 drafts
 
-## DEV
+## Done
 
 * ~~custom component~~
 * ~~about page~~
 * ~~contact us page~~
-* add logo
 * ~~rss feed~~
 * ~~fix toc links~~
 * ~~create meta card on top of toc~~
 
 ## Future
 
+* add logo
 * fix type checking props
 * dedup styles
 * add instagram as a staticquery and add it into all layouts
 * add coming soon trip
 * add nprogress
+* add sitemap
+* use webp
+* use lighthouse and fix the issues

@@ -240,7 +240,7 @@ export const pageQuery = graphql`
     file(relativePath: { eq: "about/up.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid_noBase64
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -256,7 +256,7 @@ export const pageQuery = graphql`
           localFile {
             childImageSharp {
               fixed(width: 150, height:150, quality: 100) {
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFixed_withWebp
               }
             }
           }
@@ -288,7 +288,7 @@ export const pageQuery = graphql`
             cover {
               childImageSharp{
                 fluid(maxHeight: 250, maxWidth: 350, quality: 100) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

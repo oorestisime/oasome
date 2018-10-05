@@ -10,8 +10,9 @@ module.exports = {
     'gatsby-plugin-netlify-cache',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-favicon',
-    'gatsby-transformer-sharp',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -56,6 +57,26 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        // Setting a color is optional.
+        color: 'tomato',
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'OAsome blog',
+        short_name: 'OAsome',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'minimal-ui',
+      },
+    },
     {
       resolve: 'gatsby-plugin-feed',
       options: {

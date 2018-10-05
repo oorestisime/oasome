@@ -54,13 +54,6 @@ function Error({
 
 export const pageQuery = graphql`
   query AboutQuery {
-    file(relativePath: { eq: "about/up.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
     markdownRemark(
       frontmatter: { path: { eq: "/about" } }
     ) {
