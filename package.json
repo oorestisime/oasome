@@ -26,8 +26,6 @@
     "gatsby-plugin-sharp": "latest",
     "gatsby-plugin-sitemap": "^2.0.1",
     "gatsby-remark-autolink-headers": "latest",
-    "gatsby-remark-copy-images": "^0.2.1",
-    "gatsby-remark-copy-linked-files": "latest",
     "gatsby-remark-images": "latest",
     "gatsby-remark-images-grid": "^1.0.2",
     "gatsby-source-filesystem": "latest",
