@@ -246,6 +246,7 @@ export const pageQuery = graphql`
     }
     allInstaNode (
       limit: 8
+      sort: { fields: [likes___count], order: DESC }
     ){
       edges {
         node {
