@@ -6,7 +6,6 @@ tags: ["island", "cyclades", "sea", "paros", "naxos"]
 cover: "./cover.jpg"
 country: "Greece"
 type: "article"
-featured: true
 duration: 5
 itinerary: ["Paros", "Naoussa", "Ampelas", "Naxos", "Apeiranthos", "Chalki", "Aliko"]
 km: 170

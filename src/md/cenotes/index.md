@@ -1,12 +1,13 @@
 ---
 path: "/cenotes/"
-date: "2018-10-08"
+date: "2018-10-07"
 title: "Yucatan: exploring the most impressive cenotes"
 tags: ["yucatan", "cenote", "nature", "valladolid"]
 cover: "./cover.jpg"
 country: "mexico"
 type: "article"
 duration: 3
+featured: true
 itinerary: ["Valladolid", "San Lorenzo Oxman", "Dzitnup", "Ik kil"]
 km: 153
 coordinates: [
@@ -38,15 +39,11 @@ We still had our car we rented from Merida and this helped a lot. We were autono
 
 Our first exploration started on one of the least known cenotes which is owned by a small family business of a hotel-restaurant. It is a short car ride from the city and it costs a few pesos, much cheaper than the other touristic ones.
 
-
 <photo-composition><img src="oxman2.jpg" /><img src="oxman3.jpg" /></photo-composition>
-
 
 The whole experience was a blast! You enter the cenote from some stairs leading to the entrance of the cenote. It has ample space for putting your belongings, life vests and a rope for some Tarzan-like fun! We stayed probably a couple or more hours in to swim and jump, jump and jump some more! The water was crystal clear, with lots of fish around. Most of the time we were with maximum another 2 people which made the whole experience even better.
 
 ![](oxman.jpg)
-
-![](oxman4.jpg)
 
 
 We think this cenote should be the on anyone's list. Much less touristic, without huge crowds and noise and the one we enjoyed the most!
