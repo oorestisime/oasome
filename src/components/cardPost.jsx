@@ -144,7 +144,7 @@ class CardPost extends Component {
           <CardMedia title={title}>
             <Img fluid={cover.childImageSharp.fluid} />
           </CardMedia>
-          <CardContent>
+          <CardContent component="article">
             {!expand && content}
           </CardContent>
           <CardActions className={classes.actions} disableActionSpacing>
