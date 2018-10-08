@@ -11,7 +11,7 @@ Welcome to the OAsome blog.
 This is a travel blog of a couple who guess what … their initials start with an O and an A.
 They both really like travelling new places, finding out interesting adventures and take casual photos.
 
-This blog also gives an area for friends to share some of their experiences or handful trips that they found out during their travel experiences!
+This blog also gives an area for friends to share some of their experiences or handy tips that they found out during their travel experiences!
 
 Would you like to take a stroll around the OAsome world?
 

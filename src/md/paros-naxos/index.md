@@ -203,7 +203,7 @@ Our second stop was Chalki, a quiet and almost deserted village in this
 season with its distillery Kitron, the local alcohol of Naxos. We strolled around
 the streets of the village visiting local shops and enjoyed a tasty desert.
 
-![](Naxos-car.png)
+![](naxos-car.jpg)
 
 It's situated at the center of Naxos and is another must
 visit villages. The houses there are as we imagined on the islands: all white, the door
