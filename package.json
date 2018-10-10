@@ -2,8 +2,8 @@
   "name": "OAsome",
   "description": "OAsome blog",
   "dependencies": {
-    "@material-ui/core": "^1.4.1",
-    "@material-ui/icons": "^2.0.0",
+    "@material-ui/core": "^3.2.0",
+    "@material-ui/icons": "^3.2.0",
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
     "classnames": "^2.2.6",

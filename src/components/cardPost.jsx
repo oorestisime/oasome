@@ -5,6 +5,7 @@ import { push } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -89,64 +90,85 @@ class CardPost extends Component {
     this.setState({ photo: photo + 1 });
   }
 
-  render() {
+  renderCard() {
     const {
       classes,
       title,
       date,
       cover,
-      tags,
-      content,
       expand,
-      path,
       timeToRead,
       country,
+      path,
     } = this.props;
     const { shareOpen, anchorEl } = this.state;
+
+    return [
+      <CardHeader
+        title={title}
+        classes={{ title: classes.header }}
+        titleTypographyProps={{ variant: expand ? 'subheading' : 'display1' }}
+        subheader={(
+          <div>
+            {!expand && <DateIcon className={classes.headerIcon} />}
+            {!expand && `${date}`}
+            <Location className={classes.headerIcon} />
+            {`${capitalize(country)}`}
+            <Timer className={classes.headerIcon} />
+            {`${timeToRead} min read`}
+          </div>
+        )}
+        action={!expand && (
+          <div>
+            <IconButton
+              aria-label="Share"
+              aria-owns={shareOpen ? 'share-menu' : null}
+              aria-haspopup="true"
+              onClick={evt => this.handleClick(evt)}
+            >
+              <ShareIcon title={title} path={path} />
+            </IconButton>
+            <Menu
+              id="share-menu"
+              anchorEl={anchorEl}
+              open={shareOpen}
+              onClose={() => this.handleClose()}
+            >
+              <Share title={title} path={path} />
+            </Menu>
+          </div>
+        )}
+      />,
+      <CardMedia title={title}>
+        <Img fluid={cover.childImageSharp.fluid} />
+      </CardMedia>,
+    ];
+  }
+
+  render() {
+    const {
+      classes,
+      tags,
+      expand,
+      path,
+      content,
+    } = this.props;
+
     return (
       <div>
         <Card className={classes.spacer}>
-          <CardHeader
-            title={title}
-            classes={{ title: classes.header }}
-            titleTypographyProps={{ variant: expand ? 'subheading' : 'display1' }}
-            subheader={(
-              <div>
-                {!expand && <DateIcon className={classes.headerIcon} />}
-                {!expand && `${date}`}
-                <Location className={classes.headerIcon} />
-                {`${capitalize(country)}`}
-                <Timer className={classes.headerIcon} />
-                {`${timeToRead} min read`}
-              </div>
-            )}
-            action={(
-              <div>
-                <IconButton
-                  aria-label="Share"
-                  aria-owns={shareOpen ? 'share-menu' : null}
-                  aria-haspopup="true"
-                  onClick={evt => this.handleClick(evt)}
-                >
-                  <ShareIcon title={title} path={path} />
-                </IconButton>
-                <Menu
-                  id="share-menu"
-                  anchorEl={anchorEl}
-                  open={shareOpen}
-                  onClose={() => this.handleClose()}
-                >
-                  <Share title={title} path={path} />
-                </Menu>
-              </div>
-            )}
-          />
-          <CardMedia title={title}>
-            <Img fluid={cover.childImageSharp.fluid} />
-          </CardMedia>
-          <CardContent component="article">
-            {!expand && content}
-          </CardContent>
+          {expand
+            ? (
+              <CardActionArea onClick={() => push(path)}>
+                {this.renderCard()}
+              </CardActionArea>)
+            : this.renderCard()
+          }
+          {!expand && (
+            <CardContent component="article">
+              {content}
+            </CardContent>
+          )}
           <CardActions className={classes.actions} disableActionSpacing>
             <TagCloud tags={expand ? tags.slice(0, 3) : tags} />
             {expand && (

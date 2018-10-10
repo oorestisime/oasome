@@ -1,7 +1,7 @@
 ---
 path: "/photo-album-southwest/"
 date: "2018-09-26"
-title: "Photo album from our southwest trip"
+title: "Photo album from our amazing time at the southwest"
 tags: ["canyon", "hiking", "National park", "southwest", "Zion", "Grand Canyon", "Antelope", "Monument Valley", "road trip", "Death Valley", "Bryce"]
 cover: "./cover.jpg"
 country: "Usa"
