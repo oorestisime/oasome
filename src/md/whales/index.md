@@ -42,10 +42,6 @@ They are the most playfull ones when in the mood since they play with their tail
 
 ![Humpback tail](whale6.jpg)
 
-<video width="100%" controls muted>
-  <source src="slapping-1.mp4" type="video/mp4">
-</video>
-
 # Blue whales
 
 These gigantic mammals are huge. They are probably 3 or more times the size of the humpback whale which are already quite big. Being enormaous, they don't spend much time above the sea. We managed to see only a small portion of their body when they were getting air and it was incredible. What's most impressive is when they blow air. It goes up way heigher than the others and with the most spectacular sound.
