@@ -40,7 +40,6 @@ module.exports = {
               offsetY: 100,
             },
           },
-          'gatsby-remark-copy-linked-files',
         ],
       },
     },
