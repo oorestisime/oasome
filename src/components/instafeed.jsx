@@ -51,7 +51,7 @@ function Instafeed({ classes, data }) {
               subtitle={(
                 <span>
                   <Heart style={{ fontSize: 12 }} />
-                  {` ${img.node.likes.count}`}
+                  {` ${img.node.likes}`}
                 </span>)}
             />
           </GridListTile>

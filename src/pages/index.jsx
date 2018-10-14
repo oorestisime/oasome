@@ -246,14 +246,12 @@ export const pageQuery = graphql`
     }
     allInstaNode (
       limit: 8
-      sort: { fields: [likes___count], order: DESC }
+      sort: { fields: [likes], order: DESC }
     ){
       edges {
         node {
           id
-          likes {
-            count
-          }
+          likes
           localFile {
             childImageSharp {
               fixed(width: 150, height:150, quality: 100) {
