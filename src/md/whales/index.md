@@ -1,7 +1,7 @@
 ---
 path: "/whale-watching/"
 date: "2018-10-14"
-title: "Whale watching at Monterrey bay, California"
+title: "Whale watching at Monterey bay, California"
 tags: ["whales", "sea", "california", "boat"]
 cover: "./cover.jpg"
 country: "Usa"
@@ -15,7 +15,7 @@ Tail slapping, tail flipping, breaching, waving, lobtailing, blowing, no we are 
 
 ![Humpback breaching](whale1.jpg)
 
-This is what you can expect from a whale watching tour in California. There are probably multiple companies around providing these services but in the end all of them take you to the same place, the Monterrey bay.
+This is what you can expect from a whale watching tour in California. There are probably multiple companies around providing these services but in the end all of them take you to the same place, the Monterey bay.
 
 From april to november the chances are much higher to get a glimpse of these incredible sea animals. The bay is home to one of the largest and deepest submarine canyons hence providing an abondance of food for the whales to feed. We managed to see quite a few humpback whales and two blue whales! The chances for finding out the blue whales are slim but we were quite lucky and amazed by the sizes.
 
