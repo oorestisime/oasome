@@ -107,7 +107,7 @@ function BlogPost({
               />
             )}
             <div className={classes.toc}>
-              <Typography variant="headline" gutterBottom>
+              <Typography variant="h5" gutterBottom>
                 Contents
               </Typography>
               <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
@@ -118,7 +118,7 @@ function BlogPost({
           && (
             <Section shade="300">
               <Grid item xs={12}>
-                <Typography variant="display1">
+                <Typography variant="h4">
                   Similar articles
                 </Typography>
               </Grid>

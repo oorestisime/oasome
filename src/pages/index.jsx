@@ -82,7 +82,7 @@ class Index extends Component {
         <App>
           <Section>
             <Grid item xs={12}>
-              <Typography variant="display1" className={classes.headline}>
+              <Typography variant="h4" className={classes.headline}>
                 Featured articles
               </Typography>
             </Grid>
@@ -91,7 +91,7 @@ class Index extends Component {
           <Hidden smDown>
             <Section shade="300">
               <Grid item xs={12}>
-                <Typography variant="display1" className={classes.headline}>
+                <Typography variant="h4" className={classes.headline}>
                   Our trips in numbers
                 </Typography>
               </Grid>
@@ -103,7 +103,7 @@ class Index extends Component {
                 <Fragment>
                   <Grid item xs={12} sm={3} className={classes.stats}>
                     <Distance style={{ fontSize: 50 }} />
-                    <Typography variant="headline">
+                    <Typography variant="h5">
                       Distance covered
                     </Typography>
                     <CountUp
@@ -115,7 +115,7 @@ class Index extends Component {
                   </Grid>
                   <Grid item xs={12} sm={3} className={classes.stats}>
                     <DateIcon style={{ fontSize: 50 }} />
-                    <Typography variant="headline">
+                    <Typography variant="h5">
                       Duration
                     </Typography>
                     <CountUp
@@ -127,7 +127,7 @@ class Index extends Component {
                   </Grid>
                   <Grid item xs={12} sm={3} className={classes.stats}>
                     <Earth style={{ fontSize: 50 }} />
-                    <Typography variant="headline">
+                    <Typography variant="h5">
                       Countries
                     </Typography>
                     <CountUp
@@ -138,7 +138,7 @@ class Index extends Component {
                   </Grid>
                   <Grid item xs={12} sm={3} className={classes.stats}>
                     <Location style={{ fontSize: 50 }} />
-                    <Typography variant="headline">
+                    <Typography variant="h5">
                       Destinations
                     </Typography>
                     <CountUp
@@ -155,7 +155,7 @@ class Index extends Component {
           <Hidden smDown>
             <Section>
               <Grid item xs={12}>
-                <Typography variant="display1" className={classes.headline}>
+                <Typography variant="h4" className={classes.headline}>
                   Where we have been!
                 </Typography>
               </Grid>
@@ -164,13 +164,13 @@ class Index extends Component {
           </Hidden>
           <Section shade="300">
             <Grid item xs={12}>
-              <Typography variant="display1" className={classes.headline}>
+              <Typography variant="h4" className={classes.headline}>
                 About us
               </Typography>
             </Grid>
             <Grid item sm={1} />
             <Grid item xs={12} sm={6}>
-              <Typography variant="headline" className={classNames(classes.paddingText, classes.indie)}>
+              <Typography variant="h5" className={classNames(classes.paddingText, classes.indie)}>
                 Hello there, we are A and O
               </Typography>
               <Typography className={classes.paddingText}>
@@ -192,7 +192,7 @@ class Index extends Component {
                 Then, follow along on our short adventures as we capture the planet!
               </Typography>
               <Link to="/about">
-                <Button className={classes.aboutButton} variant="raised" color="primary">
+                <Button className={classes.aboutButton} variant="contained" color="primary">
                   Read more
                 </Button>
               </Link>
@@ -204,7 +204,7 @@ class Index extends Component {
           </Section>
           <Section>
             <Grid item xs={12}>
-              <Typography variant="display1" className={classes.headline}>
+              <Typography variant="h4" className={classes.headline}>
                 Latest articles
               </Typography>
             </Grid>
@@ -214,7 +214,7 @@ class Index extends Component {
             <Section noPadding>
               <Grid item xs={12}>
                 <Typography
-                  variant="display1"
+                  variant="h4"
                   className={classNames(classes.headline, classes.indie, classes.paddingText)}
                 >
                   <Instagram />

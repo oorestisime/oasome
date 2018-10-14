@@ -33,7 +33,7 @@ const chipStyle = theme => (
       marginLeft: 'auto',
     },
     header: {
-      ...theme.typography.subheading,
+      ...theme.typography.subtitle1,
     },
     actions: {
       display: 'flex',
@@ -105,9 +105,10 @@ class CardPost extends Component {
 
     return [
       <CardHeader
+        key={`${title}-header`}
         title={title}
         classes={{ title: classes.header }}
-        titleTypographyProps={{ variant: expand ? 'subheading' : 'display1' }}
+        titleTypographyProps={{ variant: expand ? 'subtitle1' : 'h4' }}
         subheader={(
           <div>
             {!expand && <DateIcon className={classes.headerIcon} />}
@@ -139,7 +140,7 @@ class CardPost extends Component {
           </div>
         )}
       />,
-      <CardMedia title={title}>
+      <CardMedia key={`${title}-media`} title={title}>
         <Img fluid={cover.childImageSharp.fluid} />
       </CardMedia>,
     ];

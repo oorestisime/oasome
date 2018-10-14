@@ -9,14 +9,15 @@ import 'typeface-indie-flower';
 // It's optional.
 const theme = createMuiTheme({
   typography: {
+    useNextVariants: true,
     fontWeightRegular: 300,
     fontWeightMedium: 400,
     fontFamily: "'Lato', 'Helvetica', 'Arial'",
     fontSize: 18,
-    display1: {
+    h4: {
       fontWeight: 400,
     },
-    title: {
+    h6: {
       fontWeight: 300,
     },
   },

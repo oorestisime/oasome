@@ -40,10 +40,10 @@ const markdownStyle = theme => Object.assign(
       ...theme.typography.body1,
     },
     '& h1': {
-      ...theme.typography.display1,
+      ...theme.typography.h4,
     },
     '& h2': {
-      ...theme.typography.headline,
+      ...theme.typography.h5,
     },
     '& h3': {
       ...theme.typography.subheading,

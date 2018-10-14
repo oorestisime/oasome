@@ -139,7 +139,7 @@ class App extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography style={{ padding: '0.5rem', flexGrow: 1, fontWeight: 400 }} variant="headline" color="inherit" noWrap>
+            <Typography style={{ padding: '0.5rem', flexGrow: 1, fontWeight: 400 }} variant="h5" color="inherit" noWrap>
               {title}
             </Typography>
             {isWidthUp('sm', width) && (
@@ -189,7 +189,7 @@ class App extends React.Component {
         >
           <div className={classes.toolbarIe11}>
             <div className={classes.toolbar}>
-              <Typography variant="title" color="inherit">
+              <Typography variant="h6" color="inherit">
                 OAsome
               </Typography>
             </div>

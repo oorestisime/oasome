@@ -44,7 +44,7 @@ function Error({
         <Grid item sm={12} className={classes.paperSpacer}>
           <Paper className={classes.paper}>
             <ErrorIcon style={{ fontSize: 100 }} />
-            <Typography variant="display1">
+            <Typography variant="h4">
               Could not find this page.
               <Link to="/" className={classes.button}>
                 <Button variant="raised" color="primary">
