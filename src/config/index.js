@@ -8,4 +8,5 @@ module.exports = {
   email: 'oasome.blog@gmail.com',
   github: 'oorestisime/oasome',
   facebook: 'oasome.blog',
+  instagram_id: '17841408507179516',
 };

@@ -12,3 +12,4 @@ POSTS.md
 doc.pdf
 
 plugins
+.env*
