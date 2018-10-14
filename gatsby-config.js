@@ -31,7 +31,7 @@ module.exports = {
             options: {
               sizeByPixelDensity: true,
               quality: 100,
-              withWebp: true,
+              // withWebp: true,
             },
           },
           {
