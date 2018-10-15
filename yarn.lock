@@ -5433,14 +5433,32 @@ gatsby-source-filesystem@^2.0.3:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-source-instagram@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/gatsby-source-instagram/-/gatsby-source-instagram-0.1.4.tgz#c64be6b11621f9f040673af1a705fac9d0e97d08"
+gatsby-source-filesystem@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.4.tgz#001dd154470bfb1b11eb0e18ed95dfb3f55ed8c2"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    better-queue "^3.8.7"
+    bluebird "^3.5.0"
+    chokidar "^1.7.0"
+    fs-extra "^5.0.0"
+    got "^7.1.0"
+    md5-file "^3.1.1"
+    mime "^2.2.0"
+    pretty-bytes "^4.0.2"
+    slash "^1.0.0"
+    valid-url "^1.0.9"
+    xstate "^3.1.0"
+
+gatsby-source-instagram@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-instagram/-/gatsby-source-instagram-0.2.0.tgz#010ec275b18506e215d4408b6aea6047b2fa2dc8"
   dependencies:
     "@babel/preset-env" "^7.0.0"
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
     cheerio "^1.0.0-rc.2"
+    gatsby-source-filesystem "^2.0.4"
 
 gatsby-transformer-remark@^2.1.7:
   version "2.1.7"
