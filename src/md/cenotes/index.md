@@ -7,7 +7,7 @@ cover: "./cover.jpg"
 country: "mexico"
 type: "article"
 duration: 3
-featured: true
+featured: false
 itinerary: ["Valladolid", "San Lorenzo Oxman", "Dzitnup", "Ik kil"]
 km: 153
 coordinates: [
