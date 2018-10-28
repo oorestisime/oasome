@@ -7,7 +7,7 @@ cover: "./cover.jpg"
 country: "Iceland"
 type: "article"
 duration: 5
-featured: true
+featured: false
 itinerary: ["Reykjavík", "Thingvellir National Park", "Geysir", "Gullfoss",
 "Skógafoss", "Reynisfjara Beach,", "Blue lagoon"]
 km: 925
