@@ -15,7 +15,7 @@ coordinates: [
 ]
 ---
 
-When one is presented with the chance to visit France, it can be quite difficult to make a choice. Besides the obvious choice of Paris and the seasonal [lavender fields trip](/lavender-fields-and-verdon/) there are other choices that are quite on par:
+When one is presented with the chance to visit France, it can be quite difficult to make a choice. Besides the obvious one of Paris and the seasonal [lavender fields trip](/lavender-fields-and-verdon/) there are other choices that are quite on par:
 
 * the loire castles
 * north of france and the britanny castles
@@ -24,12 +24,11 @@ When one is presented with the chance to visit France, it can be quite difficult
 
 ![Mont Saint Michel](saintmichel1.jpg)
 
-
-If you have enough time then many of those places could be combined. And this is what we did, starting from Rennes then visiting the incredibles Saint Michel and Saint Malo before arriving at Tours for visiting the loire castles.
+If you have enough time then many of those places could be combined. And this is what we did, starting from Rennes then visiting the incredible Saint Michel and Saint Malo before arriving at Tours for visiting the loire castles and wine tasting.
 
 # Rennes
 
-Rennes is the capital of the Britanny region of France and is well known for the medieval timber houses, the crepes and vibrant city center.
+Rennes is the capital of the Britanny region of France and is well known for the medieval timber houses, the crepes and the vibrant city center.
 
 At the time we were living in Lyon and we chose to stay the night at Rennes before joining friends at the mont Saint-Michel where basically our trip would start.
 
@@ -37,7 +36,7 @@ The city center is quite small but beautiful. We walked around it during the aft
 
 # Mont Saint-Michel
 
-First of the many hightlights of this trip was Mont Saint-Michel. Arriving from Rennes to this island-commune-castle of Normandy is roughly a one hour and a half bus ride, and the entrance fee to is 10 euros.
+First of the many hightlights of this trip was Mont Saint-Michel. Arriving from Rennes to this island-commune-castle of Normandy is roughly a one hour and a half bus ride.
 
 We spent almost the entire day at the island walking around the historical structure and viewing the differences the tidal waves can create. An overall great experience worth even if you decide to visit from Paris which is a 4 hour drive.
 
@@ -45,7 +44,7 @@ We spent almost the entire day at the island walking around the historical struc
 
 # Saint-Malo
 
-Late afternoon we left he Unesco Heritage to go to Saint Malo, which is a port city in Brittany with a gothic and romanesque styled city center. Once again the idea of visiting this city is for walking around the old city center and enjoying the picturesque small roads and the stylish strctures.
+Late afternoon we left the Unesco Heritage to go to Saint Malo, which is a port city in Brittany with a gothic and romanesque styled city center. Once again the idea of visiting this city is for walking around the old city center and enjoying the picturesque small roads and the stylish structures.
 
 This city is quite touristic and unfortunately it was greatly reflected on our food choices. We didn't manage to find anything of great quality and we would recommend to avoid hitting the expensive restaurants the city is offering. Save your money for other french cities! Better quality better prices!
 
@@ -53,11 +52,11 @@ This city is quite touristic and unfortunately it was greatly reflected on our f
 
 ## Tours
 
-There are not many cities to choose from for enjoying the loire castles. Tours besides being the closest one, offers in addition a nice city center to spend the nights, a beautiful cathedral and some museums if this attracts your interest.
+There are not many cities to choose from for enjoying the loire castles. Tours besides being the closest one, offers in addition a nice city center to spend the nights, a beautiful cathedral and some museums if those are in your interest.
 
 ## Ambroise
 
-Our first castle stop was the one of Ambroise and it was a good choice to start building some castle momentum. The castle on is own is not of a spectacular beauty being situated in a nice village offers something different. It was the only castle we visited that wasn't away from a city or a village.
+Our first castle stop was the one of Ambroise and it was a good choice to start building some castle momentum. The castle on its own is not of a spectacular beauty, but being situated in a nice village offers something different. It was the only castle we visited that wasn't away from a city or a village.
 
 ![Chateau Ambroise](ambroise.jpg)
 
@@ -71,7 +70,7 @@ This was another highlight of our trip, a castle built on thr 15th century on to
 
 ## Chambord
 
-Off to the biggest castle of the loire valley, Chambord. It is quite spectacular mainly due to its volume. We decided to avoid entering in this one, well it gets pricey entering in more than 2-3 castles, but we took time to explore all the sides of the castle to admire its size and its style!
+Off to the biggest castle of the loire valley, Chambord. It is quite spectacular mainly due to its size. We decided to avoid entering in this one, well it gets pricey entering in more than 2-3 castles, but we took time to explore all the sides of the castle to admire its size and its style!
 
 ![Chateau Chambord](chambord.jpg)
 
