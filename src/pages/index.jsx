@@ -13,14 +13,13 @@ import Button from '@material-ui/core/Button';
 import Location from '@material-ui/icons/LocationOn';
 import DateIcon from '@material-ui/icons/DateRange';
 import Hidden from '@material-ui/core/Hidden';
-import { MapMarkerDistance as Distance, Earth, Instagram } from 'mdi-material-ui';
+import { MapMarkerDistance as Distance, Earth } from 'mdi-material-ui';
 
 import withRoot from '../withRoot';
 import App from '../components/layout';
 import Posts from '../components/posts';
 import Map from '../components/map';
 import Section from '../components/section';
-import Instafeed from '../components/instafeed';
 import Seo from '../components/seo';
 import {
   flatten,
@@ -210,20 +209,6 @@ class Index extends Component {
             </Grid>
             <Posts posts={latest.slice(0, 3)} />
           </Section>
-          <Hidden smDown>
-            <Section noPadding>
-              <Grid item xs={12}>
-                <Typography
-                  variant="h4"
-                  className={classNames(classes.headline, classes.indie, classes.paddingText)}
-                >
-                  <Instagram />
-                  {' OAsome'}
-                </Typography>
-              </Grid>
-              <Instafeed data={data.allInstaNode} />
-            </Section>
-          </Hidden>
         </App>
       </Fragment>
     );
@@ -241,24 +226,6 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    allInstaNode (
-      limit: 8
-      sort: { fields: [likes], order: DESC }
-    ){
-      edges {
-        node {
-          id
-          likes
-          localFile {
-            childImageSharp {
-              fixed(width: 150, height:150, quality: 100) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
         }
       }
     }

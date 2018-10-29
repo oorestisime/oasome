@@ -32,8 +32,9 @@ import {
   Rss,
 } from 'mdi-material-ui';
 
-import Section from './section';
 
+import Instafeed from './instafeed';
+import Section from './section';
 import Destinations from './destinations';
 import config from '../config';
 
@@ -245,6 +246,7 @@ class App extends React.Component {
         </SwipeableDrawer>
         <div className={classes.appBarSpacer}>
           { children }
+          <Instafeed />
         </div>
         <Section shade="900">
           <Grid item xs={12} className={classes.footerIcons}>
