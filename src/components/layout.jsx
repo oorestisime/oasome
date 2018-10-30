@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import classNames from 'classnames';
@@ -42,10 +42,9 @@ import config from '../config';
 const styles = theme => ({
   toolbar: {
     ...theme.mixins.toolbar,
-    paddingLeft: theme.spacing.unit * 6,
     display: 'flex',
     flexGrow: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'center',
   },
@@ -125,6 +124,7 @@ class App extends React.Component {
       title,
       children,
       width,
+      logo,
     } = this.props;
     const { open, expandDestinations } = this.state;
 
@@ -190,9 +190,7 @@ class App extends React.Component {
         >
           <div className={classes.toolbarIe11}>
             <div className={classes.toolbar}>
-              <Typography variant="h6" color="inherit">
-                OAsome
-              </Typography>
+              <img src={logo.src} alt="Logo" width="150" />
             </div>
           </div>
           <Divider />
@@ -298,6 +296,7 @@ App.propTypes = {
   classes: PropTypes.shape().isRequired,
   children: PropTypes.node,
   title: PropTypes.string,
+  logo: PropTypes.shape().isRequired,
   width: PropTypes.string.isRequired,
 };
 
@@ -306,4 +305,21 @@ App.defaultProps = {
   title: 'OAsome blog',
 };
 
-export default withWidth()(withStyles(styles)(App));
+const StyledApp = withWidth()(withStyles(styles)(App));
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        file(relativePath: { eq: "logo.png" }) {
+          childImageSharp {
+            fixed(width: 150, quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={data => <StyledApp logo={data.file.childImageSharp.fixed} {...props} />}
+  />
+);

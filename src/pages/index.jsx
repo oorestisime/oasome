@@ -222,7 +222,7 @@ Index.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    file(relativePath: { eq: "about/up.jpg" }) {
+    file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
