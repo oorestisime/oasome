@@ -7,7 +7,7 @@ cover: "../photos-southwest/forest-gump.jpg"
 country: "Usa"
 type: "article"
 duration: 8
-featured: true
+featured: false
 itinerary: ["Death Valley", "Sequoia National Park", "Zion National Park", "Bryce canyon", "Antelope canyon", "Monument Valley", "Grand Canyon"]
 km: 3200
 coordinates: [
