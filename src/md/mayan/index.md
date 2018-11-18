@@ -12,13 +12,13 @@ itinerary: ["Palenque", "Merida", "Uxmal", "Chichen itza"]
 km: 910
 ---
 
-After visiting the beautiful landscapes and waterfalls of the [state Chiapas](/chiapas/) we arrived at Palenque. This was the first of three Mayan ruin we visited in the Yucatan peninsula, before having fun and exploring the [beautiful cenotes in Valladolid](/cenotes/). The others being Uxmal, Chichen Itza.
+After visiting the beautiful landscapes and waterfalls of the [state Chiapas](/chiapas/) we arrived at Palenque. This was the first of three Mayan ruins we visited in the Yucatan peninsula, before having fun and exploring the [beautiful cenotes in Valladolid](/cenotes/). The others being Uxmal, Chichen Itza.
 
 # Palenque
 
-We arrived in Palenque on a bus ride from Chiapas starting quite early in the morning, and after exploring some stunning waterfalls. The ride was bumpy and curvy but we were full of energy as soon as we set feet at Palenque ruins.
+We arrived in Palenque on a bus ride from Chiapas starting quite early in the morning. The ride was bumpy and curvy but we were full of energy as soon as we set feet at Palenque ruins having already been full of excitement after visiting some stunning waterfalls in the morning.
 
-The combination of being in a jungle and exploring archaeological ruins was quite impressive. Being inside the jungle was also a contributing factor of the low percentage of exploration of the ruins. It is estimated that only 10% of the ruins is explored!
+The combination of being in a jungle and exploring archaeological ruins was quite impressive. It is believed that only 10% of the ruins are explored due to the surrounding landscape!
 
 ![Palenque view](palenque.jpg)
 
@@ -27,7 +27,7 @@ Since these ruins were the first we visited we were in awe from minute one. The 
 ![Palenque view 2](palenque3.jpg)
 
 <tip title="Hiring a guide">
-We mostly avoid getting guides, we feel that with enough research before you can get most of the information that will stick with you in the aftermath. If you are expecting to get enough information from the different signs and plates around the ruins then be prepared to be a bit disappointed. While there are tons of it we found out they lacked a bit in details.
+We mostly avoid hiring guides, we feel that with enough research before you can get most of the information that will stick with you in the aftermath. If you are expecting to get enough information from the different signs and plates around the ruins then be prepared to be a bit disappointed. While there are tons of them we found out they lacked a bit in details.
 <br />
 It felt like that both Palenque and Chichen Itza justified the need for a guide. We didn't regret not hiring one but in the end we felt we would have learnt a few more things in the process.
 </tip>
@@ -36,13 +36,13 @@ It felt like that both Palenque and Chichen Itza justified the need for a guide.
 
 Besides the archaeological structures if you are lucky you will see a few monkeys around and probably lots of iguanas.
 
-Since the archeological site is a medium sized one we got it done in a few hours and we had time observing a few monkeys and iguanas that were around. We then headed towards the Palenque city. The city on its own had nothing else to offer in terms of sight-seeing but we had a much needed rest walking around the city late afternoon and spending the following day around before taking a night bus to Merida.
+Since the archeological site is a medium sized one we got it done in a few hours and we had time left to observe a few monkeys and iguanas that were around. We then headed towards the Palenque city. The city on its own had nothing else to offer in terms of sight-seeing but we had a much needed rest walking around the city late afternoon and spending the following day around before taking a night bus to Merida.
 
 # Merida
 
-We opted to take a night train in order to get some sleep and it was quite a good choice. The only minor problem was that they have the AC full and at some times we were a bit cold! Keep something warm with you on the bus!
+We opted to take a night train in order to get some sleep and avoid travelling during the day and it was quite a good choice. The only minor problem was that they have the AC full and at some times we were a bit cold! Damn we should have kept something warm with us on the bus!
 
-We arrived in Merida early in the morning. We hadn't plan to visit the city but we had a few hours in our disposal to walk around the city center before renting our car. The city center looked quite nice and it could have justified staying there for a night to take advantage of it. This would have required taking the bus directly after Palenque which we thought wasn't possible for us. We are not avid bus travelers so taking a 7 hours ride in the morning and another 8 hours ride in the evening felt too much.
+We arrived in Merida early in the morning. We hadn't plan to visit the city but we had a few hours at our disposal to walk around the old center before renting our car. The city center looked quite nice and it could have justified staying there for a night to take advantage of it. This would have required taking the bus directly after Palenque which we thought wasn't possible for us. We are not avid bus travelers so taking a 7 hours ride in the morning and another 8 hours ride in the evening felt too much.
 
 # Uxmal
 
@@ -50,7 +50,7 @@ Driving from Merida to the archeological site of Uxmal took as a bit more than a
 
 ![Uxmal pyramid](uxmal.jpg)
 
-There are a lot of structures to explore with the most beautiful being the pyramid of the Magician. It is different from the other pyramid we explored mainly due to its curvy sides, and its huge height.
+There are a lot of structures to explore with the most beautiful being the pyramid of the Magician. It is different from the other pyramids we explored mainly due to its curvy sides, and its huge height.
 
 ![Uxmal ruins](uxmal3.jpg)
 
@@ -58,7 +58,7 @@ There are a lot of structures to explore with the most beautiful being the pyram
 Since there are not a lot of people around we had the best chance to find out about the bird calls of the Pyramid. While standing in front of the pyramid clap your hands and you will hear the bird chirping sound.
 </tip>
 
-The rest of the site is also interesting to explore, with many scupltured mayan signs and structures across a vast area. With water and sunscreen we spend a few lovely hours enjoying the Mayan wonders.
+The rest of the site is also interesting to explore, with many sculptured mayan signs and structures across a vast area. With enough water and sunscreen we spent a few lovely hours enjoying the Mayan wonders.
 
 ![Uxmal ruins](uxmal4.jpg)
 
@@ -72,13 +72,13 @@ Reaching Chichen Itza from Valladolid takes roughly an hour. It took us more or 
 
 ![Chichen itzan El castillo](chichenitza5.jpg)
 
-They are one of the largest ruins around and probably one of the most important cities of the Mayan world. They combine a bit of everything, an impressive pyramid (El Castillo), a great Ball court, a temple of warriors with its thousand columns, an observatory (El Caracol) and a sacred cenote.
+This is one of the largest ruins around and probably one of the most important cities of the Mayan world. They combine a bit of everything, an impressive pyramid (El Castillo), a great Ball court, a temple of warriors with its thousand columns, an observatory (El Caracol) and a sacred cenote.
 
 <photo-composition><img src="chichenitza6.jpg" /><img src="chichenitza9.jpg" /></photo-composition>
 
 ![Temple of warriors](chichenitza7.jpg)
 
-Enough to keep you busy for a handful of hours depending on your interest in the historical details of the site. Besides finding out about the well known pyramid and the ball court we enjoyed finding out about the the details of the sacrifices that happened at the sacred cenote.
+Enough to keep you busy for a handful of hours depending on your interest in the historical details of the site. Besides exploring the well known pyramid and the ball court we enjoyed finding out about the the details of the sacrifices that happened at the sacred cenote.
 
 ![The sacred cenote](chichenitza8.jpg)
 
