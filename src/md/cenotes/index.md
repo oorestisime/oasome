@@ -4,7 +4,7 @@ date: "2018-10-07"
 title: "Yucatan: exploring the most impressive cenotes"
 tags: ["yucatan", "cenote", "nature", "valladolid"]
 cover: "./cover.jpg"
-country: "mexico"
+country: "Mexico"
 type: "article"
 duration: 3
 featured: false

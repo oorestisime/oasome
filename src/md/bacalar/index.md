@@ -4,15 +4,11 @@ date: "2018-10-20"
 title: "Bacalar, the Mexican lagoon of seven colors"
 tags: ["bacalar", "quintana roo", "lagoon", "nature", "maya"]
 cover: "./cover.jpg"
-country: "mexico"
+country: "Mexico"
 type: "article"
 duration: 2
-featured: true
 itinerary: ["Bacalar"]
 km: 280
-coordinates: [
-    { coordinates: [88.3924, 18.6783], country: 'Mexico' },
-]
 ---
 
 A huge and colorful lagoon is situated at the Mexican state of Quintana Roo near the borders with Belize. Lake Bacalar is known as the **lake of seven colors** due to the multiple hues of the water. The crystalline lake spreads out into the distance almost giving the impression that you are looking out of the Caribbean Sea.  It is about 55 kilometers long, and communicates with the Bay of Chetumal across the Hondo River and the Chaac Estuary.
