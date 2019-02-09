@@ -33,6 +33,7 @@ const calculateTotals = posts =>
 
 const InternalLink = styled(Link)`
   text-decoration: none;
+  color: inherit;
   :visited {
     color: inherit;
   }

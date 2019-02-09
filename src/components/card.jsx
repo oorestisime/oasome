@@ -1,6 +1,4 @@
 import React from "react"
-import styled from "styled-components"
-import { navigate, Link } from "gatsby"
 import {
   ResponsiveContext,
   Box,
@@ -35,11 +33,9 @@ const Card = ({
             </InternalLink>
           </Box>
           <Box margin={{ top: `xsmall` }} pad={{ horizontal: `small` }}>
-            <InternalLink to={path}>
-              <Heading level="3" margin="none">
-                {title}
-              </Heading>
-            </InternalLink>
+            <Heading level="3" margin="none">
+              {title}
+            </Heading>
             <Box
               direction="row"
               gap="xsmall"
