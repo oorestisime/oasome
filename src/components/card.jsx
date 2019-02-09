@@ -1,5 +1,6 @@
 import React from "react"
-import { navigate } from "gatsby"
+import styled from "styled-components"
+import { navigate, Link } from "gatsby"
 import {
   ResponsiveContext,
   Box,
@@ -7,12 +8,12 @@ import {
   Paragraph,
   Text,
   Anchor,
-  Button,
 } from "grommet"
 import { Clock, Map } from "grommet-icons"
 import Img from "gatsby-image"
 
 import Tags from "./tags"
+import { InternalLink } from "../tools"
 
 const Card = ({
   title,
@@ -29,16 +30,16 @@ const Card = ({
       <Box align="start" fill pad="small">
         <Box elevation="small" round="xsmall">
           <Box>
-            <Button plain onClick={() => navigate(path)}>
+            <InternalLink to={path}>
               <Img fluid={cover.childImageSharp.fluid} />
-            </Button>
+            </InternalLink>
           </Box>
           <Box margin={{ top: `xsmall` }} pad={{ horizontal: `small` }}>
-            <Button plain onClick={() => navigate(path)}>
+            <InternalLink to={path}>
               <Heading level="3" margin="none">
                 {title}
               </Heading>
-            </Button>
+            </InternalLink>
             <Box
               direction="row"
               gap="xsmall"
@@ -53,12 +54,9 @@ const Card = ({
             {type !== `photo` && (
               <Paragraph margin={{ horizontal: `medium` }}>
                 {content}
-                <Anchor
-                  onClick={() => navigate(path)}
-                  label=" Read more"
-                  size="small"
-                  color="neutral-3"
-                />
+                <InternalLink to={path}>
+                  <Anchor label=" Read more" size="small" color="neutral-3" />
+                </InternalLink>
               </Paragraph>
             )}
             {size !== `small` && (

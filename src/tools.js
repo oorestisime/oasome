@@ -1,4 +1,6 @@
 import _ from "lodash"
+import styled from "styled-components"
+import { Link } from "gatsby"
 
 const capitalize = text => text.charAt(0).toUpperCase() + text.slice(1)
 const coordinates = posts =>
@@ -29,4 +31,18 @@ const calculateTotals = posts =>
     })
   }, 0)
 
-export { capitalize, coordinates, calculateTotals, groupBy, flatten }
+const InternalLink = styled(Link)`
+  text-decoration: none;
+  :visited {
+    color: inherit;
+  }
+`
+
+export {
+  capitalize,
+  coordinates,
+  calculateTotals,
+  groupBy,
+  flatten,
+  InternalLink,
+}

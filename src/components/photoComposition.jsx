@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { Grid } from "grommet"
 
 const PhotoComposition = ({ children }) => (
-  <Grid gap="small" columns={{ count: `fill` }}>
+  <Grid gap="small" columns={[`1/2`, `1/2`]}>
     {children
       .filter(child => child !== `\n`)
       .map(child => (

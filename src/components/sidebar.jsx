@@ -1,13 +1,11 @@
 import React from "react"
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
 
 import {
   Layer,
   Box,
   ResponsiveContext,
   Text,
-  Accordion,
-  AccordionPanel,
   Button,
   Collapsible,
 } from "grommet"
@@ -15,6 +13,7 @@ import { Archive, Camera, Group, Home, FormClose, Globe } from "grommet-icons"
 
 import Destinations from "./destinations"
 import ListItem from "./listItem"
+import { InternalLink } from "../tools"
 
 class Sidebar extends React.Component {
   static contextType = ResponsiveContext
@@ -46,56 +45,38 @@ class Sidebar extends React.Component {
             </Button>
           </ListItem>
         )}
-
+        <InternalLink to="/">
+          <ListItem>
+            <Home />
+            <Text>Home</Text>
+          </ListItem>
+        </InternalLink>
+        <InternalLink to="/archive/">
+          <ListItem>
+            <Archive />
+            <Text>Archive</Text>
+          </ListItem>
+        </InternalLink>
+        <InternalLink to="/photos/">
+          <ListItem>
+            <Camera />
+            <Text>Photos</Text>
+          </ListItem>
+        </InternalLink>
         <Button
           plain
-          hoverIndicator
-          onClick={() => navigate(`/`)}
-          icon={<Home />}
-          label={
-            <ListItem fill>
-              <Text>Home</Text>
-            </ListItem>
-          }
-        />
-
-        <Button
-          plain
-          hoverIndicator
-          onClick={() => navigate(`/archive/`)}
-          icon={<Archive />}
-          label={
-            <ListItem fill>
-              <Text>Archive</Text>
-            </ListItem>
-          }
-        />
-        <Button
-          plain
-          hoverIndicator
-          onClick={() => navigate(`/photos/`)}
-          icon={<Camera />}
-          label={
-            <ListItem fill>
-              <Text>Photos</Text>
-            </ListItem>
-          }
-        />
-        <Button
-          plain
-          hoverIndicator
           onClick={() =>
             this.setState({
               destOpen: !destOpen,
             })
           }
-          icon={<Globe />}
-          label={
-            <ListItem fill>
-              <Text>Destinations</Text>
-            </ListItem>
-          }
-        />
+        >
+          <ListItem>
+            <Globe />
+            <Text>Destinations</Text>
+          </ListItem>
+        </Button>
+
         <Collapsible open={destOpen}>
           {}
           <Box margin={{ left: `medium` }}>
@@ -103,17 +84,12 @@ class Sidebar extends React.Component {
           </Box>
           {}
         </Collapsible>
-        <Button
-          plain
-          hoverIndicator
-          onClick={() => navigate(`/about/`)}
-          icon={<Group />}
-          label={
-            <ListItem fill>
-              <Text>About us</Text>
-            </ListItem>
-          }
-        />
+        <InternalLink to="/about/">
+          <ListItem>
+            <Group />
+            <Text>About us</Text>
+          </ListItem>
+        </InternalLink>
       </SidebarComponent>
     )
   }

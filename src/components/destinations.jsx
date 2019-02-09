@@ -1,8 +1,9 @@
 import React from "react"
-import { navigate, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import { Text, Button } from "grommet"
 
 import ListItem from "./listItem"
+import { InternalLink } from "../tools"
 
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 
@@ -28,13 +29,11 @@ const Destinations = classes => (
     `}
     render={data =>
       data.allMarkdownRemark.distinct.map(dest => (
-        <ListItem key={dest} hoverIndicator>
-          <Button
-            plain
-            onClick={() => navigate(`/destination/${dest}`)}
-            label={<Text>{capitalize(dest)}</Text>}
-          />
-        </ListItem>
+        <InternalLink key={dest} to={`/destination/${dest}`}>
+          <ListItem>
+            <Text>{capitalize(dest)}</Text>
+          </ListItem>
+        </InternalLink>
       ))
     }
   />

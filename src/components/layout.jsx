@@ -18,7 +18,7 @@ class App extends React.Component {
   render() {
     const { title, children } = this.props
     const { showSidebar } = this.state
-    const content = <Box>{children}</Box>
+    const content = <Box justify="center">{children}</Box>
     return (
       <Grommet full theme={customTheme}>
         <Header

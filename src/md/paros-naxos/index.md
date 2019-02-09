@@ -67,7 +67,9 @@ After a few hours in the capital we decided to go for our first walk and lunch i
 We enjoyed our seafood-lunch in a nice and local seaside fish tavern tasting our first
 fish after a long time. On the menu a hearty greek salad with a big portion of fresh red porgy fish. We could already get the feel that Naoussa is the beautiful part of this island. The blue color from the sea along with the white of the houses construct a beautiful and calm scenery.
 
-<photo-composition><rehype-image src="naousa.jpg" /><rehype-image src="varkes.jpg" /><rehype-image src="voukemvilies.jpg" /></photo-composition>
+<photo-composition><rehype-image src="naousa.jpg" /><rehype-image src="varkes.jpg" /></photo-composition>
+
+<rehype-image src="voukemvilies.jpg" />
 
 <tip title="Avoiding crowds">
 During the day, since all the visitors are at the beaches, it's the best time to visit Naoussa if one wants to enjoy and walk around without many tourists!
