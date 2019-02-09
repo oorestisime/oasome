@@ -4,84 +4,59 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require('path');
-const _ = require('lodash');
-
-function paginate(array, pageSize, pageNumber) {
-  return array.slice(0).slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
-}
+const path = require(`path`)
+const _ = require(`lodash`)
 
 function createLinkedPages(createPage, edges) {
-  const listTemplate = path.resolve('src/templates/list.jsx');
-  const tagPosts = {};
-  const destPosts = {};
+  const listTemplate = path.resolve(`src/templates/list.jsx`)
+  const tagPosts = {}
+  const destPosts = {}
   edges.forEach(({ node }) => {
     if (node.frontmatter.tags) {
-      node.frontmatter.tags.forEach((tag) => {
+      node.frontmatter.tags.forEach(tag => {
         if (!tagPosts[tag]) {
-          tagPosts[tag] = [];
+          tagPosts[tag] = []
         }
-        tagPosts[tag].push(node);
-      });
+        tagPosts[tag].push(node)
+      })
     }
     if (node.frontmatter.country) {
       if (!destPosts[node.frontmatter.country]) {
-        destPosts[node.frontmatter.country] = [];
+        destPosts[node.frontmatter.country] = []
       }
-      destPosts[node.frontmatter.country].push(node);
+      destPosts[node.frontmatter.country].push(node)
     }
-  });
+  })
+  Object.keys(destPosts).forEach(dest => {
+    createPage({
+      path: `/destination/${dest}`,
+      component: listTemplate,
+      context: {
+        posts: destPosts[dest],
+        title: dest,
+        type: `destination`,
+      },
+    })
+  })
 
-  const pageSize = 6;
-  Object.keys(destPosts).forEach((dest) => {
-    const pagesSum = Math.ceil(destPosts[dest].length / pageSize);
-
-    for (let page = 1; page <= pagesSum; page += 1) {
-      createPage({
-        path:
-          page === 1
-            ? `/destination/${dest}`
-            : `/destination/${dest}/page/${page}`,
-        component: listTemplate,
-        context: {
-          posts: paginate(destPosts[dest], pageSize, page),
-          title: dest,
-          type: 'destination',
-          pagesSum,
-          page,
-        },
-      });
-    }
-  });
-
-  Object.keys(tagPosts).forEach((tagName) => {
-    const pagesSum = Math.ceil(tagPosts[tagName].length / pageSize);
-
-    for (let page = 1; page <= pagesSum; page += 1) {
-      createPage({
-        path:
-          page === 1
-            ? `/tag/${tagName.toLowerCase()}`
-            : `/tag/${tagName.toLowerCase()}/page/${page}`,
-        component: listTemplate,
-        context: {
-          posts: paginate(tagPosts[tagName], pageSize, page),
-          title: tagName,
-          type: 'tag',
-          pagesSum,
-          page,
-        },
-      });
-    }
-  });
-  return { tagPosts, destPosts };
+  Object.keys(tagPosts).forEach(tagName => {
+    createPage({
+      path: `/tag/${tagName.toLowerCase()}`,
+      component: listTemplate,
+      context: {
+        posts: tagPosts[tagName],
+        title: tagName,
+        type: `tag`,
+      },
+    })
+  })
+  return { tagPosts, destPosts }
 }
 
-
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
-  const blogPostTemplate = path.resolve('src/templates/blogTemplate.jsx');
+  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.jsx`)
 
   return graphql(`
     {
@@ -112,11 +87,12 @@ exports.createPages = ({ actions, graphql }) => {
               }
               cover {
                 childImageSharp {
-                  fluid(maxHeight: 250, maxWidth: 350, quality: 100) {
+                  fluid(maxHeight: 280, maxWidth: 320, quality: 100) {
+                    base64
                     aspectRatio
                     src
-                    sizes
                     srcSet
+                    sizes
                   }
                 }
               }
@@ -125,16 +101,17 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors);
+      return Promise.reject(result.errors)
     }
     const { destPosts, tagPosts } = createLinkedPages(
-      createPage, result.data.allMarkdownRemark.edges,
-    );
+      createPage,
+      result.data.allMarkdownRemark.edges
+    )
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      if (['article', 'photo'].includes(node.frontmatter.type)) {
+      if ([`article`, `photo`].includes(node.frontmatter.type)) {
         createPage({
           path: node.frontmatter.path,
           component: blogPostTemplate,
@@ -143,15 +120,15 @@ exports.createPages = ({ actions, graphql }) => {
               _.flatten(
                 _.concat(
                   destPosts[node.frontmatter.country],
-                  node.frontmatter.tags.map(tag => tagPosts[tag]),
-                ),
+                  node.frontmatter.tags.map(tag => tagPosts[tag])
+                )
               ),
-              'id',
+              `id`
             ),
           }, // additional data can be passed via context
-        });
+        })
       }
-    });
-    return Promise.resolve();
-  });
-};
+    })
+    return Promise.resolve()
+  })
+}

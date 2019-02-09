@@ -1,17 +1,9 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import ErrorIcon from '@material-ui/icons/Error';
-import Button from '@material-ui/core/Button';
+import React from "react"
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
-
-import withRoot from '../withRoot';
-import App from '../components/layout';
-import Section from '../components/section';
+import App from "../components/layout"
+import Section from "../components/section"
 
 const styles = theme => ({
   spacer: {
@@ -25,19 +17,17 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 4,
   },
   paper: {
-    textAlign: 'center',
+    textAlign: "center",
     color: theme.palette.text.secondary,
     paddingBottom: theme.spacing.unit * 2,
   },
   button: {
     padding: theme.spacing.unit * 1,
-    textDecoration: 'none',
+    textDecoration: "none",
   },
-});
+})
 
-function Error({
-  classes,
-}) {
+function Error({ classes }) {
   return (
     <App title="Oops something went wrong!!">
       <Section>
@@ -56,11 +46,11 @@ function Error({
         </Grid>
       </Section>
     </App>
-  );
+  )
 }
 
 Error.propTypes = {
   classes: PropTypes.shape().isRequired,
-};
+}
 
-export default withRoot(withStyles(styles)(Error));
+export default Error

@@ -1,40 +1,43 @@
-import React, { Fragment } from 'react';
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
+import React, { Fragment } from "react"
+import { graphql } from "gatsby"
+import PropTypes from "prop-types"
+import { ResponsiveContext } from "grommet"
 
-import withRoot from '../withRoot';
-import App from '../components/layout';
-import Section from '../components/section';
-import Posts from '../components/posts';
-import { flatten } from '../components/tools';
-import Seo from '../components/seo';
-
+import App from "../components/layout"
+import Section from "../components/section"
+import Posts from "../components/posts"
+import { flatten } from "../tools"
+import Seo from "../components/seo"
 
 function PhotosArchive({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+  const { edges: posts } = data.allMarkdownRemark
   return (
     <Fragment>
       <Seo
         postImage={data.file.childImageSharp.fluid.src}
         postData={{
           frontmatter: {
-            title: 'Photography articles - OAsome blog',
-            path: '/photos/',
+            title: `Photography articles - OAsome blog`,
+            path: `/photos/`,
           },
         }}
       />
       <App title="Photography articles">
-        <Section>
-          <Posts posts={flatten(posts)} />
-        </Section>
+        <ResponsiveContext.Consumer>
+          {size => (
+            <Section columns={size || `medium`}>
+              <Posts posts={flatten(posts)} />
+            </Section>
+          )}
+        </ResponsiveContext.Consumer>
       </App>
     </Fragment>
-  );
+  )
 }
 
 PhotosArchive.propTypes = {
   data: PropTypes.shape().isRequired,
-};
+}
 
 export const pageQuery = graphql`
   query PhotoQuery {
@@ -47,7 +50,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: {type: {eq: "photo"}  }}
+      filter: { frontmatter: { type: { eq: "photo" } } }
     ) {
       edges {
         node {
@@ -62,9 +65,9 @@ export const pageQuery = graphql`
             country
             cover {
               childImageSharp {
-                fluid(maxHeight: 250, maxWidth: 350, quality: 100) {
+                fluid(maxHeight: 200, maxWidth: 320, quality: 100) {
                   ...GatsbyImageSharpFluid
-              }
+                }
               }
             }
           }
@@ -72,6 +75,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default withRoot(PhotosArchive);
+export default PhotosArchive

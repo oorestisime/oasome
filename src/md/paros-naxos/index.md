@@ -61,24 +61,22 @@ The center of activity for locals is the capital town, Parikia, but a
 huge part of night life, nice shops, and services can be found in
 Naoussa too. They both have port towns, but with some differences; Parikia seems a bit more chaotic due to getting all the ferries traffic and Naoussa is a very scenic little port town with popular night life.
 
-![](paroikia.jpg)
+<rehype-image src="paroikia.jpg"></rehype-image>
 
 After a few hours in the capital we decided to go for our first walk and lunch in Naoussa.
 We enjoyed our seafood-lunch in a nice and local seaside fish tavern tasting our first
 fish after a long time. On the menu a hearty greek salad with a big portion of fresh red porgy fish. We could already get the feel that Naoussa is the beautiful part of this island. The blue color from the sea along with the white of the houses construct a beautiful and calm scenery.
 
-<photo-composition><img src="naousa.jpg" /><img src="varkes.jpg" /><img src="voukemvilies.jpg" /></photo-composition>
+<photo-composition><rehype-image src="naousa.jpg" /><rehype-image src="varkes.jpg" /><rehype-image src="voukemvilies.jpg" /></photo-composition>
 
 <tip title="Avoiding crowds">
 During the day, since all the visitors are at the beaches, it's the best time to visit Naoussa if one wants to enjoy and walk around without many tourists!
 </tip>
 
-
 Besides the dominant blue and white colorswe were struck by the bright
 violet-pink colors of the Bougainvillea trees that give you the
 following amazing pictures. These kind of pictures remain in our minds
 after leaving from Paros and they complement the beauty of this island.
-
 
 ## Nights in Naoussa
 
@@ -87,7 +85,7 @@ calm. We knew what all the people were saying to us before
 coming to this island; "Getting popular and popular", "a lot of
 tourists", "so crowded", etc... It was true finally!
 
-![](nixta-naoussa.jpg)
+<rehype-image src="nixta-naoussa.jpg"></rehype-image>
 
 We were left wondering if the place we had been during the afternoon was the
 same as the one at night. It's not easy to find a place in a restaurant to eat calm
@@ -109,7 +107,7 @@ enough to enjoy swimming with crystal clear water. Since it was a little bit far
 from the center of the island, and the big towns, we had the opportunity to relax
 and appreciate the sun and the Aegean Sea. We really loved it!
 
-![](ampelas.jpg)
+<rehype-image src="ampelas.jpg"></rehype-image>
 
 ## The food in Paros
 
@@ -118,19 +116,18 @@ wanted to eat more and more fish every day. The food was really
 good, fresh and tasty! In order to avoid promoting or neglecting restaurants
 chose to illustrate the food rather than describe it with words.
 
-![](food.png)
+<rehype-image src="food.png"></rehype-image>
 
 # Exploring the biggest island of Cyclades
 
 After completing two full days in Paros, the time to explore the next
 destination had arrived. **Naxos OAsome trip** began!
 
-![](xtapodia.jpg)
+<rehype-image src="xtapodia.jpg"></rehype-image>
 
 <tip title="Rent a car">
 Renting a car is not necessary for Naxos unless you want to visit the villages in which case you should only rent a car for a day. Don't do the same mistake as we did!
 </tip>
-
 
 One of our mistakes was that we rented a car for all the days in Naxos.
 Since we were not sure how far was the hotel from the places we wanted
@@ -140,7 +137,7 @@ few parking places were available and a lot of traffic especially during
 the night in the chaotic center of Naxos. The car is necessary maybe for
 one day to explore the old villages in Naxos, or if you really intend on going around the island.
 
-![](naxos-night.jpg)
+<rehype-image src="naxos-night.jpg"></rehype-image>
 
 Naxos is bigger than Paros, not so well-known and popular, but
 still beautiful. No matter how long you stay on Naxos, it is never
@@ -156,7 +153,7 @@ the island's most distinctive archaeological site that survives today.
 The Temple of Apollo may remain incomplete but its Portara
 entrance still stands today and has become a trademark of the island.
 
-![](portara.jpg)
+<rehype-image src="portara.jpg"></rehype-image>
 
 Even though it takes a few minutes on a steep climb to the top
 of the hill, the experience of viewing the sunset through Portara is completely worth it.
@@ -166,7 +163,6 @@ Wherever you are in Naxos, your eyes cannot possibly miss the Portara.
 
 One thing we chose to do with the car is ride along all the beaches to witness the differences they propose. We saw what surfers beach are like since there quite a few famous ones but we were mostly amazed by Alyko.
 
-
 It probably sounds weird, but in Naxos there is the most beautiful
 abandoned hotel in the world, full of colors, 3D graffitis and nice
 roof top views of the Aegean sea. This area combines beautiful beaches
@@ -175,7 +171,7 @@ on why this hotel is abandonned, today some talented people used some of the wal
 this building to transform it into an amazing street art gallery. Brilliant, 3Ds and
 revolutionary graffitis are some of the more popular ones
 
-![](hotel-3d.jpg)
+<rehype-image src="hotel-3d.jpg"></rehype-image>
 
 ## The famous mountain villages of Naxos island
 
@@ -190,7 +186,7 @@ due to its architecture and stone built houses but mainly due to its
 altitude, the center of the village is located at approximately 600m
 from sea level.
 
-![](anemomiloi.jpg)
+<rehype-image src="anemomiloi.jpg"></rehype-image>
 
 But its most impressive feature is its architecture. Stone built towers,
 old houses and churches, marble paved alleys, traditional small souvenir
@@ -203,14 +199,14 @@ Our second stop was Chalki, a quiet and almost deserted village in this
 season with its distillery Kitron, the local alcohol of Naxos. We strolled around
 the streets of the village visiting local shops and enjoyed a tasty desert.
 
-![](naxos-car.jpg)
+<rehype-image src="naxos-car.jpg"></rehype-image>
 
 It's situated at the center of Naxos and is another must
 visit villages. The houses there are as we imagined on the islands: all white, the door
 frames and windows painted blue. This blue can be very dark, as rather
 turquoise or sky blue.
 
-![](chalki.jpg)
+<rehype-image src="chalki.jpg"></rehype-image>
 
 ## The food in Naxos
 

@@ -1,77 +1,77 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import rehypeReact from 'rehype-react';
+import React, { Fragment } from "react"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import { Box, Heading, ResponsiveContext, Anchor } from "grommet"
+import rehypeReact from "rehype-react"
+import styled from "styled-components"
 
-import PhotoComposition from '../components/photoComposition';
-import Tip from '../components/tip';
-import withRoot from '../withRoot';
-import Section from '../components/section';
-import App from '../components/layout';
-import CardPost from '../components/cardPost';
-import { markdownStyle } from '../components/tools';
-import Posts from '../components/posts';
-import TripDetails from '../components/tripNotes';
-import Seo from '../components/seo';
+import PhotoComposition from "../components/photoComposition"
+import Tip from "../components/tip"
+import Section from "../components/section"
+import App from "../components/layout"
+import Post from "../components/post"
+import Posts from "../components/posts"
+import TripDetails from "../components/tripNotes"
+import Seo from "../components/seo"
 
+const BlogHeading = styled(Heading)`
+  font-family: "Indie flower", "Lato", "Arial";
+`
 
-const styles = theme => ({
-  text: markdownStyle(theme),
-  toc: {
-    top: 90,
-    flexShrink: 0,
-    order: 2,
-    position: 'sticky',
-    wordBreak: 'break-word',
-    height: 'calc(100vh - 70px)',
-    overflowY: 'auto',
-    margin: theme.spacing.unit,
-    padding: theme.spacing.unit * 4,
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
-    '& $ul': {
-      paddingLeft: theme.spacing.unit * 3,
-      margin: 0,
-      listStyleType: 'none',
-    },
-    '& $li': {
-      fontSize: 14,
-      padding: `${theme.spacing.unit / 2}px 0`,
-    },
-    '& $a': {
-      color: 'rgba(0, 0, 0, 0.54)',
-      textDecoration: 'none',
-      '&:hover': {
-        color: 'black',
-      },
-    },
-  },
-});
+const Photo = ({ rehyped }) => {
+  const props = JSON.parse(rehyped)
+  return (
+    <Img
+      fluid={props}
+      style={{
+        maxWidth: props.presentationWidth,
+        margin: `0 auto`,
+      }}
+    />
+  )
+}
 
-const renderAst = new rehypeReact({ // eslint-disable-line new-cap
+const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
-    'photo-composition': PhotoComposition,
+    "photo-composition": PhotoComposition,
+    "rehype-image": Photo,
     tip: Tip,
+    a: Anchor,
+    h1: data => <BlogHeading level={1} {...data} />,
+    h2: data => <BlogHeading level={2} {...data} />,
+    h3: data => <BlogHeading level={3} {...data} />,
+    h4: data => <BlogHeading level={4} {...data} />,
+    h5: data => <BlogHeading level={5} {...data} />,
+    h6: data => <BlogHeading level={6} {...data} />,
   },
-}).Compiler;
+}).Compiler
 
-function BlogPost({
-  data, classes, pageContext, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { similar } = pageContext;
-  const {
-    frontmatter,
-    htmlAst,
-    timeToRead,
-    tableOfContents,
-  } = markdownRemark;
+const Toc = styled.div`
+  word-wrap: break-word;
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+  }
+
+  li {
+    padding: 5px;
+  }
+  a {
+    color: rgba(0, 0, 0, 0.54);
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+  }
+`
+
+function BlogPost({ data, pageContext }) {
+  const { markdownRemark } = data // data.markdownRemark holds our post data
+  const { similar } = pageContext
+  const { frontmatter, htmlAst, timeToRead, tableOfContents } = markdownRemark
   return (
     <Fragment>
       <Seo
@@ -79,69 +79,76 @@ function BlogPost({
         postImage={frontmatter.cover.childImageSharp.fluid.src}
         postData={markdownRemark}
       />
-      <App title="OAsome blog">
-        <Section>
-          <Grid item xs={12} sm={9}>
-            <CardPost
-              title={frontmatter.title}
-              date={frontmatter.date}
-              cover={frontmatter.cover}
-              tags={frontmatter.tags}
-              content={(
-                <div className={classes.text}>
-                  {renderAst(htmlAst)}
-                </div>
+      <ResponsiveContext.Consumer>
+        {size => (
+          <App title="OAsome blog">
+            <Box direction="row-responsive">
+              <Box basis={size !== `small` ? `3/4` : `full`}>
+                <Post
+                  size={size}
+                  title={frontmatter.title}
+                  date={frontmatter.date}
+                  cover={frontmatter.cover}
+                  tags={frontmatter.tags}
+                  content={renderAst(htmlAst)}
+                  type={frontmatter.type}
+                  timeToRead={timeToRead}
+                  country={frontmatter.country}
+                />
+              </Box>
+              {size !== `small` && (
+                <Box basis="1/4">
+                  <Box margin="none" pad="none">
+                    {frontmatter.km && (
+                      <TripDetails
+                        km={frontmatter.km}
+                        itinerary={frontmatter.itinerary}
+                        duration={frontmatter.duration}
+                      />
+                    )}
+                  </Box>
+
+                  <Box
+                    margin={{ horizontal: `medium` }}
+                    elevation="small"
+                    pad="small"
+                  >
+                    <Heading level="5" padding="small">
+                      Contents
+                    </Heading>
+                    <Toc
+                      dangerouslySetInnerHTML={{ __html: tableOfContents }}
+                    />
+                  </Box>
+                </Box>
               )}
-              expand={false}
-              type={frontmatter.type}
-              timeToRead={timeToRead}
-              country={frontmatter.country}
-            />
-          </Grid>
-          <Grid item sm={3}>
-            {frontmatter.km && (
-              <TripDetails
-                km={frontmatter.km}
-                itinerary={frontmatter.itinerary}
-                duration={frontmatter.duration}
-              />
+            </Box>
+            {similar.length > 1 && (
+              <Section
+                columns={size || `medium`}
+                background="light-4"
+                title="Similar articles"
+              >
+                <Posts
+                  posts={similar
+                    .filter(
+                      post => post.frontmatter.title !== frontmatter.title
+                    )
+                    .slice(0, 8)}
+                />
+              </Section>
             )}
-            <div className={classes.toc}>
-              <Typography variant="h5" gutterBottom>
-                Contents
-              </Typography>
-              <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-            </div>
-          </Grid>
-        </Section>
-        {similar.length > 1
-          && (
-            <Section shade="300">
-              <Grid item xs={12}>
-                <Typography variant="h4">
-                  Similar articles
-                </Typography>
-              </Grid>
-              <Posts
-                posts={similar.filter(
-                  post => post.frontmatter.title !== frontmatter.title,
-                ).slice(0, 8)}
-              />
-            </Section>
-          )
-        }
-      </App>
+          </App>
+        )}
+      </ResponsiveContext.Consumer>
     </Fragment>
-  );
+  )
 }
 
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(
-      frontmatter: {
-        path: { eq: $path },
-        type: { in: ["photo", "article"] }
-      }
+      frontmatter: { path: { eq: $path }, type: { in: ["photo", "article"] } }
     ) {
       htmlAst
       timeToRead
@@ -158,22 +165,20 @@ export const pageQuery = graphql`
         itinerary
         duration
         cover {
-          childImageSharp{
+          childImageSharp {
             fluid(maxHeight: 450, maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
-        },
+        }
       }
     }
   }
-`;
-
+`
 
 BlogPost.propTypes = {
-  classes: PropTypes.shape().isRequired,
   data: PropTypes.shape().isRequired,
   pageContext: PropTypes.shape().isRequired,
-};
+}
 
-export default withRoot(withStyles(styles)(BlogPost));
+export default BlogPost

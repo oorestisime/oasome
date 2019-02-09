@@ -1,58 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import Avatar from '@material-ui/core/Avatar';
-import Warning from '@material-ui/icons/Warning';
-import Typography from '@material-ui/core/Typography';
-import yellow from '@material-ui/core/colors/yellow';
+import React from "react"
+import PropTypes from "prop-types"
+import { Box, Text, Heading } from "grommet"
+import { Alert } from "grommet-icons"
 
-const styles = theme => ({
-  yellowAvatar: {
-    color: '#fff',
-    backgroundColor: yellow[700],
-  },
-  content: {
-    paddingTop: 0,
-    paddingnBottom: 0,
-  },
-  header: {
-    paddingnBottom: '0 !important',
-  },
-  card: {
-    marginBottom: theme.spacing.unit * 2,
-  },
-});
-
-function Tip({
-  title, children, classes,
-}) {
+function Tip({ title, children }) {
   return (
-    <Card className={classes.card}>
-      <CardHeader
-        classes={{ root: classes.header, content: classes.header }}
-        avatar={(
-          <Avatar className={classes.yellowAvatar}>
-            <Warning />
-          </Avatar>
-        )}
-        title={title}
-      />
-      <CardContent className={classes.content}>
-        <Typography component="p">
-          {children}
-        </Typography>
-      </CardContent>
-    </Card>
-  );
+    <Box
+      margin="none"
+      pad={{ horizontal: `large`, vertical: `small` }}
+      background="light-3"
+    >
+      <Box align="center" gap="small" direction="row">
+        <Box
+          align="center"
+          round="full"
+          pad="xsmall"
+          background="status-warning"
+        >
+          <Alert size="medium" />
+        </Box>
+        <Heading level="4">{title}</Heading>
+      </Box>
+      <Text>{children}</Text>
+    </Box>
+  )
 }
 
 Tip.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  classes: PropTypes.shape().isRequired,
-};
+}
 
-export default withStyles(styles)(Tip);
+export default Tip

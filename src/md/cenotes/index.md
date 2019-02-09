@@ -7,7 +7,6 @@ cover: "./cover.jpg"
 country: "Mexico"
 type: "article"
 duration: 3
-featured: false
 itinerary: ["Valladolid", "San Lorenzo Oxman", "Dzitnup", "Ik kil"]
 km: 153
 coordinates: [
@@ -39,12 +38,11 @@ We still had our car we rented from Merida and this helped a lot. We were autono
 
 Our first exploration started on one of the least known cenotes which is owned by a small family business of a hotel-restaurant. It is a short car ride from the city and it costs a few pesos, much cheaper than the other touristic ones.
 
-<photo-composition><img src="oxman2.jpg" /><img src="oxman3.jpg" /></photo-composition>
+<photo-composition><rehype-image src="oxman2.jpg" /><rehype-image src="oxman3.jpg" /></photo-composition>
 
 The whole experience was a blast! You enter the cenote from some stairs leading to the entrance of the cenote. It has ample space for putting your belongings, life vests and a rope for some Tarzan-like fun! We stayed probably a couple or more hours in to swim and jump, jump and jump some more! The water was crystal clear, with lots of fish around. Most of the time we were with maximum another 2 people which made the whole experience even better.
 
-![](oxman.jpg)
-
+<rehype-image src="oxman.jpg"></rehype-image>
 
 We think this cenote should be the on anyone's list. Much less touristic, without huge crowds and noise and the one we enjoyed the most!
 
@@ -52,14 +50,13 @@ We think this cenote should be the on anyone's list. Much less touristic, withou
 
 Being excited after our morning adventure we continued to some cenotes that are much more known. Next stop Dzitnup cenote which actually involves two separated cenotes. It was quite obvious from the beginning that these two were going to be really different from the first one we visited.
 
-
 Both get minimal sunlight exposure but what strikes around is the whole commercial business setting. Guides moving around, there is a restaurant, photographers and quite a lot of people as well.
 
-<photo-composition><img src="xkeken.jpg" /><img src="dzitnup.jpg" /></photo-composition>
+<photo-composition><rehype-image src="xkeken.jpg" /><rehype-image src="dzitnup.jpg" /></photo-composition>
 
 Nevertheless it was a pleasant stay here. The uniqueness of the cenotes is well visible. It is pretty dark inside, rendering our task of taking photos more difficult. The water is considerably colder with less life inside.
 
-![](elephant.jpg)
+<rehype-image src="elephant.jpg"></rehype-image>
 
 We also ate at the restaurant around and the food was not exceptional but not bad either. We had our first taste of Cochinita Pibil there and gave us the urge to try more elsewhere!
 
@@ -67,11 +64,11 @@ We also ate at the restaurant around and the food was not exceptional but not ba
 
 Another pretty known cenote, situated not very far away from Dzitnup. Another private one with a restaurant and a hotel. This one is pretty organized as well. You are obliged to have a shower and a life vest on when inside the cenote which makes the experience a little cumbersome. There is a spot to cliff jump but it is not that high.
 
-![](hacienda2.jpg)
+<rehype-image src="hacienda2.jpg"></rehype-image>
 
 On the other hand the cenote is quite big with a nearly perfect circular cieling and a couple of tiny waterfalls around. We didn't stay there a lot, tending to always avoid the crowds. We didn't try the restaurant having eaten just before but it seemed nice.
 
-![](hacienda.jpg)
+<rehype-image src="hacienda.jpg"></rehype-image>
 
 # Ik Kil
 
@@ -81,19 +78,19 @@ As soon as we entered the parking space we understood that this one was going to
 
 The cenote is huge! Like really huge which means a hell of a lot of people inside it! If you are looking for a calm no noise cenote then this is the worst choice. It has a few cliff jumping spots that are high enough for fun and you are left wondering how can people cliff jump from the top on the Red Bull competitions! The ceiling is huge!
 
-![](ikkil.jpg)
+<rehype-image src="ikkil.jpg"></rehype-image>
 
 # Lol Ha
 
 Another cenote close to Chichen Itza accessible by car on a 30 minutes drive. It is lost in a small village (called Yaxunah) and looks like it is not maintained much. This one is strictly for adventurers, and be prepared to find there the bare minimum, abandonned stairs leading to the cenote!
 
-![](lolha.jpg)
+<rehype-image src="lolha.jpg"></rehype-image>
 
 # Cenote Zaci
 
 We left this one for the end since it was the closest to where we stayed. This one is also one of the cheapest and it has another beautiful setting. The cenote involves nice vegetation around and it looks more like a cave on one side. In our opinion it offered the best spots for cliff jumping. They were heigh enough to give you second thoughts and at the time there were not a lot of people waiting in line to discourage you to go there. We found there only families and locals which probably means something. The water was great!
 
-![](zaci.jpg)
+<rehype-image src="zaci.jpg"></rehype-image>
 
 # Hunting for more
 

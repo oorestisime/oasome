@@ -21,13 +21,12 @@ Then, follow along on our short adventures as we capture the planet!
 
 Yay we agree, you would say all good, but why another travel blog? And truth to be told we thought about this some time as well, but we ended up deciding because:
 
- * everyone has something different to offer in terms of adventures
- * we think we have experiences that could be useful for other people, just like other and wil provide insights for us at some point during our travels.
- * it is fun and you should try it to!
- * we document our experiences in a beautiful and constructive way
+- everyone has something different to offer in terms of adventures
+- we think we have experiences that could be useful for other people, just like other and wil provide insights for us at some point during our travels.
+- it is fun and you should try it to!
+- we document our experiences in a beautiful and constructive way
 
-![](up.jpg)
-
+<rehype-image src="up.jpg"></rehype-image>
 
 # So who are you?
 
@@ -43,7 +42,7 @@ We are no professional or anything. You could probably describe us best as amate
 
 We have not been to many countries yet, but we will try to provide details, tips and photos from our trips in Mexico, USA, Greece, Spain, Italy, Germany, France and some interesting tips about Paris and Cyprus.
 
-![](down.jpg)
+<rehype-image src="down.jpg"></rehype-image>
 
 # Using the content of this blog
 

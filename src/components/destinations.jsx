@@ -1,25 +1,16 @@
-import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import { withStyles } from '@material-ui/core/styles';
+import React from "react"
+import { navigate, StaticQuery, graphql } from "gatsby"
+import { Text, Button } from "grommet"
 
+import ListItem from "./listItem"
 
-const styles = theme => ({
-  nested: {
-    paddingLeft: theme.spacing.unit * 4,
-  },
-});
-
-const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 
 const Destinations = classes => (
   <StaticQuery
     query={graphql`
       query {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-        ) {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
           distinct(field: frontmatter___country)
           edges {
             node {
@@ -35,14 +26,18 @@ const Destinations = classes => (
         }
       }
     `}
-    render={data => data.allMarkdownRemark.distinct.map(dest => (
-      <Link key={dest} to={`/destination/${dest}`} style={{ textDecoration: 'none' }}>
-        <ListItem button className={classes.nested}>
-          <ListItemText inset primary={capitalize(dest)} />
+    render={data =>
+      data.allMarkdownRemark.distinct.map(dest => (
+        <ListItem key={dest} hoverIndicator>
+          <Button
+            plain
+            onClick={() => navigate(`/destination/${dest}`)}
+            label={<Text>{capitalize(dest)}</Text>}
+          />
         </ListItem>
-      </Link>
-    ))}
+      ))
+    }
   />
-);
+)
 
-export default withStyles(styles)(Destinations);
+export default Destinations

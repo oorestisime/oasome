@@ -2,7 +2,20 @@
 path: "/photo-album-southwest/"
 date: "2018-09-26"
 title: "Photo album from our amazing time at the southwest"
-tags: ["canyon", "hiking", "National park", "southwest", "Zion", "Grand Canyon", "Antelope", "Monument Valley", "road trip", "Death Valley", "Bryce"]
+tags:
+  [
+    "canyon",
+    "hiking",
+    "National park",
+    "southwest",
+    "Zion",
+    "Grand Canyon",
+    "Antelope",
+    "Monument Valley",
+    "road trip",
+    "Death Valley",
+    "Bryce",
+  ]
 cover: "./cover.jpg"
 country: "Usa"
 type: "photo"
@@ -12,66 +25,66 @@ Photo album from our [road trip at the SouthWest](/enjoying-7-nighs-sw-usa/).
 
 ### Death Valley
 
-![Death valley; Badwater bassin](dunes.jpg)
+<rehype-image src="dunes.jpg"></rehype-image>
 
-<photo-composition><img src="zabriskie.jpg" /><img src="deathvalley.jpg" /></photo-composition>
+<photo-composition><rehype-image src="zabriskie.jpg" /><rehype-image src="deathvalley.jpg" /></photo-composition>
 
 ### Sequoia National Park
 
-![General Sherman](sherman.jpg)
+<rehype-image src="sherman.jpg"></rehype-image>
 
-![Big trees](sequoia.jpg)
+<rehype-image src="sequoia.jpg"></rehype-image>
 
 ### Zion National Park
 
-<photo-composition><img src="elafi.jpg" /><img src="zion3.jpg" /></photo-composition>
+<photo-composition><rehype-image src="elafi.jpg" /><rehype-image src="zion3.jpg" /></photo-composition>
 
-![Narrows again](zion.jpg)
+<rehype-image src="zion.jpg"></rehype-image>
 
-![Narrows again](zion2.jpg)
+<rehype-image src="zion2.jpg"></rehype-image>
 
 ### Bryce National Park
 
-![Bryce canyon](bryce1.jpg)
+<rehype-image src="bryce1.jpg"></rehype-image>
 
 ### Antelope Canyon
 
-![Antelope canyon](antelope2.jpg)
+<rehype-image src="antelope2.jpg"></rehype-image>
 
-<photo-composition><img src="rattlesnake.jpg" /><img src="antelope1.jpg" /></photo-composition>
+<photo-composition><rehype-image src="rattlesnake.jpg" /><rehype-image src="antelope1.jpg" /></photo-composition>
 
-<photo-composition><img src="antelope3.jpg" /><img src="antelope5.jpg" /></photo-composition>
+<photo-composition><rehype-image src="antelope3.jpg" /><rehype-image src="antelope5.jpg" /></photo-composition>
 
-![Antelope canyon](antelope6.jpg)
+<rehype-image src="antelope6.jpg"></rehype-image>
 
-![Antelope canyon](lightbeam.jpg)
+<rehype-image src="lightbeam.jpg"></rehype-image>
 
 ### Lake Powell
 
-![Lake powell](powell.jpg)
+<rehype-image src="powell.jpg"></rehype-image>
 
 ### Horseshew bend
 
-![Horseshew bend](horseshew.jpg)
+<rehype-image src="horseshew.jpg"></rehype-image>
 
-![Horseshew bend at sunset](horseshew-sunset.jpg)
+<rehype-image src="horseshew-sunset.jpg"></rehype-image>
 
 ### Monument Valley
 
-![Monument valley at dawn](monument1.jpg)
+<rehype-image src="monument1.jpg"></rehype-image>
 
-![Monument valley at dawn](monument2.jpg)
+<rehype-image src="monument2.jpg"></rehype-image>
 
-![Monument valley at dawn](monument3.jpg)
+<rehype-image src="monument3.jpg"></rehype-image>
 
-![Monument valley at dawn](monument4.jpg)
+<rehype-image src="monument4.jpg"></rehype-image>
 
-![Monument valley at dawn](forest-gump.jpg)
+<rehype-image src="forest-gump.jpg"></rehype-image>
 
 ### Grand Canyon
 
-![Grand canyon](grand1.jpg)
+<rehype-image src="grand1.jpg"></rehype-image>
 
-![Grand canyon](grand2.jpg)
+<rehype-image src="grand2.jpg"></rehype-image>
 
-![Grand canyon](grand3.jpg)
+<rehype-image src="grand3.jpg"></rehype-image>

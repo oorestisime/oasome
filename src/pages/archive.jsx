@@ -1,39 +1,43 @@
-import React, { Fragment } from 'react';
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
+import React, { Fragment } from "react"
+import { graphql } from "gatsby"
+import PropTypes from "prop-types"
+import { ResponsiveContext } from "grommet"
 
-import withRoot from '../withRoot';
-import App from '../components/layout';
-import Posts from '../components/posts';
-import Section from '../components/section';
-import { flatten } from '../components/tools';
-import Seo from '../components/seo';
+import App from "../components/layout"
+import Posts from "../components/posts"
+import Section from "../components/section"
+import { flatten } from "../tools"
+import Seo from "../components/seo"
 
 function Archive({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+  const { edges: posts } = data.allMarkdownRemark
   return (
     <Fragment>
       <Seo
         postImage={data.file.childImageSharp.fluid.src}
         postData={{
           frontmatter: {
-            title: 'Archive - OAsome blog',
-            path: '/archive/',
+            title: `Archive - OAsome blog`,
+            path: `/archive/`,
           },
         }}
       />
       <App title="Archive">
-        <Section>
-          <Posts posts={flatten(posts)} />
-        </Section>
+        <ResponsiveContext.Consumer>
+          {size => (
+            <Section columns={size || `medium`}>
+              <Posts posts={flatten(posts)} />
+            </Section>
+          )}
+        </ResponsiveContext.Consumer>
       </App>
     </Fragment>
-  );
+  )
 }
 
 Archive.propTypes = {
   data: PropTypes.shape().isRequired,
-};
+}
 
 export const pageQuery = graphql`
   query ArchiveQuery {
@@ -46,7 +50,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: {type: {in: ["photo", "article", "friends"] }  }}
+      filter: { frontmatter: { type: { in: ["photo", "article", "friends"] } } }
     ) {
       edges {
         node {
@@ -61,9 +65,9 @@ export const pageQuery = graphql`
             country
             cover {
               childImageSharp {
-                fluid(maxHeight: 250, maxWidth: 350, quality: 100) {
+                fluid(maxHeight: 200, maxWidth: 320, quality: 100) {
                   ...GatsbyImageSharpFluid
-              }
+                }
               }
             }
           }
@@ -71,6 +75,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default withRoot(Archive);
+export default Archive
