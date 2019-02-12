@@ -15,7 +15,7 @@ const IndexSection = ({
     {title && (
       <Box direction="row" justify="center" align="center" gap="small">
         {TitleIcon && <TitleIcon size="large" />}
-        <Heading textAlign="center" size="medium">
+        <Heading textAlign="center" level="2">
           {title}
         </Heading>
       </Box>

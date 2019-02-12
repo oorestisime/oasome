@@ -29,11 +29,13 @@ const Destinations = classes => (
     `}
     render={data =>
       data.allMarkdownRemark.distinct.map(dest => (
-        <InternalLink key={dest} to={`/destination/${dest}`}>
-          <ListItem>
-            <Text>{capitalize(dest)}</Text>
-          </ListItem>
-        </InternalLink>
+        <Button key={dest} as="span" hoverIndicator>
+          <InternalLink to={`/destination/${dest}`}>
+            <ListItem margin={{ left: `small` }}>
+              <Text>{capitalize(dest)}</Text>
+            </ListItem>
+          </InternalLink>
+        </Button>
       ))
     }
   />

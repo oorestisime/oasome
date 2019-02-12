@@ -1,5 +1,4 @@
 import React from "react"
-import { navigate } from "gatsby"
 
 import {
   Layer,
@@ -8,6 +7,7 @@ import {
   Text,
   Button,
   Collapsible,
+  Heading,
 } from "grommet"
 import { Archive, Camera, Group, Home, FormClose, Globe } from "grommet-icons"
 
@@ -15,6 +15,16 @@ import Destinations from "./destinations"
 import ListItem from "./listItem"
 import { InternalLink } from "../tools"
 
+const SideBarLink = ({ to, text, icon: Icon }) => (
+  <Button as="span" hoverIndicator>
+    <InternalLink to={to}>
+      <ListItem>
+        <Icon />
+        <Text>{text}</Text>
+      </ListItem>
+    </InternalLink>
+  </Button>
+)
 class Sidebar extends React.Component {
   static contextType = ResponsiveContext
   state = {
@@ -25,19 +35,16 @@ class Sidebar extends React.Component {
     const { toggleSidebar } = this.props
     const { destOpen } = this.state
     const size = this.context
-    const SidebarComponent = size === `small` ? Layer : Box
-    const sidebarProps =
-      size === `small`
-        ? { full: true, onEsc: () => toggleSidebar(false) }
-        : {
-            fill: `vertical`,
-            width: `medium`,
-            pad: `small`,
-            background: `light-1`,
-            elevation: `xsmall`,
-          }
+    const sidebarProps = {
+      full: `vertical`,
+      background: `light-3`,
+      position: `left`,
+      modal: true,
+      onClickOutside: () => toggleSidebar(false),
+      onEsc: () => toggleSidebar(false),
+    }
     return (
-      <SidebarComponent {...sidebarProps}>
+      <Layer {...sidebarProps}>
         {size === `small` && (
           <ListItem hoverIndicator>
             <Button onClick={() => toggleSidebar(false)}>
@@ -45,52 +52,40 @@ class Sidebar extends React.Component {
             </Button>
           </ListItem>
         )}
-        <InternalLink to="/">
-          <ListItem>
-            <Home />
-            <Text>Home</Text>
-          </ListItem>
-        </InternalLink>
-        <InternalLink to="/archive/">
-          <ListItem>
-            <Archive />
-            <Text>Archive</Text>
-          </ListItem>
-        </InternalLink>
-        <InternalLink to="/photos/">
-          <ListItem>
-            <Camera />
-            <Text>Photos</Text>
-          </ListItem>
-        </InternalLink>
-        <Button
-          plain
-          onClick={() =>
-            this.setState({
-              destOpen: !destOpen,
-            })
-          }
-        >
-          <ListItem>
-            <Globe />
-            <Text>Destinations</Text>
-          </ListItem>
-        </Button>
-
-        <Collapsible open={destOpen}>
-          {}
-          <Box margin={{ left: `medium` }}>
-            <Destinations />
+        <Box width="small">
+          <Box align="center" border="bottom">
+            <Heading level={3}>OAsome</Heading>
           </Box>
-          {}
-        </Collapsible>
-        <InternalLink to="/about/">
-          <ListItem>
-            <Group />
-            <Text>About us</Text>
-          </ListItem>
-        </InternalLink>
-      </SidebarComponent>
+          <Box margin={{ vertical: `small` }}>
+            <SideBarLink to="/" text="Home" icon={Home} />
+            <SideBarLink to="/archive/" text="Archive" icon={Archive} />
+            <SideBarLink to="/photos/" text="Photos" icon={Camera} />
+            <Button
+              plain
+              hoverIndicator
+              onClick={() =>
+                this.setState({
+                  destOpen: !destOpen,
+                })
+              }
+            >
+              <ListItem>
+                <Globe />
+                <Text>Destinations</Text>
+              </ListItem>
+            </Button>
+
+            <Collapsible open={destOpen}>
+              {}
+              <Box>
+                <Destinations />
+              </Box>
+              {}
+            </Collapsible>
+            <SideBarLink to="/about/" text="About us" icon={Group} />
+          </Box>
+        </Box>
+      </Layer>
     )
   }
 }

@@ -97,7 +97,7 @@ function BlogPost({ data, pageContext }) {
                 />
               </Box>
               {size !== `small` && (
-                <Box basis="1/4">
+                <Box basis="1/4" margin={{ bottom: `small` }}>
                   <Box margin="none" pad="none">
                     {frontmatter.km && (
                       <TripDetails

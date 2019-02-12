@@ -20,9 +20,9 @@ function Error({ data }) {
         }}
       />
       <App title="About this blog">
-        <Section background="light-1" title="About us" columns="auto">
+        <Section columns="auto">
           <Box
-            margin={{ horizontal: `xlarge` }}
+            margin={{ horizontal: `xlarge`, vertical: `small` }}
             pad="medium"
             align="center"
             elevation="medium"
