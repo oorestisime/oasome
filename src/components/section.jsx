@@ -1,5 +1,5 @@
 import React from "react"
-import { Grid, Box, Heading } from "grommet"
+import { Box, Heading } from "grommet"
 
 const IndexSection = ({
   title,
@@ -7,8 +7,8 @@ const IndexSection = ({
   size,
   children,
   columns,
-  gridGap,
-  gridJustifyContent,
+  gapInner,
+  justifyInner,
   ...rest
 }) => (
   <Box {...rest}>
@@ -21,15 +21,14 @@ const IndexSection = ({
       </Box>
     )}
 
-    <Grid
-      fill="horizontal"
-      justify="around"
-      justifyContent={gridJustifyContent || `stretch`}
-      columns={columns}
-      gap={gridGap || `small`}
+    <Box
+      wrap
+      justify={justifyInner || `center`}
+      direction="row-responsive"
+      gap={gapInner || `small`}
     >
       {children}
-    </Grid>
+    </Box>
   </Box>
 )
 

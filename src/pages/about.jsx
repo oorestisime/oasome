@@ -6,8 +6,9 @@ import { Box } from "grommet"
 import Section from "../components/section"
 import Seo from "../components/seo"
 import App from "../components/layout"
+import { renderAst } from "../tools"
 
-function Error({ data }) {
+function About({ data }) {
   return (
     <Fragment>
       <Seo
@@ -20,16 +21,14 @@ function Error({ data }) {
         }}
       />
       <App title="About this blog">
-        <Section columns="auto">
+        <Section>
           <Box
             margin={{ horizontal: `xlarge`, vertical: `small` }}
             pad="medium"
             align="center"
             elevation="medium"
           >
-            <div
-              dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-            />
+            {renderAst(data.markdownRemark.htmlAst)}
           </Box>
         </Section>
       </App>
@@ -47,7 +46,7 @@ export const pageQuery = graphql`
       }
     }
     markdownRemark(frontmatter: { path: { eq: "/about" } }) {
-      html
+      htmlAst
       frontmatter {
         path
       }
@@ -55,8 +54,8 @@ export const pageQuery = graphql`
   }
 `
 
-Error.propTypes = {
+About.propTypes = {
   data: PropTypes.shape().isRequired,
 }
 
-export default Error
+export default About

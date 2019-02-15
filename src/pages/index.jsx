@@ -48,88 +48,75 @@ class Index extends Component {
           <ResponsiveContext.Consumer>
             {size => (
               <>
-                <Section columns={size || `medium`} title="Featured articles">
+                <Section title="Featured articles">
                   <Posts posts={featured} />
                 </Section>
                 {size !== `small` && (
                   <Fragment>
-                    <Section
-                      columns={{ count: `fill` }}
-                      size={size}
-                      title="Our trips in numbers"
-                      background="light-4"
+                    <VisibilitySensor
+                      onChange={e => this.onVisibilityChange(e)}
+                      offset={{ top: 10 }}
+                      delayedCall
                     >
-                      <VisibilitySensor
-                        onChange={e => this.onVisibilityChange(e)}
-                        offset={{ top: 10 }}
-                        delayedCall
+                      <Section
+                        pad={{ horizontal: `xlarge` }}
+                        justifyInner="between"
+                        size={size}
+                        title="Our trips in numbers"
+                        background="light-4"
                       >
-                        <Box
-                          gap="medium"
-                          justify="around"
-                          align="center"
-                          direction="row-responsive"
-                        >
-                          <Stat
-                            icon={Car}
-                            title="Distance covered"
-                            counter={
-                              <CountUp
-                                duration={2}
-                                start={0}
-                                end={this.state.didViewCountUp ? totals.km : 0}
-                                suffix=" km"
-                              />
-                            }
-                          />
-                          <Stat
-                            icon={Schedule}
-                            title="Duration"
-                            counter={
-                              <CountUp
-                                duration={2}
-                                start={0}
-                                end={
-                                  this.state.didViewCountUp
-                                    ? totals.duration
-                                    : 0
-                                }
-                                suffix=" days"
-                              />
-                            }
-                          />
-                          <Stat
-                            icon={Globe}
-                            title="Countries"
-                            counter={
-                              <CountUp
-                                duration={2}
-                                start={0}
-                                end={this.state.didViewCountUp ? countries : 0}
-                              />
-                            }
-                          />
-                          <Stat
-                            icon={MapLocation}
-                            title="Destinations"
-                            counter={
-                              <CountUp
-                                duration={2}
-                                start={0}
-                                end={
-                                  this.state.didViewCountUp ? totals.stops : 0
-                                }
-                                suffix=" stops"
-                              />
-                            }
-                          />
-                        </Box>
-                      </VisibilitySensor>
-                    </Section>
-                    <Section
-                      columns={{ count: `fit` }}
-                      title="Where we have been!"
-                    >
+                        <Stat
+                          icon={Car}
+                          title="Distance covered"
+                          counter={
+                            <CountUp
+                              duration={2}
+                              start={0}
+                              end={this.state.didViewCountUp ? totals.km : 0}
+                              suffix=" km"
+                            />
+                          }
+                        />
+                        <Stat
+                          icon={Schedule}
+                          title="Duration"
+                          counter={
+                            <CountUp
+                              duration={2}
+                              start={0}
+                              end={
+                                this.state.didViewCountUp ? totals.duration : 0
+                              }
+                              suffix=" days"
+                            />
+                          }
+                        />
+                        <Stat
+                          icon={Globe}
+                          title="Countries"
+                          counter={
+                            <CountUp
+                              duration={2}
+                              start={0}
+                              end={this.state.didViewCountUp ? countries : 0}
+                            />
+                          }
+                        />
+                        <Stat
+                          icon={MapLocation}
+                          title="Destinations"
+                          counter={
+                            <CountUp
+                              duration={2}
+                              start={0}
+                              end={this.state.didViewCountUp ? totals.stops : 0}
+                              suffix=" stops"
+                            />
+                          }
+                        />
+                      </Section>
+                    </VisibilitySensor>
+                    <Section title="Where we have been!">
                       <Map cities={coords} />
                     </Section>
                   </Fragment>
@@ -137,8 +124,6 @@ class Index extends Component {
                 <Section
                   background="light-3"
                   title="Hello there, we are A and O"
-                  responsive
-                  columns={{ count: `fit` }}
                 >
                   <Box direction="row-responsive" margin="small">
                     <Box align="center" basis="3/4">
@@ -174,7 +159,7 @@ class Index extends Component {
                     </Box>
                   </Box>
                 </Section>
-                <Section columns={size || `medium`} title="Latest articles">
+                <Section title="Latest articles">
                   <Posts posts={latest.slice(0, 3)} />
                 </Section>
               </>

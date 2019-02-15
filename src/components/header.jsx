@@ -1,83 +1,78 @@
-import React from "react"
+import React, { useContext } from "react"
 
 import { Box, Button, Heading, Anchor, ResponsiveContext } from "grommet"
 import { Menu, Twitter, Instagram, Facebook, MailOption } from "grommet-icons"
 
 import config from "../config"
 
-class Header extends React.Component {
-  static contextType = ResponsiveContext
-
-  render() {
-    const size = this.context
-    const { title, toggleSidebar, showSidebar } = this.props
-    return (
+const Header = ({ title, toggleSidebar, showSidebar }) => {
+  const size = useContext(ResponsiveContext)
+  return (
+    <Box
+      responsive={false}
+      pad="small"
+      as="header"
+      direction="row"
+      background="brand"
+      align="center"
+      elevation="small"
+      justify="between"
+    >
       <Box
-        responsive={false}
-        pad="small"
-        as="header"
+        flex={false}
         direction="row"
-        background="brand"
         align="center"
-        elevation="small"
-        justify="between"
+        margin={{ left: `small` }}
+        gap="small"
       >
+        <Button
+          icon={<Menu />}
+          plain
+          onClick={() => toggleSidebar(!showSidebar)}
+        />
+        <Heading level="2" margin={{ left: `small`, vertical: `none` }}>
+          {title || `OAsome Blog`}
+        </Heading>
+      </Box>
+      {size !== `small` && (
         <Box
-          flex={false}
+          margin={{ horizontal: `medium` }}
           direction="row"
           align="center"
-          margin={{ left: `small` }}
-          gap="small"
+          gap="medium"
         >
-          <Button
-            icon={<Menu />}
-            plain
-            onClick={() => toggleSidebar(!showSidebar)}
+          <Anchor
+            rel="noopener noreferrer"
+            target="_blank"
+            a11title="Instagram"
+            icon={<Instagram />}
+            href={`https://instagram.com/${config.instagram}/`}
           />
-          <Heading level="2" margin={{ left: `small`, vertical: `none` }}>
-            {title || `OAsome Blog`}
-          </Heading>
+          <Anchor
+            rel="noopener noreferrer"
+            target="_blank"
+            a11title="Twitter"
+            icon={<Twitter />}
+            href={`https://twitter.com/${config.twitter}`}
+          />
+          <Anchor
+            rel="noopener noreferrer"
+            target="_blank"
+            a11title="Facebook"
+            icon={<Facebook />}
+            href={`https://facebook.com/${config.facebook}`}
+          />
+          <Anchor
+            rel="noopener noreferrer"
+            target="_blank"
+            a11title="Email"
+            icon={<MailOption />}
+            href={`mailto:${config.email}`}
+          />
         </Box>
-        {size !== `small` && (
-          <Box
-            margin={{ horizontal: `medium` }}
-            direction="row"
-            align="center"
-            gap="medium"
-          >
-            <Anchor
-              rel="noopener noreferrer"
-              target="_blank"
-              a11title="Instagram"
-              icon={<Instagram />}
-              href={`https://instagram.com/${config.instagram}/`}
-            />
-            <Anchor
-              rel="noopener noreferrer"
-              target="_blank"
-              a11title="Twitter"
-              icon={<Twitter />}
-              href={`https://twitter.com/${config.twitter}`}
-            />
-            <Anchor
-              rel="noopener noreferrer"
-              target="_blank"
-              a11title="Facebook"
-              icon={<Facebook />}
-              href={`https://facebook.com/${config.facebook}`}
-            />
-            <Anchor
-              rel="noopener noreferrer"
-              target="_blank"
-              a11title="Email"
-              icon={<MailOption />}
-              href={`mailto:${config.email}`}
-            />
-          </Box>
-        )}
-      </Box>
-    )
-  }
+      )}
+    </Box>
+  )
 }
 
 export default Header

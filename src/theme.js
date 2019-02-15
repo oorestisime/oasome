@@ -1,6 +1,4 @@
 import { deepFreeze } from "grommet/utils"
-import "typeface-indie-flower"
-import "typeface-lato"
 
 export const customTheme = deepFreeze({
   global: {
@@ -9,6 +7,16 @@ export const customTheme = deepFreeze({
     },
     font: {
       family: `'Lato', 'Helvetica', 'Arial'`,
+      face: `
+        @font-face {
+          font-family: "Lato";
+          font-display: block;
+        }
+        @font-face {
+          font-family: "Indie flower";
+          font-display: block;
+        }
+      `,
       weight: `500`,
     },
   },

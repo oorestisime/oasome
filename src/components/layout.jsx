@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Grommet, Box, ResponsiveContext } from "grommet"
+import "typeface-indie-flower"
+import "typeface-lato"
 
 import { customTheme } from "../theme"
 import Instafeed from "./instafeed"
@@ -8,38 +10,29 @@ import Header from "./header"
 import Footer from "./footer"
 import Sidebar from "./sidebar"
 
-class App extends React.Component {
-  state = {
-    showSidebar: false,
-  }
-
-  toggleSidebar = showSidebar => this.setState({ showSidebar })
-
-  render() {
-    const { title, children } = this.props
-    const { showSidebar } = this.state
-    const content = <Box justify="center">{children}</Box>
-    return (
-      <Grommet full theme={customTheme}>
-        <Header
-          showSidebar={showSidebar}
-          toggleSidebar={this.toggleSidebar}
-          title={title}
-        />
-        {showSidebar && (
-          <Box direction="row" flex>
-            <Sidebar toggleSidebar={this.toggleSidebar} />
-            {content}
+const App = ({ title, children }) => {
+  const [showSidebar, setSidebar] = useState(false)
+  return (
+    <Grommet full theme={customTheme}>
+      <Box full>
+        <Box alignSelf="center">
+          <Box width="xxxlarge">
+            <Header
+              showSidebar={showSidebar}
+              toggleSidebar={setSidebar}
+              title={title}
+            />
+            {showSidebar && <Sidebar toggleSidebar={setSidebar} />}
+            {children}
+            <ResponsiveContext.Consumer>
+              {size => size !== `small` && <Instafeed />}
+            </ResponsiveContext.Consumer>
+            <Footer />
           </Box>
-        )}
-        {!showSidebar && content}
-        <ResponsiveContext.Consumer>
-          {size => size !== `small` && <Instafeed />}
-        </ResponsiveContext.Consumer>
-        <Footer />
-      </Grommet>
-    )
-  }
+        </Box>
+      </Box>
+    </Grommet>
+  )
 }
 
 App.propTypes = {

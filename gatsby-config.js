@@ -8,6 +8,7 @@ module.exports = {
     description: config.description,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-favicon`,
@@ -30,7 +31,7 @@ module.exports = {
             options: {
               tag: `rehype-image`,
               quality: 100,
-              maxWidth: 700,
+              maxWidth: 1000,
               srcSetBreakpoints: [300, 600],
             },
           },

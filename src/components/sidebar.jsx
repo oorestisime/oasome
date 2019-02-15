@@ -1,5 +1,4 @@
-import React from "react"
-
+import React, { useContext, useState } from "react"
 import {
   Layer,
   Box,
@@ -25,69 +24,53 @@ const SideBarLink = ({ to, text, icon: Icon }) => (
     </InternalLink>
   </Button>
 )
-class Sidebar extends React.Component {
-  static contextType = ResponsiveContext
-  state = {
-    destOpen: false,
+const Sidebar = ({ toggleSidebar }) => {
+  const [destOpen, setDest] = useState(false)
+  const size = useContext(ResponsiveContext)
+  const sidebarProps = {
+    full: `vertical`,
+    background: `light-3`,
+    position: `left`,
+    modal: true,
+    onClickOutside: () => toggleSidebar(false),
+    onEsc: () => toggleSidebar(false),
   }
-
-  render() {
-    const { toggleSidebar } = this.props
-    const { destOpen } = this.state
-    const size = this.context
-    const sidebarProps = {
-      full: `vertical`,
-      background: `light-3`,
-      position: `left`,
-      modal: true,
-      onClickOutside: () => toggleSidebar(false),
-      onEsc: () => toggleSidebar(false),
-    }
-    return (
-      <Layer {...sidebarProps}>
-        {size === `small` && (
-          <ListItem hoverIndicator>
-            <Button onClick={() => toggleSidebar(false)}>
-              <FormClose />
-            </Button>
-          </ListItem>
-        )}
-        <Box width="small">
-          <Box align="center" border="bottom">
-            <Heading level={3}>OAsome</Heading>
-          </Box>
-          <Box margin={{ vertical: `small` }}>
-            <SideBarLink to="/" text="Home" icon={Home} />
-            <SideBarLink to="/archive/" text="Archive" icon={Archive} />
-            <SideBarLink to="/photos/" text="Photos" icon={Camera} />
-            <Button
-              plain
-              hoverIndicator
-              onClick={() =>
-                this.setState({
-                  destOpen: !destOpen,
-                })
-              }
-            >
-              <ListItem>
-                <Globe />
-                <Text>Destinations</Text>
-              </ListItem>
-            </Button>
-
-            <Collapsible open={destOpen}>
-              {}
-              <Box>
-                <Destinations />
-              </Box>
-              {}
-            </Collapsible>
-            <SideBarLink to="/about/" text="About us" icon={Group} />
-          </Box>
+  return (
+    <Layer {...sidebarProps}>
+      {size === `small` && (
+        <ListItem hoverIndicator>
+          <Button onClick={() => toggleSidebar(false)}>
+            <FormClose />
+          </Button>
+        </ListItem>
+      )}
+      <Box width="small">
+        <Box align="center" border="bottom">
+          <Heading level={3}>OAsome</Heading>
         </Box>
-      </Layer>
-    )
-  }
+        <Box margin={{ vertical: `small` }}>
+          <SideBarLink to="/" text="Home" icon={Home} />
+          <SideBarLink to="/archive/" text="Archive" icon={Archive} />
+          <SideBarLink to="/photos/" text="Photos" icon={Camera} />
+          <Button plain hoverIndicator onClick={() => setDest(!destOpen)}>
+            <ListItem>
+              <Globe />
+              <Text>Destinations</Text>
+            </ListItem>
+          </Button>
+
+          <Collapsible open={destOpen}>
+            {}
+            <Box>
+              <Destinations />
+            </Box>
+            {}
+          </Collapsible>
+          <SideBarLink to="/about/" text="About us" icon={Group} />
+        </Box>
+      </Box>
+    </Layer>
+  )
 }
 
 export default Sidebar

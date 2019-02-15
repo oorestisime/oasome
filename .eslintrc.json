@@ -7,7 +7,7 @@
     "prettier",
     "prettier/react"
   ],
-  "plugins": ["prettier", "react"],
+  "plugins": ["prettier", "react", "react-hooks"],
   "parserOptions": {
     "ecmaVersion": 2016,
     "sourceType": "module",
@@ -44,7 +44,8 @@
     "react/no-unescaped-entities": "warn",
     "react/prop-types": "off",
     "require-jsdoc": "off",
-    "valid-jsdoc": "off"
+    "valid-jsdoc": "off",
+    "react-hooks/rules-of-hooks": "error"
   },
   "settings": {
     "react": {

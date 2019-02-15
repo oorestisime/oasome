@@ -4,7 +4,7 @@ import { Box, Button, Text } from "grommet"
 
 const Tags = ({ tags }) => (
   <Box
-    margin={{ vertical: "small" }}
+    margin={{ vertical: `small` }}
     direction="row-responsive"
     wrap
     gap="xsmall"

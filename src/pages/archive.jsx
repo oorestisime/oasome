@@ -1,7 +1,6 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
-import { ResponsiveContext } from "grommet"
 
 import App from "../components/layout"
 import Posts from "../components/posts"
@@ -23,13 +22,9 @@ function Archive({ data }) {
         }}
       />
       <App title="Archive">
-        <ResponsiveContext.Consumer>
-          {size => (
-            <Section columns={size || `medium`}>
-              <Posts posts={flatten(posts)} />
-            </Section>
-          )}
-        </ResponsiveContext.Consumer>
+        <Section>
+          <Posts posts={flatten(posts)} />
+        </Section>
       </App>
     </Fragment>
   )
