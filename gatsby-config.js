@@ -9,7 +9,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-favicon`,
     `gatsby-plugin-sitemap`,
