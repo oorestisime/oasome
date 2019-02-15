@@ -5,7 +5,7 @@ jobs:
       ignore:
         - master
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:10
 
     working_directory: ~/repo
 
