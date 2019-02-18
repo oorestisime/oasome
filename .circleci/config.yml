@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    branches:
+      ignore:
+        - master
+    docker:
+      - image: circleci/node:10
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - yarn-cypress-cache-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Install Dependencies
+          command: yarn install
+
+      - save_cache:
+          key: yarn-cypress-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+
+      - run:
+          name: Gatsby Build
+          command: yarn build
+
+      - run:
+          name: Netlify Deploy
+          command: ./node_modules/.bin/netlify deploy --dir=public
