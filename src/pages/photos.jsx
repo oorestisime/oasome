@@ -1,6 +1,7 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
+import { Box } from "grommet"
 
 import App from "../components/layout"
 import Section from "../components/section"

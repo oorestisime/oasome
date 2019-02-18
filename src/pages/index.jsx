@@ -170,7 +170,7 @@ class Index extends Component {
                   </Box>
                 </Section>
                 <Section title="Latest articles">
-                  <Posts posts={latest.slice(0, 3)} />
+                  <Posts posts={latest.slice(0, 4)} />
                 </Section>
               </>
             )}

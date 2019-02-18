@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useContext } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { Box, Heading, ResponsiveContext } from "grommet"
@@ -33,6 +33,7 @@ const Toc = styled.div`
 `
 
 function BlogPost({ data, pageContext }) {
+  const size = useContext(ResponsiveContext)
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { similar } = pageContext
   const { frontmatter, htmlAst, timeToRead, tableOfContents } = markdownRemark
@@ -43,60 +44,55 @@ function BlogPost({ data, pageContext }) {
         postImage={frontmatter.cover.childImageSharp.fluid.src}
         postData={markdownRemark}
       />
-      <ResponsiveContext.Consumer>
-        {size => (
-          <App title="OAsome blog">
-            <Box justify="between" direction="row-responsive">
-              <Post
-                size={size}
-                title={frontmatter.title}
-                date={frontmatter.date}
-                cover={frontmatter.cover}
-                tags={frontmatter.tags}
-                content={renderAst(htmlAst)}
-                type={frontmatter.type}
-                timeToRead={timeToRead}
-                country={frontmatter.country}
+      <App title="OAsome blog">
+        <Box
+          width="xxlarge"
+          alignSelf="center"
+          justify="around"
+          direction="row-responsive"
+        >
+          <Post
+            size={size}
+            title={frontmatter.title}
+            date={frontmatter.date}
+            cover={frontmatter.cover}
+            tags={frontmatter.tags}
+            content={renderAst(htmlAst)}
+            type={frontmatter.type}
+            timeToRead={timeToRead}
+            country={frontmatter.country}
+          />
+          <Box gap="small" width="medium">
+            {frontmatter.km && (
+              <TripDetails
+                km={frontmatter.km}
+                itinerary={frontmatter.itinerary}
+                duration={frontmatter.duration}
               />
-              <Box gap="small" width="medium">
-                {frontmatter.km && (
-                  <TripDetails
-                    km={frontmatter.km}
-                    itinerary={frontmatter.itinerary}
-                    duration={frontmatter.duration}
-                  />
-                )}
-
-                <Box
-                  margin={{ horizontal: `medium` }}
-                  elevation="small"
-                  pad="small"
-                >
-                  <Heading level="5" padding="small">
-                    Contents
-                  </Heading>
-                  <Toc dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-                </Box>
-              </Box>
-            </Box>
-            {similar.length > 1 && (
-              <Section
-                columns={size || `medium`}
-                background="light-4"
-                title="Similar articles"
-              >
-                <Posts
-                  posts={similar
-                    .filter(
-                      post => post.frontmatter.title !== frontmatter.title
-                    )
-                    .slice(0, 8)}
-                />
-              </Section>
             )}
-          </App>
+
+            <Box
+              margin={{ horizontal: `medium` }}
+              elevation="small"
+              pad="small"
+            >
+              <Heading level="5" padding="small">
+                Contents
+              </Heading>
+              <Toc dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+            </Box>
+          </Box>
+        </Box>
+        {similar.length > 1 && (
+          <Section background="light-3" title="Similar articles">
+            <Posts
+              posts={similar
+                .filter(post => post.frontmatter.title !== frontmatter.title)
+                .slice(0, 8)}
+            />
+          </Section>
         )}
-      </ResponsiveContext.Consumer>
+      </App>
     </Fragment>
   )
 }

@@ -7,6 +7,7 @@ cover: "./cover.jpg"
 country: "Mexico"
 type: "article"
 duration: 6
+featured: true
 itinerary: ["San Cristobal", "Sumidero canyon", "El Chiflon", "Montebello lakes",
 "Zapatistas", "Agua azul", "Misol-Ha"]
 km: 789

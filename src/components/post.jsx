@@ -50,7 +50,7 @@ const Post = ({
       </Box>
       {size !== `small` && (
         <Box
-          margin={{ top: `small` }}
+          margin={{ top: `small`, horizontal: "small" }}
           gap="xsmall"
           direction="row-responsive"
           align="center"

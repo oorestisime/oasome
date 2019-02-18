@@ -15,7 +15,7 @@ function List({ pageContext }) {
   return (
     <App title={`OAsome - ${capitalize(title)}`}>
       {type !== `tag` && (
-        <Box margin={{ vertical: `small` }}>
+        <Box width="xxlarge" alignSelf="center" margin={{ vertical: `small` }}>
           <Map cities={coords} zoom={3} center={_.sample(coords).coordinates} />
         </Box>
       )}

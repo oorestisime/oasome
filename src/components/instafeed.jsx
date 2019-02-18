@@ -9,12 +9,11 @@ import Section from "./section"
 const InstaPost = value => {
   const [overlay, setOverlay] = useState(false)
   return (
-    <Stack fill anchor="bottom">
+    <Stack anchor="bottom">
       <Box
         onMouseEnter={() => setOverlay(true)}
         onMouseLeave={() => setOverlay(false)}
         margin="none"
-        fill
       >
         <Anchor
           plain
@@ -67,36 +66,13 @@ const Instafeed = () => (
       }
     `}
     render={data => (
-      <Section
-        margin="none"
-        gap="none"
-        pad="none"
-        title="OAsome"
-        titleIcon={Instagram}
-        gridGap="none"
-        gridJustifyContent="around"
-        columns={{ count: `fill` }}
-      >
-        <Box margin="none" gap="none" direction="row">
-          {data.allInstaNode.edges.map(value => (
-            <InstaPost key={value.node.id} node={value.node} />
-          ))}
-        </Box>
+      <Section title="OAsome" titleIcon={Instagram}>
+        {data.allInstaNode.edges.map(value => (
+          <InstaPost key={value.node.id} node={value.node} />
+        ))}
       </Section>
     )}
   />
 )
-
-// <GridListTileBar
-// className={props.classes.caption}
-// style={{ height: "25px" }}
-// subtitle={
-//   <span>
-//     <Heart style={{ fontSize: 12 }} />
-//     {` ${img.node.likes}`}
-//   </span>
-// }
-// />
-// </GridListTile>
 
 export default Instafeed

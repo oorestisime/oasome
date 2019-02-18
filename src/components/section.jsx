@@ -11,7 +11,7 @@ const IndexSection = ({
   justifyInner,
   ...rest
 }) => (
-  <Box {...rest}>
+  <Box width="xxlarge" alignSelf="center" {...rest}>
     {title && (
       <Box direction="row" justify="center" align="center" gap="small">
         {TitleIcon && <TitleIcon size="large" />}

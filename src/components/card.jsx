@@ -31,7 +31,7 @@ const Card = ({
           <Img fluid={cover.childImageSharp.fluid} />
         </InternalLink>
         <Box margin={{ top: `xsmall` }} pad={{ horizontal: `small` }}>
-          <Heading level="3" margin="none">
+          <Heading level="3" margin={{ vertical: `small` }}>
             {title}
           </Heading>
           <Box
@@ -40,13 +40,17 @@ const Card = ({
             align="center"
             margin={{ left: `xsmall`, top: `xsmall` }}
           >
-            <Map size="medium" />
-            <Text size="small">{country}</Text>
-            <Clock size="medium" />
-            <Text size="small">{timeToRead} min read</Text>
+            <Map color="dark-4" size="medium" />
+            <Text color="dark-4" size="small">
+              {country}
+            </Text>
+            <Clock color="dark-4" size="medium" />
+            <Text color="dark-4" size="small">
+              {timeToRead} min read
+            </Text>
           </Box>
           {type !== `photo` && (
-            <Paragraph margin={{ horizontal: `medium` }}>
+            <Paragraph margin={{ horizontal: `small` }}>
               {content}
               <InternalLink to={path}>
                 <Anchor
