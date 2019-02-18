@@ -31,8 +31,8 @@ module.exports = {
             options: {
               tag: `rehype-image`,
               quality: 100,
-              maxWidth: 1000,
-              srcSetBreakpoints: [300, 600],
+              maxWidth: 2112,
+              srcSetBreakpoints: [1056 / 4, 1056 / 2, 1056],
             },
           },
           {
