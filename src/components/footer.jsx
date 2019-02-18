@@ -12,8 +12,13 @@ import {
 import config from "../config"
 
 const Footer = () => (
-  <Box background="dark-2">
-    <Box margin={{ horizontal: `medium`, vertical: `small` }} gap="medium">
+  <Box background="dark-2" fill="horizontal">
+    <Box
+      alignSelf="center"
+      width="xxlarge"
+      margin={{ horizontal: `medium`, vertical: `small` }}
+      gap="medium"
+    >
       <Box direction="row" gap="xsmall">
         <Anchor
           rel="noopener noreferrer"

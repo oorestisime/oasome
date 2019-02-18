@@ -15,20 +15,18 @@ const App = ({ title, children }) => {
   return (
     <Grommet full theme={customTheme}>
       <Box full>
-        <Box alignSelf="center">
-          <Box width="xxxlarge">
-            <Header
-              showSidebar={showSidebar}
-              toggleSidebar={setSidebar}
-              title={title}
-            />
-            {showSidebar && <Sidebar toggleSidebar={setSidebar} />}
-            {children}
-            <ResponsiveContext.Consumer>
-              {size => size !== `small` && <Instafeed />}
-            </ResponsiveContext.Consumer>
-            <Footer />
-          </Box>
+        <Box width="xxxlarge">
+          <Header
+            showSidebar={showSidebar}
+            toggleSidebar={setSidebar}
+            title={title}
+          />
+          {showSidebar && <Sidebar toggleSidebar={setSidebar} />}
+          {children}
+          <ResponsiveContext.Consumer>
+            {size => size !== `small` && <Instafeed />}
+          </ResponsiveContext.Consumer>
+          <Footer />
         </Box>
       </Box>
     </Grommet>

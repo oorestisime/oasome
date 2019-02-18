@@ -59,61 +59,70 @@ class Index extends Component {
                       delayedCall
                     >
                       <Section
-                        pad={{ horizontal: `xlarge` }}
-                        justifyInner="between"
                         size={size}
                         title="Our trips in numbers"
                         background="light-4"
                       >
-                        <Stat
-                          icon={Car}
-                          title="Distance covered"
-                          counter={
-                            <CountUp
-                              duration={2}
-                              start={0}
-                              end={this.state.didViewCountUp ? totals.km : 0}
-                              suffix=" km"
-                            />
-                          }
-                        />
-                        <Stat
-                          icon={Schedule}
-                          title="Duration"
-                          counter={
-                            <CountUp
-                              duration={2}
-                              start={0}
-                              end={
-                                this.state.didViewCountUp ? totals.duration : 0
-                              }
-                              suffix=" days"
-                            />
-                          }
-                        />
-                        <Stat
-                          icon={Globe}
-                          title="Countries"
-                          counter={
-                            <CountUp
-                              duration={2}
-                              start={0}
-                              end={this.state.didViewCountUp ? countries : 0}
-                            />
-                          }
-                        />
-                        <Stat
-                          icon={MapLocation}
-                          title="Destinations"
-                          counter={
-                            <CountUp
-                              duration={2}
-                              start={0}
-                              end={this.state.didViewCountUp ? totals.stops : 0}
-                              suffix=" stops"
-                            />
-                          }
-                        />
+                        <Box
+                          justify="between"
+                          width="xxlarge"
+                          direction="row-responsive"
+                          pad={{ horizontal: `xlarge`, vertical: `small` }}
+                        >
+                          <Stat
+                            icon={Car}
+                            title="Distance covered"
+                            counter={
+                              <CountUp
+                                duration={2}
+                                start={0}
+                                end={this.state.didViewCountUp ? totals.km : 0}
+                                suffix=" km"
+                              />
+                            }
+                          />
+                          <Stat
+                            icon={Schedule}
+                            title="Duration"
+                            counter={
+                              <CountUp
+                                duration={2}
+                                start={0}
+                                end={
+                                  this.state.didViewCountUp
+                                    ? totals.duration
+                                    : 0
+                                }
+                                suffix=" days"
+                              />
+                            }
+                          />
+                          <Stat
+                            icon={Globe}
+                            title="Countries"
+                            counter={
+                              <CountUp
+                                duration={2}
+                                start={0}
+                                end={this.state.didViewCountUp ? countries : 0}
+                              />
+                            }
+                          />
+                          <Stat
+                            icon={MapLocation}
+                            title="Destinations"
+                            counter={
+                              <CountUp
+                                duration={2}
+                                start={0}
+                                end={
+                                  this.state.didViewCountUp ? totals.stops : 0
+                                }
+                                suffix=" stops"
+                              />
+                            }
+                          />
+                        </Box>
                       </Section>
                     </VisibilitySensor>
                     <Section title="Where we have been!">
@@ -124,8 +133,9 @@ class Index extends Component {
                 <Section
                   background="light-3"
                   title="Hello there, we are A and O"
+                  pad={{ horizontal: `xlarge`, vertical: `small` }}
                 >
-                  <Box direction="row-responsive" margin="small">
+                  <Box direction="row-responsive" margin="medium">
                     <Box align="center" basis="3/4">
                       <Text size="large">
                         Welcome to the OAsome blog.
