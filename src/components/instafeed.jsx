@@ -48,7 +48,7 @@ const Instafeed = () => (
   <StaticQuery
     query={graphql`
       query {
-        allInstaNode(limit: 9, sort: { fields: [likes], order: DESC }) {
+        allInstaNode(limit: 8, sort: { fields: [likes], order: DESC }) {
           edges {
             node {
               id

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react"
+import React, { Component, Fragment, useState, useContext } from "react"
 import _ from "lodash"
 import { graphql, navigate } from "gatsby"
 import Img from "gatsby-image"
@@ -24,161 +24,150 @@ const Stat = ({ title, icon: Icon, counter }) => (
   </Box>
 )
 
-class Index extends Component {
-  state = {
-    didViewCountUp: false,
+const Sensor = ({ onChange, children }) => {
+  const size = useContext(ResponsiveContext)
+  if (size === `small`) {
+    return null
   }
+  // TODO improve this to be more modular
+  // Receive an object with the info and recreate the stats etc
+  return (
+    <VisibilitySensor
+      onChange={e => onChange(e)}
+      offset={{ top: 10 }}
+      delayedCall
+    >
+      {children}
+    </VisibilitySensor>
+  )
+}
 
-  onVisibilityChange(isVisible) {
-    this.setState({ didViewCountUp: isVisible })
-  }
+const Index = ({ data }) => {
+  const [didViewCountUp, setViewCountUp] = useState(false)
+  const { edges: posts } = data.allMarkdownRemark
+  const nodes = flatten(posts)
+  const { [true]: featured, [null]: latest } = groupBy(nodes, `featured`)
+  const coords = coordinates(nodes)
+  const totals = calculateTotals(nodes)
+  const countries = _.uniq(nodes.map(post => post.frontmatter.country)).length
 
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-    const nodes = flatten(posts)
-    const { [true]: featured, [null]: latest } = groupBy(nodes, `featured`)
-    const coords = coordinates(nodes)
-    const totals = calculateTotals(nodes)
-    const countries = _.uniq(nodes.map(post => post.frontmatter.country)).length
-    return (
-      <>
-        <Seo postImage={data.file.childImageSharp.fluid.src} />
-        <App>
-          <ResponsiveContext.Consumer>
-            {size => (
-              <>
-                <Section title="Featured articles">
-                  <Posts posts={featured} />
-                </Section>
-                {size !== `small` && (
-                  <Fragment>
-                    <VisibilitySensor
-                      onChange={e => this.onVisibilityChange(e)}
-                      offset={{ top: 10 }}
-                      delayedCall
-                    >
-                      <Section
-                        size={size}
-                        title="Our trips in numbers"
-                        background="light-4"
-                      >
-                        <Box
-                          justify="between"
-                          width="xxlarge"
-                          direction="row-responsive"
-                          pad={{ horizontal: `xlarge`, vertical: `small` }}
-                        >
-                          <Stat
-                            icon={Car}
-                            title="Distance covered"
-                            counter={
-                              <CountUp
-                                duration={2}
-                                start={0}
-                                end={this.state.didViewCountUp ? totals.km : 0}
-                                suffix=" km"
-                              />
-                            }
-                          />
-                          <Stat
-                            icon={Schedule}
-                            title="Duration"
-                            counter={
-                              <CountUp
-                                duration={2}
-                                start={0}
-                                end={
-                                  this.state.didViewCountUp
-                                    ? totals.duration
-                                    : 0
-                                }
-                                suffix=" days"
-                              />
-                            }
-                          />
-                          <Stat
-                            icon={Globe}
-                            title="Countries"
-                            counter={
-                              <CountUp
-                                duration={2}
-                                start={0}
-                                end={this.state.didViewCountUp ? countries : 0}
-                              />
-                            }
-                          />
-                          <Stat
-                            icon={MapLocation}
-                            title="Destinations"
-                            counter={
-                              <CountUp
-                                duration={2}
-                                start={0}
-                                end={
-                                  this.state.didViewCountUp ? totals.stops : 0
-                                }
-                                suffix=" stops"
-                              />
-                            }
-                          />
-                        </Box>
-                      </Section>
-                    </VisibilitySensor>
-                    <Section title="Where we have been!">
-                      <Map cities={coords} />
-                    </Section>
-                  </Fragment>
-                )}
-                <Section
-                  background="light-3"
-                  title="Hello there, we are A and O"
-                  pad={{ horizontal: `xlarge`, vertical: `small` }}
-                >
-                  <Box direction="row-responsive" margin="medium">
-                    <Box align="center" basis="3/4">
-                      <Text size="large">
-                        Welcome to the OAsome blog.
-                        <br />
-                        This is a travel blog of a couple who guess what … their
-                        initials start with an O and an A. They both really like
-                        travelling new places, finding out interesting
-                        adventures and take casual photos.
-                        <br />
-                        <br />
-                        This blog also gives an area for friends to share some
-                        of their experiences or handful trips that they found
-                        out during their travel experiences!
-                        <br />
-                        <br />
-                        Would you like to take a stroll around the OAsome world?
-                        <br />
-                        <br />
-                        Then, follow along on our short adventures as we capture
-                        the planet!
-                        <Anchor
-                          onClick={() => navigate(`/about`)}
-                          label=" Read more"
-                          size="medium"
-                          color="neutral-3"
-                        />
-                      </Text>
-                    </Box>
-                    <Box align="stretch" basis="1/4">
-                      <Img fluid={data.file.childImageSharp.fluid} alt="Logo" />
-                    </Box>
-                  </Box>
-                </Section>
-                <Section title="Latest articles">
-                  <Posts posts={latest.slice(0, 4)} />
-                </Section>
-              </>
-            )}
-          </ResponsiveContext.Consumer>
-        </App>
-      </>
-    )
-  }
+  return (
+    <>
+      <Seo postImage={data.file.childImageSharp.fluid.src} />
+      <App>
+        <Section title="Featured articles">
+          <Posts posts={featured} />
+        </Section>
+        <Sensor onChange={setViewCountUp}>
+          <Section
+            size={useContext(ResponsiveContext)}
+            title="Our trips in numbers"
+            background="light-4"
+          >
+            <Box
+              justify="between"
+              width="xxlarge"
+              direction="row-responsive"
+              pad={{ horizontal: `xlarge`, vertical: `small` }}
+            >
+              <Stat
+                icon={Car}
+                title="Distance covered"
+                counter={
+                  <CountUp
+                    duration={2}
+                    start={0}
+                    end={didViewCountUp ? totals.km : 0}
+                    suffix=" km"
+                  />
+                }
+              />
+              <Stat
+                icon={Schedule}
+                title="Duration"
+                counter={
+                  <CountUp
+                    duration={2}
+                    start={0}
+                    end={didViewCountUp ? totals.duration : 0}
+                    suffix=" days"
+                  />
+                }
+              />
+              <Stat
+                icon={Globe}
+                title="Countries"
+                counter={
+                  <CountUp
+                    duration={2}
+                    start={0}
+                    end={didViewCountUp ? countries : 0}
+                  />
+                }
+              />
+              <Stat
+                icon={MapLocation}
+                title="Destinations"
+                counter={
+                  <CountUp
+                    duration={2}
+                    start={0}
+                    end={didViewCountUp ? totals.stops : 0}
+                    suffix=" stops"
+                  />
+                }
+              />
+            </Box>
+          </Section>
+        </Sensor>
+        <Section title="Where we have been!">
+          <Map cities={coords} />
+        </Section>
+        <Section
+          background="light-3"
+          title="Hello there, we are A and O"
+          pad={{ horizontal: `xlarge`, vertical: `small` }}
+        >
+          <Box direction="row-responsive" margin="medium">
+            <Box align="center" basis="3/4">
+              <Text size="large">
+                Welcome to the OAsome blog.
+                <br />
+                This is a travel blog of a couple who guess what … their
+                initials start with an O and an A. They both really like
+                travelling new places, finding out interesting adventures and
+                take casual photos.
+                <br />
+                <br />
+                This blog also gives an area for friends to share some of their
+                experiences or handful trips that they found out during their
+                travel experiences!
+                <br />
+                <br />
+                Would you like to take a stroll around the OAsome world?
+                <br />
+                <br />
+                Then, follow along on our short adventures as we capture the
+                planet!
+                <Anchor
+                  onClick={() => navigate(`/about`)}
+                  label=" Read more"
+                  size="medium"
+                  color="neutral-3"
+                />
+              </Text>
+            </Box>
+            <Box align="stretch" basis="1/4">
+              <Img fluid={data.file.childImageSharp.fluid} alt="Logo" />
+            </Box>
+          </Box>
+        </Section>
+        <Section title="Latest articles">
+          <Posts posts={latest.slice(0, 4)} />
+        </Section>
+      </App>
+    </>
+  )
 }
 
 Index.propTypes = {
