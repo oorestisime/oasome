@@ -43,14 +43,19 @@ const Post = ({
   )
 
   return (
-    <Box width="xlarge" round="xsmall" margin="medium" elevation="medium">
+    <Box
+      width="xlarge"
+      round="xsmall"
+      margin={{ vertical: `medium` }}
+      elevation="medium"
+    >
       {header}
       <Box pad="medium" align="center" as="article">
         {content}
       </Box>
       {size !== `small` && (
         <Box
-          margin={{ top: `small`, horizontal: "small" }}
+          margin={{ top: `small`, horizontal: `small` }}
           gap="xsmall"
           direction="row-responsive"
           align="center"

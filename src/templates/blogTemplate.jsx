@@ -47,9 +47,9 @@ function BlogPost({ data, pageContext }) {
       <App title="OAsome blog">
         <Box
           width="xxlarge"
-          alignSelf="center"
           justify="around"
           direction="row-responsive"
+          pad="small"
         >
           <Post
             size={size}

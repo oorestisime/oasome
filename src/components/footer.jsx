@@ -12,7 +12,7 @@ import {
 import config from "../config"
 
 const Footer = () => (
-  <Box background="dark-2" fill="horizontal">
+  <Box background="dark-2" fill="horizontal" pad={{ horizontal: `small` }}>
     <Box
       alignSelf="center"
       width="xxlarge"
