@@ -12,7 +12,7 @@ const SLICES = {
 
 const Posts = ({ posts }) => {
   const size = useContext(ResponsiveContext)
-  if (postMessage.length < 1) {
+  if (posts.length < 1) {
     return null
   }
   const sliced = SLICES[size]
