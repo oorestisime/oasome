@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Grommet, Box, ResponsiveContext } from "grommet"
 import "typeface-indie-flower"
 import "typeface-lato"
+import { createGlobalStyle } from "styled-components"
 
 import { customTheme } from "../theme"
 import Instafeed from "./instafeed"
@@ -10,10 +11,15 @@ import Header from "./header"
 import Footer from "./footer"
 import Sidebar from "./sidebar"
 
+const FullGlobalStyle = createGlobalStyle`
+  body { margin: 0; }
+`
+
 const App = ({ title, children }) => {
   const [showSidebar, setSidebar] = useState(false)
   return (
-    <Grommet full theme={customTheme}>
+    <Grommet theme={customTheme}>
+      <FullGlobalStyle />
       <Box full>
         <Header
           showSidebar={showSidebar}

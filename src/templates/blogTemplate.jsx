@@ -18,10 +18,11 @@ const Toc = styled.div`
   ul {
     margin: 0;
     list-style-type: none;
+    padding-left: 1em;
   }
 
   li {
-    padding: 5px;
+    padding: 2px;
   }
   a {
     color: rgba(0, 0, 0, 0.54);
@@ -72,19 +73,17 @@ function BlogPost({ data, pageContext }) {
             )}
 
             <Box
-              margin={{ horizontal: `medium` }}
+              margin={{ horizontal: `medium`, bottom: `medium` }}
               elevation="small"
-              pad="small"
+              pad={{ horizontal: `small` }}
             >
-              <Heading level="5" padding="small">
-                Contents
-              </Heading>
+              <Heading level="4">Contents</Heading>
               <Toc dangerouslySetInnerHTML={{ __html: tableOfContents }} />
             </Box>
           </Box>
         </Box>
         {similar.length > 1 && (
-          <Section background="light-3" title="Similar articles">
+          <Section background="light-1" title="Similar articles">
             <Posts
               posts={similar
                 .filter(post => post.frontmatter.title !== frontmatter.title)

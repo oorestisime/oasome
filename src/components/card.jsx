@@ -40,14 +40,10 @@ const Card = ({
             align="center"
             margin={{ left: `xsmall`, top: `xsmall` }}
           >
-            <Map color="dark-4" size="medium" />
-            <Text color="dark-4" size="small">
-              {country}
-            </Text>
-            <Clock color="dark-4" size="medium" />
-            <Text color="dark-4" size="small">
-              {timeToRead} min read
-            </Text>
+            <Map color="dark-2" size="medium" />
+            <Text size="small">{country}</Text>
+            <Clock color="dark-2" size="medium" />
+            <Text size="small">{timeToRead} min read</Text>
           </Box>
           {type !== `photo` && (
             <Paragraph margin={{ horizontal: `small` }}>
@@ -64,7 +60,7 @@ const Card = ({
           )}
           {size !== `small` && (
             <Box gap="xsmall" direction="row-responsive" align="center">
-              <Tags tags={tags} />
+              <Tags size="small" tags={tags} />
             </Box>
           )}
         </Box>

@@ -32,11 +32,17 @@ const Post = ({
           margin={{ left: `xsmall`, top: `xsmall` }}
         >
           <Schedule color="dark-3" size="medium" />
-          <Text size="small">{date}</Text>
+          <Text size="small" color="dark-3">
+            {date}
+          </Text>
           <Map color="dark-3" size="medium" />
-          <Text size="small">{country}</Text>
+          <Text size="small" color="dark-3">
+            {country}
+          </Text>
           <Clock color="dark-3" size="medium" />
-          <Text size="small">{timeToRead} min read</Text>
+          <Text color="dark-3" size="small">
+            {timeToRead} min read
+          </Text>
         </Box>
       </Box>
     </Box>
@@ -60,7 +66,7 @@ const Post = ({
           direction="row-responsive"
           align="center"
         >
-          <Tags tags={tags} />
+          <Tags size="medium" tags={tags} />
         </Box>
       )}
     </Box>

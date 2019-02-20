@@ -9,25 +9,28 @@ const IndexSection = ({
   columns,
   gapInner,
   justifyInner,
+  background,
   ...rest
 }) => (
-  <Box width="xxlarge" alignSelf="center" {...rest}>
-    {title && (
-      <Box direction="row" justify="center" align="center" gap="small">
-        {TitleIcon && <TitleIcon size="large" />}
-        <Heading textAlign="center" level="2">
-          {title}
-        </Heading>
-      </Box>
-    )}
+  <Box background={background}>
+    <Box width="xxlarge" alignSelf="center" {...rest}>
+      {title && (
+        <Box direction="row" justify="center" align="center" gap="small">
+          {TitleIcon && <TitleIcon size="large" />}
+          <Heading textAlign="center" level="2">
+            {title}
+          </Heading>
+        </Box>
+      )}
 
-    <Box
-      wrap
-      justify={justifyInner || `center`}
-      direction="row-responsive"
-      gap={gapInner || `small`}
-    >
-      {children}
+      <Box
+        wrap
+        justify={justifyInner || `center`}
+        direction="row-responsive"
+        gap={gapInner || `small`}
+      >
+        {children}
+      </Box>
     </Box>
   </Box>
 )

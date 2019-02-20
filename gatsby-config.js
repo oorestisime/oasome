@@ -15,6 +15,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-scroll-indicator`,
+      options: {
+        color: `#00739D`,
+      },
+    },
+
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/md`,

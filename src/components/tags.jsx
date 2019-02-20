@@ -2,7 +2,7 @@ import React from "react"
 import { navigate } from "gatsby"
 import { Box, Button, Text } from "grommet"
 
-const Tags = ({ tags }) => (
+const Tags = ({ tags, size }) => (
   <Box
     margin={{ vertical: `small` }}
     direction="row-responsive"
@@ -17,7 +17,7 @@ const Tags = ({ tags }) => (
           round="xsmall"
           pad={{ horizontal: `xsmall` }}
         >
-          <Text size="small">{tag}</Text>
+          <Text size={size}>{tag}</Text>
         </Box>
       </Button>
     ))}
