@@ -38,6 +38,7 @@ module.exports = {
               tag: `rehype-image`,
               quality: 100,
               maxWidth: 2112,
+              toFormat: 'WEBP',
               srcSetBreakpoints: [1056 / 4, 1056 / 2, 1056],
             },
           },
