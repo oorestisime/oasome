@@ -36,9 +36,9 @@ module.exports = {
             resolve: `gatsby-remark-rehype-images`,
             options: {
               tag: `rehype-image`,
-              quality: 100,
+              quality: 80,
               maxWidth: 2112,
-              toFormat: 'WEBP',
+              toFormat: `WEBP`,
               srcSetBreakpoints: [1056 / 4, 1056 / 2, 1056],
             },
           },
