@@ -51,6 +51,7 @@ function BlogPost({ data, pageContext }) {
           justify="around"
           direction="row-responsive"
           pad="small"
+          alignSelf="center"
         >
           <Post
             size={size}
