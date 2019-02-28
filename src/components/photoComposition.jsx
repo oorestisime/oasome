@@ -1,23 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
+import React from "react"
+import PropTypes from "prop-types"
+import Img from "gatsby-image"
+import { Grid } from "grommet"
 
-function PhotoComposition({ children }) {
-  const photos = children.filter(child => typeof child !== 'string');
-  const total = photos.length;
-  return (
-    <Grid container spacing={24}>
-      {photos.map(photo => (
-        <Grid item xs={12} sm={12 / total} key={photo.props.href}>
-          {photo}
-        </Grid>
+const PhotoComposition = ({ children }) => (
+  <Grid gap="small" columns={[`1/2`, `1/2`]}>
+    {children
+      .filter(child => child !== `\n`)
+      .map(child => (
+        <Img fluid={JSON.parse(child.props.rehyped)} />
       ))}
-    </Grid>
-  );
-}
+  </Grid>
+)
 
 PhotoComposition.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default PhotoComposition;
+export default PhotoComposition

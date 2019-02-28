@@ -17,12 +17,12 @@ coordinates: [
 
 When one is presented with the chance to visit France, it can be quite difficult to make a choice. Besides the obvious one of Paris and the seasonal [lavender fields trip](/lavender-fields-and-verdon/) there are other choices that are quite on par:
 
-* the loire castles
-* north of france and the britanny castles
-* strolling around bordeaux wine fields
-* visiting the south of france and the incredible calanques
+- the loire castles
+- north of france and the britanny castles
+- strolling around bordeaux wine fields
+- visiting the south of france and the incredible calanques
 
-![Mont Saint Michel](saintmichel1.jpg)
+<rehype-image src="saintmichel1.jpg"></rehype-image>
 
 If you have enough time then many of those places could be combined. And this is what we did, starting from Rennes then visiting the incredible Saint Michel and Saint Malo before arriving at Tours for visiting the loire castles and wine tasting.
 
@@ -40,7 +40,7 @@ First of the many hightlights of this trip was Mont Saint-Michel. Arriving from 
 
 We spent almost the entire day at the island walking around the historical structure and viewing the differences the tidal waves can create. An overall great experience worth even if you decide to visit from Paris which is a 4 hour drive.
 
-![Mont Saint Michel](saintmichel2.jpg)
+<rehype-image src="saintmichel2.jpg"></rehype-image>
 
 # Saint-Malo
 
@@ -58,29 +58,29 @@ There are not many cities to choose from for enjoying the loire castles. Tours b
 
 Our first castle stop was the one of Ambroise and it was a good choice to start building some castle momentum. The castle on its own is not of a spectacular beauty, but being situated in a nice village offers something different. It was the only castle we visited that wasn't away from a city or a village.
 
-![Chateau Ambroise](ambroise.jpg)
+<rehype-image src="ambroise.jpg"></rehype-image>
 
 ## Chenonceau
 
 This was another highlight of our trip, a castle built on thr 15th century on top of a bridge. It is very well worth visiting this unusual castle and even spending some time exploring the insides of the castle for learning more about its history.
 
-![Chateau Chenonceau](cheno1.jpg)
+<rehype-image src="cheno1.jpg"></rehype-image>
 
-<photo-composition><img src="cheno3-2.jpg" /><img src="cheno2.jpg" /></photo-composition>
+<photo-composition><rehype-image src="cheno3-2.jpg" /><rehype-image src="cheno2.jpg" /></photo-composition>
 
 ## Chambord
 
 Off to the biggest castle of the loire valley, Chambord. It is quite spectacular mainly due to its size. We decided to avoid entering in this one, well it gets pricey entering in more than 2-3 castles, but we took time to explore all the sides of the castle to admire its size and its style!
 
-![Chateau Chambord](chambord.jpg)
+<rehype-image src="chambord.jpg"></rehype-image>
 
 ## Chaumont sur loire
 
 Final destination was Chaumont sur loire, a castle known for its defensive walls. Its current structure was also built on the 15th century, and it is quite spectactular due its beautiful walls and the unusual setting on top of the river.
 
-<photo-composition><img src="chaumont1.jpg" /><img src="chaumont2.jpg" /></photo-composition>
+<photo-composition><rehype-image src="chaumont1.jpg" /><rehype-image src="chaumont2.jpg" /></photo-composition>
 
-![Chateau Chaumont Sur Loire](chaumont3.jpg)
+<rehype-image src="chaumont3.jpg"></rehype-image>
 
 # Wine tasting
 
@@ -88,4 +88,4 @@ Besides the castle this region has other experiences to offer, one of which is w
 
 The area is well known for its sparkling wine mostly white and if you like wine then you will find for sure bottles to your liking. In addition there are many troglodytic caves and white chalk and limestone basements which create a magnificent setting for the thousands of bottles of wines that are aged there, hiding away from the light.
 
-![Wine tasting](wine.jpg)
+<rehype-image src="wine.jpg"></rehype-image>

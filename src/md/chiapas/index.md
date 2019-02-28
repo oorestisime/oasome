@@ -7,6 +7,7 @@ cover: "./cover.jpg"
 country: "Mexico"
 type: "article"
 duration: 6
+featured: true
 itinerary: ["San Cristobal", "Sumidero canyon", "El Chiflon", "Montebello lakes",
 "Zapatistas", "Agua azul", "Misol-Ha"]
 km: 789
@@ -35,25 +36,25 @@ The road from the airport of Tuxtla to the city was quite interesting and scary!
 
 We booked our stay not far from the historic city center in order to be able to move around on foot and explore the market and the pedestrian streets quite easily. And it was a good choice since the city center is lively and beautiful with vivid colors. Besides visiting the most known places such as the cathedral and other churches, Na Bolom, one should not skip the handicrafts market. In overall just walking around real de Guadelupe is enough to charm anyone's heart.
 
-<photo-composition><img src="realguadelupe.jpg" /><img src="realguadelupe2.jpg" /></photo-composition>
+<photo-composition><rehype-image src="realguadelupe.jpg" /><rehype-image src="realguadelupe2.jpg" /></photo-composition>
 
 Day 1 was the day we searched for the best tacos in town. Its name is El Tacoleto! From the guacamole to the al pastor tacos, from the drinks to the overal taste and flavor of the food, it was just perfect. And we returned there again and again. As for late night drinks, we ve once tried Dos Amores for some local Mezcal, which was very good, and TierrAdentro for some live music with lots of locals buzzing around.
 
-<photo-composition><img src="burrito.jpg" /><img src="mezcal.jpg" /></photo-composition>
+<photo-composition><rehype-image src="burrito.jpg" /><rehype-image src="mezcal.jpg" /></photo-composition>
 
 ## Sumidero canyon
 
 First day trip was to Sumidero canyon along with a short visit to Chiapa de Corzo colonial village which albeit nice was nothing special. The drive to the canyon was not long and as soon as we arrived to the starting point we put on our life jackets and hopped on to the boat.
 
-![](sumidero.jpg)
+<rehype-image src="sumidero.jpg"></rehype-image>
 
-<photo-composition><img src="sumidero3.jpg" /><img src="sumidero2.jpg" /></photo-composition>
+<photo-composition><rehype-image src="sumidero3.jpg" /><rehype-image src="sumidero2.jpg" /></photo-composition>
 
 At the beginning the views are not spectacular but as soon as the canyon gets narrower then everything sets into place for some magnificent spots. And in terms of living animals we weren't left unsatisfied since we managed to see quite a lot different birds, a few crocodiles and some funny monkeys competing for a few pieces of bananas!
 
-![](crocodile.jpg)
+<rehype-image src="crocodile.jpg"></rehype-image>
 
-![](monkeys.jpg)
+<rehype-image src="monkeys.jpg"></rehype-image>
 
 ## El Chiflon and Montebello lakes
 
@@ -61,11 +62,11 @@ Second tour was a pretty long one. We left early in the morning to return late a
 
 There are 59 different lakes in the national park situated near the Guatemala borders, some of quite big, others small but all of them with stunning blue and green colors. We managed to catch the sunset at one of them and it was quite nice with the sun almost falling in the lake. Probably the most amazing one is at the border since while not that big it has the most intense green and blue colors.
 
-![](montebello.jpg)
+<rehype-image src="montebello.jpg"></rehype-image>
 
 We probably apperciated though much more the El Chiflon waterfalls during that day trip. The hike to the top is neither hard nor long and there are several nice stops in between for shorter falls and interesting colors. For the way back we chose the zip lining for a short fun!
 
-![](elchiflon.jpg)
+<rehype-image src="elchiflon.jpg"></rehype-image>
 
 ## Zapatistas
 
@@ -78,11 +79,11 @@ There are times throughout the year that Zapatistas refuse entrance to the villa
 It is a military zone, even if at no time we felt insecure or threatened so they ask you a few questions before letting you in, like where you are from and what is the purpose of the visit.
 </tip>
 
-![](zapatistas.jpg)
+<rehype-image src="zapatistas.jpg"></rehype-image>
 
-We were allowed a 2h entrance to the village with a *guide* explaining us the buildings the history and the current struggles. There was only one problem during our visit, it was in spanish and we both don't speak spanish :D Luckily there were two Argentines with us translating most of the things our guide said. The people we met were more than friendly to talk with us and answer our questions. We were also allowed to take pictures of the many wall paintings (murals) available around the village.
+We were allowed a 2h entrance to the village with a _guide_ explaining us the buildings the history and the current struggles. There was only one problem during our visit, it was in spanish and we both don't speak spanish :D Luckily there were two Argentines with us translating most of the things our guide said. The people we met were more than friendly to talk with us and answer our questions. We were also allowed to take pictures of the many wall paintings (murals) available around the village.
 
-![](zapatistas2.jpg)
+<rehype-image src="zapatistas2.jpg"></rehype-image>
 
 ## Agua Azul and Misol Ha cascades
 
@@ -90,12 +91,12 @@ The first part of our trip was almost coming to an end. Two stops before arrivin
 
 The waterfalls are totaly different from one another and probably the most interesting is the Agua Azul. We had never seen a cascade group with so spectacular colors and we were left speachless.
 
-![](aguaazul.jpg)
-![](aguaazul2.jpg)
+<rehype-image src="aguaazul.jpg"></rehype-image>
+<rehype-image src="aguaazul2.jpg"></rehype-image>
 
 Misol Ha on the other hand is a more common watefall, taller than Agua Azul but what lacks in colors gets it in the small cave behind the fall. We could walk around the waterfall and it was an interesting experience.
 
-![](misolha.jpg)
+<rehype-image src="misolha.jpg"></rehype-image>
 
 People were swimming in both of them, we unfortunately were short on time and didn't have our swimming suits with us!
 

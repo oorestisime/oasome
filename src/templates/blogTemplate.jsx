@@ -1,77 +1,43 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import rehypeReact from 'rehype-react';
+import React, { Fragment, useContext } from "react"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+import { Box, Heading, ResponsiveContext } from "grommet"
+import styled from "styled-components"
 
-import PhotoComposition from '../components/photoComposition';
-import Tip from '../components/tip';
-import withRoot from '../withRoot';
-import Section from '../components/section';
-import App from '../components/layout';
-import CardPost from '../components/cardPost';
-import { markdownStyle } from '../components/tools';
-import Posts from '../components/posts';
-import TripDetails from '../components/tripNotes';
-import Seo from '../components/seo';
+import Section from "../components/section"
+import App from "../components/layout"
+import Post from "../components/post"
+import Posts from "../components/posts"
+import TripDetails from "../components/tripNotes"
+import Seo from "../components/seo"
+import { renderAst } from "../tools"
 
+const Toc = styled.div`
+  word-wrap: break-word;
 
-const styles = theme => ({
-  text: markdownStyle(theme),
-  toc: {
-    top: 90,
-    flexShrink: 0,
-    order: 2,
-    position: 'sticky',
-    wordBreak: 'break-word',
-    height: 'calc(100vh - 70px)',
-    overflowY: 'auto',
-    margin: theme.spacing.unit,
-    padding: theme.spacing.unit * 4,
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
-    '& $ul': {
-      paddingLeft: theme.spacing.unit * 3,
-      margin: 0,
-      listStyleType: 'none',
-    },
-    '& $li': {
-      fontSize: 14,
-      padding: `${theme.spacing.unit / 2}px 0`,
-    },
-    '& $a': {
-      color: 'rgba(0, 0, 0, 0.54)',
-      textDecoration: 'none',
-      '&:hover': {
-        color: 'black',
-      },
-    },
-  },
-});
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 1em;
+  }
 
-const renderAst = new rehypeReact({ // eslint-disable-line new-cap
-  createElement: React.createElement,
-  components: {
-    'photo-composition': PhotoComposition,
-    tip: Tip,
-  },
-}).Compiler;
+  li {
+    padding: 2px;
+  }
+  a {
+    color: rgba(0, 0, 0, 0.54);
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+  }
+`
 
-function BlogPost({
-  data, classes, pageContext, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { similar } = pageContext;
-  const {
-    frontmatter,
-    htmlAst,
-    timeToRead,
-    tableOfContents,
-  } = markdownRemark;
+function BlogPost({ data, pageContext }) {
+  const size = useContext(ResponsiveContext)
+  const { markdownRemark } = data // data.markdownRemark holds our post data
+  const { similar } = pageContext
+  const { frontmatter, htmlAst, timeToRead, tableOfContents } = markdownRemark
   return (
     <Fragment>
       <Seo
@@ -80,25 +46,25 @@ function BlogPost({
         postData={markdownRemark}
       />
       <App title="OAsome blog">
-        <Section>
-          <Grid item xs={12} sm={9}>
-            <CardPost
-              title={frontmatter.title}
-              date={frontmatter.date}
-              cover={frontmatter.cover}
-              tags={frontmatter.tags}
-              content={(
-                <div className={classes.text}>
-                  {renderAst(htmlAst)}
-                </div>
-              )}
-              expand={false}
-              type={frontmatter.type}
-              timeToRead={timeToRead}
-              country={frontmatter.country}
-            />
-          </Grid>
-          <Grid item sm={3}>
+        <Box
+          width="xxlarge"
+          justify="around"
+          direction="row-responsive"
+          pad="small"
+          alignSelf="center"
+        >
+          <Post
+            size={size}
+            title={frontmatter.title}
+            date={frontmatter.date}
+            cover={frontmatter.cover}
+            tags={frontmatter.tags}
+            content={renderAst(htmlAst)}
+            type={frontmatter.type}
+            timeToRead={timeToRead}
+            country={frontmatter.country}
+          />
+          <Box gap="small" width="medium">
             {frontmatter.km && (
               <TripDetails
                 km={frontmatter.km}
@@ -106,42 +72,35 @@ function BlogPost({
                 duration={frontmatter.duration}
               />
             )}
-            <div className={classes.toc}>
-              <Typography variant="h5" gutterBottom>
-                Contents
-              </Typography>
-              <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-            </div>
-          </Grid>
-        </Section>
-        {similar.length > 1
-          && (
-            <Section shade="300">
-              <Grid item xs={12}>
-                <Typography variant="h4">
-                  Similar articles
-                </Typography>
-              </Grid>
-              <Posts
-                posts={similar.filter(
-                  post => post.frontmatter.title !== frontmatter.title,
-                ).slice(0, 8)}
-              />
-            </Section>
-          )
-        }
+
+            <Box
+              margin={{ horizontal: `medium`, bottom: `medium` }}
+              elevation="small"
+              pad={{ horizontal: `small` }}
+            >
+              <Heading level="4">Contents</Heading>
+              <Toc dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+            </Box>
+          </Box>
+        </Box>
+        {similar.length > 1 && (
+          <Section background="light-1" title="Similar articles">
+            <Posts
+              posts={similar
+                .filter(post => post.frontmatter.title !== frontmatter.title)
+                .slice(0, 8)}
+            />
+          </Section>
+        )}
       </App>
     </Fragment>
-  );
+  )
 }
 
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(
-      frontmatter: {
-        path: { eq: $path },
-        type: { in: ["photo", "article"] }
-      }
+      frontmatter: { path: { eq: $path }, type: { in: ["photo", "article"] } }
     ) {
       htmlAst
       timeToRead
@@ -158,22 +117,20 @@ export const pageQuery = graphql`
         itinerary
         duration
         cover {
-          childImageSharp{
-            fluid(maxHeight: 450, maxWidth: 800, quality: 100) {
+          childImageSharp {
+            fluid(maxHeight: 550, maxWidth: 1000, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
-        },
+        }
       }
     }
   }
-`;
-
+`
 
 BlogPost.propTypes = {
-  classes: PropTypes.shape().isRequired,
   data: PropTypes.shape().isRequired,
   pageContext: PropTypes.shape().isRequired,
-};
+}
 
-export default withRoot(withStyles(styles)(BlogPost));
+export default BlogPost

@@ -1,62 +1,38 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import grey from '@material-ui/core/colors/grey';
+import React from "react"
+import { Box, Heading } from "grommet"
 
-const styles = theme => ({
-  root: {
-    display: 'flex',
-    flexFlow: 'column',
-    alignItems: 'center',
-    minHeight: '100%',
-    height: '100%',
-    paddingRight: 0,
-  },
-  rootPadding: {
-    padding: theme.spacing.unit,
-  },
-  fullWidth: {
-    width: '100%',
-    display: 'flex',
-    flexFlow: 'column',
-    maxWidth: 1200,
-    flex: 1,
-  },
-  spacer: {
-    marginBottom: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit,
-  },
-});
+const IndexSection = ({
+  title,
+  titleIcon: TitleIcon,
+  size,
+  children,
+  columns,
+  gapInner,
+  justifyInner,
+  background,
+  ...rest
+}) => (
+  <Box background={background}>
+    <Box width="xxlarge" alignSelf="center" {...rest}>
+      {title && (
+        <Box direction="row" justify="center" align="center" gap="small">
+          {TitleIcon && <TitleIcon size="large" />}
+          <Heading textAlign="center" level="2">
+            {title}
+          </Heading>
+        </Box>
+      )}
 
-function Section({
-  classes, children, shade, noPadding,
-}) {
-  return (
-    <div
-      className={classNames(classes.root, !noPadding && classes.rootPadding)}
-      style={{ backgroundColor: grey[shade] }}
-    >
-      <div className={classes.fullWidth}>
-        <Grid container spacing={0} className={!noPadding ? classes.spacer : null}>
-          { children }
-        </Grid>
-      </div>
-    </div>
-  );
-}
+      <Box
+        wrap
+        justify={justifyInner || `center`}
+        direction="row-responsive"
+        gap={gapInner || `small`}
+      >
+        {children}
+      </Box>
+    </Box>
+  </Box>
+)
 
-Section.propTypes = {
-  classes: PropTypes.shape().isRequired,
-  children: PropTypes.node.isRequired,
-  shade: PropTypes.string,
-  noPadding: PropTypes.bool,
-};
-
-Section.defaultProps = {
-  shade: '50',
-  noPadding: false,
-};
-
-export default withStyles(styles)(Section);
+export default IndexSection

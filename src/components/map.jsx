@@ -1,7 +1,7 @@
-
-import React, { Component } from 'react';
-import { push } from 'gatsby';
-import PropTypes from 'prop-types';
+import React, { Component } from "react"
+import { push } from "gatsby"
+import PropTypes from "prop-types"
+import { Box } from "grommet"
 import {
   ComposableMap,
   ZoomableGroup,
@@ -9,40 +9,29 @@ import {
   Geography,
   Markers,
   Marker,
-} from 'react-simple-maps';
-import { withStyles } from '@material-ui/core/styles';
+} from "react-simple-maps"
 
-import worldJson from '../static/world-50m-simplified.json';
-
-
-const styles = {
-  wrapper: {
-    width: '90%',
-    margin: '0 auto',
-  },
-};
+import worldJson from "../static/world-50m-simplified.json"
 
 class ZoomPan extends Component {
   handleMapClick(geography) {
-    const { cities } = this.props;
+    const { cities } = this.props
     // TODO Temporary fix. Will need to create a mapping later
-    const country = geography.properties.NAME === 'United States of America' ? 'Usa' : geography.properties.NAME;
-    const destination = cities.filter(city => city.country === country);
+    const country =
+      geography.properties.NAME === `United States of America`
+        ? `Usa`
+        : geography.properties.NAME
+    const destination = cities.filter(city => city.country === country)
     if (destination.length > 0) {
-      push(`/destination/${country}`);
+      push(`/destination/${country}`)
     }
   }
 
   render() {
-    const {
-      cities,
-      classes,
-      center,
-      zoom,
-    } = this.props;
+    const { cities, center, zoom } = this.props
 
     return (
-      <div className={classes.wrapper}>
+      <Box>
         <ComposableMap
           projectionConfig={{
             scale: 320,
@@ -50,34 +39,40 @@ class ZoomPan extends Component {
           width={1200}
           height={zoom > 1 ? 500 : 900}
           style={{
-            width: '100%',
-            height: 'auto',
+            width: `100%`,
+            height: `auto`,
+            overflow: `visible`,
           }}
         >
           <ZoomableGroup center={center} zoom={zoom} disablePanning>
             <Geographies geography={worldJson}>
-              {(geographies, projection) => geographies.map(geography => geography.id !== 'ATA' && (
-                <Geography
-                  key={geography.properties.NAME}
-                  geography={geography}
-                  projection={projection}
-                  onClick={() => this.handleMapClick(geography)}
-                  style={{
-                    default: {
-                      fill: '#f0f0f0',
-                      stroke: '#cdcdcd',
-                      strokeWidth: 0.75,
-                      outline: 'none',
-                    },
-                    hover: {
-                      fill: '#828282',
-                      stroke: '#cdcdcd',
-                      strokeWidth: 0.75,
-                      outline: 'none',
-                    },
-                  }}
-                />
-              ))}
+              {(geographies, projection) =>
+                geographies.map(
+                  geography =>
+                    geography.id !== `ATA` && (
+                      <Geography
+                        key={geography.properties.NAME}
+                        geography={geography}
+                        projection={projection}
+                        onClick={() => this.handleMapClick(geography)}
+                        style={{
+                          default: {
+                            fill: `#f0f0f0`,
+                            stroke: `#cdcdcd`,
+                            strokeWidth: 0.75,
+                            outline: `none`,
+                          },
+                          hover: {
+                            fill: `#828282`,
+                            stroke: `#cdcdcd`,
+                            strokeWidth: 0.75,
+                            outline: `none`,
+                          },
+                        }}
+                      />
+                    )
+                )
+              }
             </Geographies>
             <Markers>
               {cities.map(marker => (
@@ -85,7 +80,7 @@ class ZoomPan extends Component {
                   key={marker.coordinates}
                   marker={marker}
                   style={{
-                    default: { stroke: '#505050' },
+                    default: { stroke: `#505050` },
                   }}
                 >
                   <g transform="translate(-12, -24)">
@@ -113,27 +108,26 @@ class ZoomPan extends Component {
             </Markers>
           </ZoomableGroup>
         </ComposableMap>
-      </div>
-    );
+      </Box>
+    )
   }
 }
 
 ZoomPan.propTypes = {
-  classes: PropTypes.shape().isRequired,
   center: PropTypes.arrayOf(PropTypes.number),
   zoom: PropTypes.number,
-  cities: PropTypes.arrayOf(PropTypes.shape({
-    coordinates: PropTypes.arrayOf(PropTypes.number),
-    country: PropTypes.string,
-  })),
-};
-
+  cities: PropTypes.arrayOf(
+    PropTypes.shape({
+      coordinates: PropTypes.arrayOf(PropTypes.number),
+      country: PropTypes.string,
+    })
+  ),
+}
 
 ZoomPan.defaultProps = {
   center: [0, 20],
   zoom: 1,
   cities: [],
-};
+}
 
-
-export default withStyles(styles)(ZoomPan);
+export default ZoomPan

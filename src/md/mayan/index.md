@@ -20,11 +20,11 @@ We arrived in Palenque on a bus ride from Chiapas starting quite early in the mo
 
 The combination of being in a jungle and exploring archaeological ruins was quite impressive. It is believed that only 10% of the ruins are explored due to the surrounding landscape!
 
-![Palenque view](palenque.jpg)
+<rehype-image src="palenque.jpg"></rehype-image>
 
 Since these ruins were the first we visited we were in awe from minute one. The structures are quite impressive and you get to climb the many stairs to get on top of some of those, ultimately giving you the feeling of being in an Indiana Jones film.
 
-![Palenque view 2](palenque3.jpg)
+<rehype-image src="palenque3.jpg"></rehype-image>
 
 <tip title="Hiring a guide">
 We mostly avoid hiring guides, we feel that with enough research before you can get most of the information that will stick with you in the aftermath. If you are expecting to get enough information from the different signs and plates around the ruins then be prepared to be a bit disappointed. While there are tons of them we found out they lacked a bit in details.
@@ -32,7 +32,7 @@ We mostly avoid hiring guides, we feel that with enough research before you can 
 It felt like that both Palenque and Chichen Itza justified the need for a guide. We didn't regret not hiring one but in the end we felt we would have learnt a few more things in the process.
 </tip>
 
-![Palenque [pyramid]](palenque2.jpg)
+<rehype-image src="palenque2.jpg"></rehype-image>
 
 Besides the archaeological structures if you are lucky you will see a few monkeys around and probably lots of iguanas.
 
@@ -48,11 +48,11 @@ We arrived in Merida early in the morning. We hadn't plan to visit the city but 
 
 Driving from Merida to the archeological site of Uxmal took as a bit more than an hour. We found that this site is quite peaceful, not a lot of people in it and quite big to be able to walk around freely.
 
-![Uxmal pyramid](uxmal.jpg)
+<rehype-image src="uxmal.jpg"></rehype-image>
 
 There are a lot of structures to explore with the most beautiful being the pyramid of the Magician. It is different from the other pyramids we explored mainly due to its curvy sides, and its huge height.
 
-![Uxmal ruins](uxmal3.jpg)
+<rehype-image src="uxmal3.jpg"></rehype-image>
 
 <tip title="Pyramid bird calls">
 Since there are not a lot of people around we had the best chance to find out about the bird calls of the Pyramid. While standing in front of the pyramid clap your hands and you will hear the bird chirping sound.
@@ -60,26 +60,26 @@ Since there are not a lot of people around we had the best chance to find out ab
 
 The rest of the site is also interesting to explore, with many sculptured mayan signs and structures across a vast area. With enough water and sunscreen we spent a few lovely hours enjoying the Mayan wonders.
 
-![Uxmal ruins](uxmal4.jpg)
+<rehype-image src="uxmal4.jpg"></rehype-image>
 
 # Chichen Itza
 
 We left Uxmal at dusk to reach Valladolid, a 3 hours drive. This is were we stayed for a few days combining our [cenotes](/cenotes/) visit with one of the most impressive archaeological sites, Chichen Itza.
 
-![Chichen itzan El castillo](chichenitza2.jpg)
+<rehype-image src="chichenitza2.jpg"></rehype-image>
 
 Reaching Chichen Itza from Valladolid takes roughly an hour. It took us more or less the same time to find parking and get our entrance tickets. There are a lot of people in this site. More than you can imagine. This is quite the downside of an otherwise impressive Mayan ruin. There are bus tours from Cancun, Tulum and Playa del Carmen bringing hordes of people.
 
-![Chichen itzan El castillo](chichenitza5.jpg)
+<rehype-image src="chichenitza5.jpg"></rehype-image>
 
 This is one of the largest ruins around and probably one of the most important cities of the Mayan world. They combine a bit of everything, an impressive pyramid (El Castillo), a great Ball court, a temple of warriors with its thousand columns, an observatory (El Caracol) and a sacred cenote.
 
-<photo-composition><img src="chichenitza6.jpg" /><img src="chichenitza9.jpg" /></photo-composition>
+<photo-composition><rehype-image src="chichenitza6.jpg" /><rehype-image src="chichenitza9.jpg" /></photo-composition>
 
-![Temple of warriors](chichenitza7.jpg)
+<rehype-image src="chichenitza7.jpg"></rehype-image>
 
 Enough to keep you busy for a handful of hours depending on your interest in the historical details of the site. Besides exploring the well known pyramid and the ball court we enjoyed finding out about the the details of the sacrifices that happened at the sacred cenote.
 
-![The sacred cenote](chichenitza8.jpg)
+<rehype-image src="chichenitza8.jpg"></rehype-image>
 
 We concluded our Mayan ruins exploration later in Tulum where we explored the famous port city. In between we had a nice break having fun at the [cenotes](/cenotes) and relaxing at the [Bacalar lagoon](bacalar).

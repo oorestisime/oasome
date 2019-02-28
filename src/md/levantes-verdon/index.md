@@ -35,7 +35,7 @@ The city during the summer days is buzzing with life. Markets are open until lat
 
 We managed to try our fair share of duck recipes since this is the region they are most famous. And we weren't dissapointed. Intersting flavours, tasty food at a nice setting. We could not ask for more.
 
-![Aix en provence](aix.jpg)
+<rehype-image src="aix.jpg"></rehype-image>
 
 # Lavender route
 
@@ -47,15 +47,15 @@ So first stop was the lavender museum at Coustellet. The fields of the museum di
 You'll also learn the difference of Lavande and Lavandin, which most people ignore. Lavande is the original plant and Lavandin is a natural hybrid that occurs from the mix of two types of Lavande, the "fine" and the "Aspic". Lavandin appears in inferior altitudes than Lavande and in much more quantities. The fields at Valensole are from Lavandin. Other differences include the aroma, their qualities and of course the price!
 </tip>
 
-![Lavander](lavander1.jpg)
+<rehype-image src="lavander1.jpg"></rehype-image>
 
 Coming out of the museum with enough information we decided to try the higher altitudes and specifically the Luberon village since Lavandin was for sure already harvested. The road was beautiful and we were buzzing all along with the opportunity to witness the fields. Luckily we didn't have to wait a lot and once we were on higher altitude fields begun to appear.
 
 We got to see some beautifull fields and advance towards Valensole quite happy with our findings and the expectations set. We also got to see some harvest ongoing on a full-bio field. It was quite spectacular.
 
-![Lavander](lavander3.jpg)
+<rehype-image src="lavander3.jpg"></rehype-image>
 
-![Lavander](lavander4.jpg)
+<rehype-image src="lavander4.jpg"></rehype-image>
 
 Unfortunately as we were descending to lower altitude the fields disappeared and we ultimately didn't manage to see any purple fields at Valensole. All of them were harvested and there was only a brown color around. So we headed quite fast to our next destination.
 
@@ -63,11 +63,11 @@ Unfortunately as we were descending to lower altitude the fields disappeared and
 
 Another hickup of our last minute weekend was that the day we wanted to enter the river going inside the canyon by canoe or paddle was closed. There were indeed some strong winds and it was forbidden by the authorities.
 
-<photo-composition><img src="gorges.jpg" /><img src="verdon.jpg" /></photo-composition>
+<photo-composition><rehype-image src="gorges.jpg" /><rehype-image src="verdon.jpg" /></photo-composition>
 
 The change of plans meant we got to visit the canyon from the different viewpoints around it by car. The views were spectacular and with so many places to stop and admire: the bridge of Lac St. Croix, Pont de l’Artuby, the different viewpoints (belvedere) at Route des Cretes and some of the villages around such as Moustier-Sainte-Marie.
 
-![Verdon](verdon2.jpg)
+<rehype-image src="verdon2.jpg"></rehype-image>
 
 # We will be back
 

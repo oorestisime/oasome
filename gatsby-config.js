@@ -1,6 +1,5 @@
-require('dotenv').config();
-const config = require('./src/config');
-
+require(`dotenv`).config()
+const config = require(`./src/config`)
 
 module.exports = {
   siteMetadata: {
@@ -9,33 +8,42 @@ module.exports = {
     description: config.description,
   },
   plugins: [
-    'gatsby-plugin-netlify-cache',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-favicon',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-favicon`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-plugin-scroll-indicator`,
+      options: {
+        color: `#00739D`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/md`,
-        name: 'pages',
+        name: `pages`,
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-rehype-images`,
             options: {
-              sizeByPixelDensity: true,
-              quality: 100,
-              // withWebp: true,
+              tag: `rehype-image`,
+              quality: 80,
+              maxWidth: 2112,
+              toFormat: `WEBP`,
+              srcSetBreakpoints: [1056 / 4, 1056 / 2, 1056],
             },
           },
           {
-            resolve: 'gatsby-remark-autolink-headers',
+            resolve: `gatsby-remark-autolink-headers`,
             options: {
               offsetY: 100,
             },
@@ -44,7 +52,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-instagram',
+      resolve: `gatsby-source-instagram`,
       options: {
         username: config.instagram,
         access_token: process.env.IG_ACCESS_TOKEN,
@@ -52,27 +60,27 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: config.gaId,
         anonymize: true,
         respectDNT: true,
-        cookieDomain: 'oasome.blog',
+        cookieDomain: `oasome.blog`,
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'OAsome blog',
-        short_name: 'OAsome',
-        start_url: '/',
-        background_color: '#fafafa',
-        theme_color: '#EEEEEE',
-        display: 'minimal-ui',
+        name: `OAsome blog`,
+        short_name: `OAsome`,
+        start_url: `/`,
+        background_color: `#fafafa`,
+        theme_color: `#EEEEEE`,
+        display: `minimal-ui`,
       },
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: `gatsby-plugin-feed`,
       options: {
         query: `
           {
@@ -88,18 +96,15 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: (
-              { query: { site, allMarkdownRemark } },
-            ) => allMarkdownRemark.edges.map(edge => Object.assign(
-              {},
-              edge.node.frontmatter,
-              {
-                description: edge.node.excerpt,
-                url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                custom_elements: [{ 'content:encoded': edge.node.html }],
-              },
-            )),
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map(edge =>
+                Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              ),
             query: `
               {
                 allMarkdownRemark(
@@ -120,11 +125,11 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml',
+            output: `/rss.xml`,
           },
         ],
       },
     },
-    'gatsby-plugin-offline',
+    `gatsby-plugin-offline`,
   ],
-};
+}
