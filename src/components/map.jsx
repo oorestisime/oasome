@@ -41,7 +41,6 @@ class ZoomPan extends Component {
           style={{
             width: `100%`,
             height: `auto`,
-            overflow: `visible`,
           }}
         >
           <ZoomableGroup center={center} zoom={zoom} disablePanning>

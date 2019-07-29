@@ -23,7 +23,7 @@ function Archive({ data }) {
       />
       <App title="Archive">
         <Section>
-          <Posts posts={flatten(posts)} />
+          <Posts posts={flatten(posts)} limit={false} />
         </Section>
       </App>
     </Fragment>

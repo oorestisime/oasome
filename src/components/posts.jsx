@@ -10,15 +10,14 @@ const SLICES = {
   large: 4,
 }
 
-const Posts = ({ posts }) => {
+const Posts = ({ posts, limit = true }) => {
   const size = useContext(ResponsiveContext)
   if (posts.length < 1) {
     return null
   }
-  const sliced = SLICES[size]
 
   return posts
-    .slice(0, sliced)
+    .slice(0, limit ? SLICES[size] : undefined)
     .map(post => (
       <Card
         key={post.frontmatter.title}

@@ -21,7 +21,7 @@ country: "Usa"
 type: "photo"
 ---
 
-Photo album from our [road trip at the SouthWest](/enjoying-7-nighs-sw-usa/).
+# Photo album from our [road trip at the SouthWest](/enjoying-7-nighs-sw-usa/).
 
 ### Death Valley
 
