@@ -99,6 +99,7 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) =>
               allMarkdownRemark.edges.map(edge =>
                 Object.assign({}, edge.node.frontmatter, {
+                  title: edge.node.frontmatter.title,
                   description: edge.node.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
