@@ -4,11 +4,14 @@ import Img from "gatsby-image"
 import { Grid } from "grommet"
 
 const PhotoComposition = ({ children }) => (
-  <Grid gap="small" columns={[`1/2`, `1/2`]}>
+  <Grid
+    gap="small"
+    columns={children.length === 2 ? [`1/2`, `1/2`] : [`1/3`, `1/3`, `1/3`]}
+  >
     {children
       .filter(child => child !== `\n`)
-      .map(child => (
-        <Img fluid={JSON.parse(child.props.rehyped)} />
+      .map((child, i) => (
+        <Img key={i} fluid={JSON.parse(child.props.rehyped)} />
       ))}
   </Grid>
 )

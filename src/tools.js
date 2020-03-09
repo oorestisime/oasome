@@ -51,6 +51,7 @@ const BlogHeading = styled(Heading)`
 `
 
 const Photo = ({ rehyped }) => {
+  console.log(rehyped)
   const props = JSON.parse(rehyped)
   return (
     <Img
