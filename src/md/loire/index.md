@@ -7,12 +7,19 @@ cover: "./cover.jpg"
 country: "France"
 type: "article"
 duration: 5
-featured: true
-itinerary: ["Rennes", "Mont-Saint-Michel", "Saint-Malo", "Tours", "Chenonceau", "Chambord", "Chaumont"]
+featured: false
+itinerary:
+  [
+    "Rennes",
+    "Mont-Saint-Michel",
+    "Saint-Malo",
+    "Tours",
+    "Chenonceau",
+    "Chambord",
+    "Chaumont",
+  ]
 km: 604
-coordinates: [
-    { coordinates: [0.6848, 47.3941], country: 'France' },
-]
+coordinates: [{ coordinates: [0.6848, 47.3941], country: "France" }]
 ---
 
 When one is presented with the chance to visit France, it can be quite difficult to make a choice. Besides the obvious one of Paris and the seasonal [lavender fields trip](/lavender-fields-and-verdon/) there are other choices that are quite on par:

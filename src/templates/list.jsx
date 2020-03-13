@@ -22,7 +22,7 @@ function List({ pageContext }) {
       <ResponsiveContext.Consumer>
         {size => (
           <Section columns={size || `medium`}>
-            <Posts posts={posts} />
+            <Posts posts={posts} limit={false} />
           </Section>
         )}
       </ResponsiveContext.Consumer>

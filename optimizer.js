@@ -11,7 +11,7 @@ Promise.all(
     const stream = sharp(match)
     const info = await stream.metadata()
 
-    if (info.width < 2112) {
+    if (info.width <= 2112) {
       return
     }
 
@@ -22,7 +22,7 @@ Promise.all(
 
     await stream
       .resize(2112)
-      .jpeg({ quality: 70 })
+      .jpeg({ quality: 100 })
       .toFile(optimizedName)
 
     return fs.rename(optimizedName, match)
