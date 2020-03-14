@@ -1,6 +1,6 @@
 ---
 path: "/visiting-yosemite-in-autumn/"
-date: "2020-17-03"
+date: "2020-03-14"
 title: "Visiting Yosemite in autumn"
 tags: ["canyon", "National park", "Yosemite", "road trip", "waterfall"]
 cover: "./cover.jpg"
@@ -20,14 +20,14 @@ We once again stayed outside of the park due to prices being quite expensive ins
 
 A few things we didn't know about autumn in Yosemite were:
 
-- less crowds: YAY
-- dry waterfalls: NAY
+- less crowds: 👍
+- dry waterfalls: 👎
 
 Even if the main waterfalls were dry we had the chance to see some other ones and especially the Bridalveil one with a great rainbow!
 
 <rehype-image src="bridalveil.jpg"></rehype-image>
 
-If you are planning as well to visit the national park for the very known waterfalls then be prepared to see them dry! We didn't know about this and came out to be a somewhat disappointing experience. The whole park felt a bit dry as well. If we add to this that the remaining of the previous season fires were all around we can recommend choosing a different season to visit this park or a different park in autumn, like Yellowstone!
+If you are planning as well to visit the national park for the very known waterfalls then be prepared to see them dry! We didn't know about this and came out to be a somewhat disappointing experience. The whole park felt a bit dry as well. If we add to this to the clear aftermath of the previous season wildfires visible all around, we can recommend choosing a different season to visit this park or a different park in autumn, like [Yellowstone](/searching-for-bears-yellowstone/)!
 
 Nevertheless we took profit of the two days we stayed there to explore and enjoy as much scenery as possible!
 
@@ -48,6 +48,8 @@ The sunset there was very nice and we spent some time enjoying it before hitting
 We were a bit tired for hiking due to our many days in Yellowstone so we decided to have a rather small and laidback exploration of Mariposa grove. Besides the numerous Sequoia trees we were also surrounded by squirrels all along our way making our walk more pleasant!
 
 We had already been to [Sequoia national park](/road-trip-southwest/#comparing-ourselves-to-the-great-trees-of-sequoia-national-park) so we didn't spend a lot of time hiking and we picked the Grizzly Giant Loop for our walk!
+
+<photo-composition><rehype-image src="yosemite1.jpg" /><rehype-image src="yosemite2.jpg" /></photo-composition>
 
 With our energy levels being close to 0 after the long road trip we hit the road back to San Francisco where we relaxed for the remaining few days of our stay. Only [This time](/san-francisco/) we had the chance to see a better and clearer view of the Golden Gate bridge and we were even offered a nice sunset around the area!
 

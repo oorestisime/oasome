@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import { Box, Text, Heading } from "grommet"
-import { Clock, Map, Schedule } from "grommet-icons"
+import { Clock, Map, Plan } from "grommet-icons"
 
 import Tags from "./tags"
 
@@ -31,7 +31,7 @@ const Post = ({
           align="center"
           margin={{ left: `xsmall`, top: `xsmall` }}
         >
-          <Schedule color="dark-3" size="medium" />
+          <Plan color="dark-3" size="medium" />
           <Text size="small" color="dark-3">
             {date}
           </Text>

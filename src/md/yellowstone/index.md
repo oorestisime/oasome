@@ -1,6 +1,6 @@
 ---
 path: "/searching-for-bears-yellowstone/"
-date: "2020-07-03"
+date: "2020-03-12"
 title: "Searching for bears in Yellowstone"
 tags:
   [
