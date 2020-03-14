@@ -5,7 +5,7 @@ import { Grid } from "grommet"
 
 const PhotoComposition = ({ children }) => (
   <Grid
-    gap="small"
+    gap="xxsmall"
     columns={children.length === 2 ? [`1/2`, `1/2`] : [`1/3`, `1/3`, `1/3`]}
   >
     {children

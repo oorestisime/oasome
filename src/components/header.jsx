@@ -4,6 +4,7 @@ import { Box, Button, Heading, Anchor, ResponsiveContext } from "grommet"
 import { Menu, Twitter, Instagram, Facebook, MailOption } from "grommet-icons"
 
 import config from "../config"
+import { navigate } from "gatsby"
 
 const Header = ({ title, toggleSidebar, showSidebar }) => {
   const size = useContext(ResponsiveContext)
@@ -29,7 +30,12 @@ const Header = ({ title, toggleSidebar, showSidebar }) => {
             plain
             onClick={() => toggleSidebar(!showSidebar)}
           />
-          <Heading level="2" margin={{ left: `small`, vertical: `none` }}>
+          <Heading
+            style={{ cursor: `pointer` }}
+            onClick={() => navigate(`/`)}
+            level="2"
+            margin={{ left: `small`, vertical: `none` }}
+          >
             {title || `OAsome Blog`}
           </Heading>
         </Box>

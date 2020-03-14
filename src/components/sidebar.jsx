@@ -13,6 +13,7 @@ import { Archive, Camera, Group, Home, FormClose, Globe } from "grommet-icons"
 import Destinations from "./destinations"
 import ListItem from "./listItem"
 import { InternalLink } from "../tools"
+import { navigate } from "gatsby"
 
 const SideBarLink = ({ to, text, icon: Icon }) => (
   <Button as="span" hoverIndicator>
@@ -46,7 +47,13 @@ const Sidebar = ({ toggleSidebar }) => {
       )}
       <Box width="small">
         <Box align="center" border="bottom">
-          <Heading level={3}>OAsome</Heading>
+          <Heading
+            style={{ cursor: `pointer` }}
+            onClick={() => navigate(`/`)}
+            level={3}
+          >
+            OAsome
+          </Heading>
         </Box>
         <Box margin={{ vertical: `small` }}>
           <SideBarLink to="/" text="Home" icon={Home} />
